@@ -4,6 +4,8 @@ import AdbIcon from '@mui/icons-material/Adb';
 
 const NavBar = ()  => {
 
+  //const styles = React.useLayoutEffect(() => import('./NavBar.module'), []);
+
   return (
     <AppBar position="static">
       <Container maxWidth="xl">
@@ -24,30 +26,31 @@ const NavBar = ()  => {
                 color: 'inherit',
                 textDecoration: 'none',
               }}>
-              LOGO
+              ML
             </Typography>
           </Box>
 
           <Box sx={{ justifyContent: 'space-around', flexGrow: 0.5, display: { xs: 'none', md: 'flex' } }}>
             <Button
-              key='Home'
               sx={{ my: 2, color: 'white', display: 'block' }}>
-              Home
+              Inicio
             </Button>
             <Button
-              key='About'
               sx={{ my: 2, color: 'white', display: 'block' }}>
-              About
+              Acerca de mí
             </Button>
             <Button
-              key='Services'
               sx={{ my: 2, color: 'white', display: 'block' }}>
-              Services
+              Servicios
             </Button>
             <Button
-              key='Projects'
               sx={{ my: 2, color: 'white', display: 'block' }}>
-              Projects
+              Proyectos
+            </Button>
+            <Button
+              key='Contact me'
+              sx={{ my: 2, color: 'white', display: 'block' }}>
+              Contáctame
             </Button>
           </Box>
         </Toolbar>

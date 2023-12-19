@@ -1,4 +1,4 @@
-import NavBar from './Components/AppBar'
+import NavBar from './Components/NavBar/NavBar.jsx'
 
 const App = () => {
   return (
