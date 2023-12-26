@@ -1,10 +1,9 @@
 import * as React from 'react';
-import { AppBar, Box, Toolbar, Typography, Container, Button } from '@mui/material';
+import { AppBar, Box, Toolbar, Typography, Container, Button,  } from '@mui/material';
 import AdbIcon from '@mui/icons-material/Adb';
 
 const NavBar = ()  => {
 
-  //const styles = React.useLayoutEffect(() => import('./NavBar.module'), []);
 
   return (
     <AppBar position="static">
