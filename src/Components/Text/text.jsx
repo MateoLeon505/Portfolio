@@ -1,20 +1,20 @@
-import { Grid, Typography, makeStyles } from '@mui/material';
+import { Grid, Typography } from '@mui/material';
+import { makeStyles } from '@mui/styles';
 
-// const useStyles = makeStyles((theme) => ({
-//     container: {
-//         backgroundColor: '#000000',
-//     }
-// }))
+const useStyles = makeStyles((theme) => ({
+    container: {
+        backgroundColor: '#000000',
+    }
+}))
 
 const Text = () => {
 
-    
-  //const classes = useStyles();
+  const classes = useStyles();
 
     return (            
         <Grid
         container
-        //className={classes.container}
+        className={classes.container}
         direction="column"
         justifyContent="center"
         alignItems="center"
