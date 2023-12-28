@@ -1,6 +1,6 @@
 import { useLocation, Routes, Route } from 'react-router-dom';
-import NavBar from './Components/NavBar/NavBar.jsx'
-import Home from './Views/Home/Home.jsx';
+import { NavBar } from './Components/index.js'
+import { Home } from './Views/index.js';
 
 const App = () => {
 
