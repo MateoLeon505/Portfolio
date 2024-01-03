@@ -37,7 +37,7 @@ const NavBar = ()  => {
       <Container>
         <span className='navbar-toggler-icon'></span>
         <Navbar.Brand href="#home">
-          <img src="" alt="Logo" />
+          <img src={logo} alt="Logo" />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav">
           <span className='navbar-toggler-icon'></span>
