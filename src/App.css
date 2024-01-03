@@ -31,8 +31,15 @@ body {
   font-weight: 400;
   overflow-x: hidden;
   position: relative;
-  background: #282c34;
+  background-color: #121212 !important;
+  color: #ffff !important;
+  font-family: Centra, sans-serif;
 }
+
+h1, h2, h3, h4, h5, h6 {
+  
+}
+
 /* .App {
   text-align: center;
 }
