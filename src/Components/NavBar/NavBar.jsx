@@ -1,60 +1,39 @@
 import * as React from 'react';
-import { AppBar, Box, Toolbar, Typography, Container, Button,  } from '@mui/material';
-import AdbIcon from '@mui/icons-material/Adb';
+import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
 
 const NavBar = ()  => {
 
-
   return (
-    <AppBar position="static">
-      <Container maxWidth="xl">
-        <Toolbar disableGutters>
-          <Box sx={{ justifyContent: 'flex-start', flexGrow: 0.5, display: { xs: 'none', md: 'flex' } }}>
-            <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
-            <Typography
-              variant="h6"
-              noWrap
-              component="a"
-              href="#app-bar-with-responsive-menu"
-              sx={{
-                mr: 2,
-                display: { xs: 'none', md: 'flex' },
-                fontFamily: 'monospace',
-                fontWeight: 700,
-                letterSpacing: '.3rem',
-                color: 'inherit',
-                textDecoration: 'none',
-              }}>
-              ML
-            </Typography>
-          </Box>
-
-          <Box sx={{ justifyContent: 'space-around', flexGrow: 0.5, display: { xs: 'none', md: 'flex' } }}>
-            <Button
-              sx={{ my: 2, color: 'white', display: 'block' }}>
-              Inicio
-            </Button>
-            <Button
-              sx={{ my: 2, color: 'white', display: 'block' }}>
-              Acerca de mí
-            </Button>
-            <Button
-              sx={{ my: 2, color: 'white', display: 'block' }}>
-              Servicios
-            </Button>
-            <Button
-              sx={{ my: 2, color: 'white', display: 'block' }}>
-              Proyectos
-            </Button>
-            <Button
-              key='Contact me'
-              sx={{ my: 2, color: 'white', display: 'block' }}>
-              Contáctame
-            </Button>
-          </Box>
-        </Toolbar>
+    <Navbar expand="lg" 
+    //className="bg-body-tertiary"
+    >
+      <Container>
+        <span className='navbar-toggler-icon'></span>
+        <Navbar.Brand href="#home">
+          <img src="" alt="Logo" />
+        </Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav">
+          <span className='navbar-toggler-icon'></span>
+        </Navbar.Toggle>
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="me-auto">
+            <Nav.Link href="#home">Home</Nav.Link>
+            <Nav.Link href="#about">About</Nav.Link>
+            <Nav.Link href="#skills">Skills</Nav.Link>
+            <Nav.Link href="#proyects">Proyects</Nav.Link>
+            <Nav.Link href="#contact">Contact</Nav.Link>
+          </Nav>
+          <span className='navbar-text'>
+            <div className='social-icon'>
+              <a href="#"><img src="" alt="Linkedin" /></a>
+              <a href="#"><img src="" alt="Github" /></a>
+              <a href="#"><img src="" alt="Stack Overflow" /></a>
+              <button></button>
+            </div>
+          </span>
+        </Navbar.Collapse>
       </Container>
-    </AppBar>
+    </Navbar>
   );
 }
 
