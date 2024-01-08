@@ -1,4 +1,4 @@
-import { Container, Row, Col, Badge } from 'react-bootstrap';
+import { Container, Row, Col } from 'react-bootstrap';
 import { ArrowRightCircle } from 'react-bootstrap-icons'
 import styles from './Banner.module.css';
 
@@ -11,14 +11,16 @@ const Banner = () => {
                     <Row className={styles.row}>
                         <Col xs='12' md='6' xl='7'>
                             <span className={styles.tagline}>
-                                <h1><Badge bg="secondary">Bienvenido a mi portfolio 👋</Badge></h1>
+                                <h1>Bienvenido a mi portfolio 👋</h1>
                             </span>
-                            <h1><Badge bg="secondary">Soy</Badge></h1>
+                            <h1>Soy</h1>
                             <h4>Desarollador Frontend</h4>
                             <h4>Desarollador FullStack</h4>
                             <h4>Estudiante de ingeniería multimedia</h4>
-                            <button className={styles.connect} onClick={()=>alert('connect') }><ArrowRightCircle/><span>Let´s connect</span></button>
+                            <button className={styles.connect} onClick={()=>alert('connect') }><ArrowRightCircle/> <span>Let´s connect</span></button>
                         </Col>
+                        <Col></Col>
+                        
                     </Row>
                 </Container>
             </section>
