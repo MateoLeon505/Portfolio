@@ -1,3 +1,4 @@
+/* CONTAINER */
 .navbar {
     padding: 18px 5px;
     position: fixed;
@@ -11,16 +12,25 @@
     padding: 0px 0;
     background-color: transparent !important;
 }
-  
-.brand {
-    width: 90%;
-}
-
 .navigation {
     display: flex;
-    justify-content: space-between; /* Distribuye los elementos */
-    align-items: center; /* Alinea verticalmente */
+    justify-content: space-between; 
+    align-items: center;
+    padding-left: 25px;
 }
+
+/* Logo */
+.logo {
+    width: 100px;
+} 
+/* Items */
+.items {
+    display: flex;
+    gap: 60px;
+}
+.items  * {
+    margin-right: 30px; /* Ejemplo: 15px de margen a la derecha */
+  }
 .navbarlink {
     font-weight: 400;
     color: #fff !important;
@@ -41,49 +51,11 @@
     opacity: 50;
 }
   
+
 .navbar_text {
     display: flex;
     align-items: center;
 }
-  
-.social_icon {
-    display: inline-block;
-    margin-left: 20px;
-}
-.social_icon a {
-    width: 42px;
-    height: 42px;
-    background: rgba(217, 217, 217, 0.1);
-    display: inline-flex;
-    margin-right: 6px;
-    align-items: center;
-    justify-content: center;
-    line-height: 1;
-    border-radius: 50%;
-    border: 1px solid rgba(255, 255, 255, 0.5);
-}
-.social_icon a::before {
-    content: "";
-    width: 42px;
-    height: 42px;
-    position: absolute;
-    background-color: #ffffff;
-    border-radius: 50%;
-    transform: scale(0);
-    transition: 0.3s ease-in-out;
-}
-.social_icon a:hover::before {
-    transform: scale(1);
-}
-.social_icon a img {
-    width: 40%;
-    z-index: 1;
-    transition: 0.3s ease-in-out;
-}
-.social_icon a:hover img {
-    filter: brightness(0) saturate(100%) invert(0%) sepia(7%) saturate(98%) hue-rotate(346deg) brightness(95%) contrast(86%);
-}
-  
 .navbar_text button {
     font-weight: 400;
     color: #fff;
@@ -120,5 +92,43 @@
     border-radius: 15px;
     height: 100%;
     position: absolute;
+}
+  
+  
+.social_icon {
+    display: inline-block;
+}
+.social_icon a {
+    width: 42px;
+    height: 42px;
+    background: rgba(217, 217, 217, 0.1);
+    display: inline-flex;
+    margin-right: 6px;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+.social_icon a::before {
+    content: "";
+    width: 42px;
+    height: 42px;
+    position: absolute;
+    background-color: #ffffff;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: 0.3s ease-in-out;
+}
+.social_icon a:hover::before {
+    transform: scale(1);
+}
+.social_icon a img {
+    width: 40%;
+    z-index: 1;
+    transition: 0.3s ease-in-out;
+}
+.social_icon a:hover img {
+    filter: brightness(0) saturate(100%) invert(0%) sepia(7%) saturate(98%) hue-rotate(346deg) brightness(95%) contrast(86%);
 }
   
