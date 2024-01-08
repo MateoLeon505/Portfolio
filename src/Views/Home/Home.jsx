@@ -1,13 +1,13 @@
-//import FrontPage from "../../Components/FrontPage/frontPage";
-import { FrontPage, Text } from "../../Components/index"
-//import Text from "../../Components/description/text";
-import { Grid } from '@mui/material';
+import { FrontPage, Text, Banner } from "../../Components/index"
+
+
 
 const Home = () => {
 
     return(
         <div>
             <FrontPage/>
+            <Banner/>
             <Text/>
         </div>
     );
