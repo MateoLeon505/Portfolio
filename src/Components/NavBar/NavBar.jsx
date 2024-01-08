@@ -36,7 +36,7 @@ const NavBar = ()  => {
 
   return (
     <Navbar expand="lg" className={styles.navbar}>
-      <Container >
+      <Container>
         <div className={styles.navigation}>
           <div className={styles.brand}>
             <Navbar.Brand href="#home">
