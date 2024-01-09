@@ -1,12 +1,9 @@
-import { FrontPage, Text, Banner } from "../../Components/index"
-
-
+import { Text, Banner } from "../../Components/index"
 
 const Home = () => {
 
     return(
         <div>
-            <FrontPage/>
             <Banner/>
             <Text/>
         </div>
