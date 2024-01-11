@@ -5,7 +5,7 @@ const Home = () => {
     return(
         <div>
             <Banner/>
-            <Text/>
+            <Text id='about' href='about'/>
         </div>
     );
 }

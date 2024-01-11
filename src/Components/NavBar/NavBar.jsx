@@ -59,7 +59,7 @@ const NavBar = ()  => {
                 <img src={logo} alt="Logo" className={styles.logo}/>
               </IconButton>
             </div>
-            <div>
+            <div className={styles.items}>
               <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
                 <IconButton
                   size="large"
@@ -75,7 +75,7 @@ const NavBar = ()  => {
                   anchorEl={anchorElNav}
                   anchorOrigin={{
                     vertical: 'bottom',
-                    horizontal: 'left',
+                     horizontal: 'left',
                   }}
                   keepMounted
                   transformOrigin={{
@@ -125,8 +125,6 @@ const NavBar = ()  => {
                   </Button>
                 </Menu>
               </Box>
-            </div>
-            <div className={styles.items}>
               <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex', xl: 'flex' } }}>
                 <Button
                   href="#home"
@@ -164,15 +162,15 @@ const NavBar = ()  => {
                   Contacto
                 </Button>
               </Box>
-            </div>
-            {/* <span className={styles.navbar_text}> 
+              {/* <span className={styles.navbar_text}> 
                 <div className={styles.social_icon}>
-                <a href="#"><img src={navIcon1} alt="Linkedin" /></a>
-                <a href="#"><img src={navIcon2} alt="Github" /></a>
-                <a href="#"><img src={navIcon3} alt="StackOverflow" /></a>
-                <button className={styles.connect} onClick={()=>alert('connect') }><span>Let´s connect</span></button>
-              </div> 
-            </span> */}
+                  <a href="#"><img src={navIcon1} alt="Linkedin" /></a>
+                  <a href="#"><img src={navIcon2} alt="Github" /></a>
+                  <a href="#"><img src={navIcon3} alt="StackOverflow" /></a>
+                  <button className={styles.connect} onClick={()=>alert('connect') }><span>Let´s connect</span></button>
+                </div> 
+              </span> */}
+            </div>
           </div>
         </Toolbar>
       </Container>
