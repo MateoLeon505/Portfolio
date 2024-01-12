@@ -4,7 +4,6 @@ import { ArrowRightCircle } from 'react-bootstrap-icons'
 import { Grid, Typography } from "@mui/material"
 import styles from './Banner.module.css';
 import header from '../../assets/img/header-img.svg';
-import Pauzel from '../../assets/img/pawel-czerwinski-fBTd3Xng5j0-unsplash.jpg';
 
 
 const Banner = () => {

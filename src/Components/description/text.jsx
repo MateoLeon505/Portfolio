@@ -1,5 +1,6 @@
 import { Grid, Typography } from '@mui/material';
 import styles from  './text.module.css';
+import reactImage from '../../assets/img/skills/react.svg';
 
 const Text = () => {
 
@@ -32,12 +33,12 @@ const Text = () => {
             <table>
                 <tr>
                     <td valign="top" width="33%">
-                        <div align="center">  
+                        <div align="center" className={styles.skills}>  
                             <a href="https://reactjs.org/" target="_blank">
                                 <img 
                                 // style="margin: 10px" 
-                                src="https://profilinator.rishav.dev/skills-assets/react-original-wordmark.svg" 
-                                alt="React" height="50" />
+                                src={reactImage}
+                                alt="React" height="80" />
                             </a>  
                             <a href="https://www.w3schools.com/css/" target="_blank">
                                 <img 
