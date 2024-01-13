@@ -1,11 +1,11 @@
-import { Text, Banner } from "../../Components/index"
+import { Description, Banner } from "../../Components/index"
 
 const Home = () => {
 
     return(
         <div>
             <Banner/>
-            <Text id='about' href='about'/>
+            <Description id='about' href='about'/>
         </div>
     );
 }

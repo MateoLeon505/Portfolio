@@ -1,6 +1,6 @@
 import NavBar from "./NavBar/NavBar";
-import Text from "./description/text";
+import Description from "./description/description.jsx";
 import Banner from "./Banner/Banner";
 import Footer from "./Footer/footer.jsx";
 
-export { NavBar, Text, Banner, Footer };
+export { NavBar, Description, Banner, Footer };

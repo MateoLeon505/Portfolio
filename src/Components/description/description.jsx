@@ -1,5 +1,5 @@
 import { Grid, Typography } from '@mui/material';
-import styles from  './text.module.css';
+import styles from  './description.module.css';
 import reactImage from '../../assets/img/skills/react.svg';
 
 const Text = () => {
