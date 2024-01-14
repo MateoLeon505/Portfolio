@@ -4,6 +4,8 @@ import { ArrowRightCircle } from 'react-bootstrap-icons'
 import { Grid, Typography } from "@mui/material"
 import styles from './Banner.module.css';
 import header from '../../assets/img/header-img.svg';
+import HandCoding from '../../assets/img/Hand coding-bro.svg';
+import coding from '../../assets/img/Code typing-bro.svg';
 
 
 const Banner = () => {
@@ -28,8 +30,10 @@ const Banner = () => {
                         </Typography>
                     </Grid>
                     <Grid item xs={6}>
-                        <img src={header} alt="HeaderImage" />                
+                        <img src={coding} alt="HeaderImage" />                
+                        
                     </Grid>
+                    
                 </Grid>
                 {/* //<img src={Pauzel} alt="pauzek" /> */}
             </section>

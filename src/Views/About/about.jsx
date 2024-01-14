@@ -1,8 +1,8 @@
 import { Grid, Typography } from '@mui/material';
-import styles from  './description.module.css';
+import styles from  './about.module.css';
 import reactImage from '../../assets/img/skills/react.svg';
 
-const Text = () => {
+const About = () => {
 
     return (   
         <div className={styles.container}>
@@ -86,18 +86,8 @@ const Text = () => {
                     </td>
                 </tr>
             </table> 
-{/* <a href="https://github.com/MateoLeon505" target="_blank">
-<img src="https://img.shields.io/badge/github-%2324292e.svg?&style=for-the-badge&logo=github&logoColor=white" alt="github" style="margin-bottom: 5px;" />
-</a>
-<a href="https://stackoverflow.com/users/22949021/mateo-leon" target="_blank">
-<img src="https://img.shields.io/badge/stackoverflow-%23F28032.svg?&style=for-the-badge&logo=stackoverflow&logoColor=white" alt="stackoverflow" style="margin-bottom: 5px;" />
-</a>
-<a href="https://linkedin.com/in/mateo-león-097b57268/" target="_blank">
-<img src="https://img.shields.io/badge/linkedin-%231E77B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white" alt="linkedin" style="margin-bottom: 5px;" />
-</a>   */}
-
         </div>         
     );
 }
 
-export default Text;
+export default About;
