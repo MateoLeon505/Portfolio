@@ -29,7 +29,7 @@ const About = () => {
                     </Typography>
                 </Grid>
             </Grid>
-            <h2>Skills</h2>
+            {/* <h2>Skills</h2>
             <table>
                 <tr>
                     <td valign="top" width="33%">
@@ -85,7 +85,7 @@ const About = () => {
                         </div>
                     </td>
                 </tr>
-            </table> 
+            </table>  */}
         </div>         
     );
 }

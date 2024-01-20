@@ -3,9 +3,8 @@ import { Container, Row, Col } from 'react-bootstrap';
 import { ArrowRightCircle } from 'react-bootstrap-icons'
 import { Grid, Typography } from "@mui/material"
 import styles from './Banner.module.css';
-import header from '../../assets/img/header-img.svg';
-import HandCoding from '../../assets/img/Hand coding-bro.svg';
 import coding from '../../assets/img/Code typing-bro.svg';
+import codeTyping from '../../assets/img/Code typing.gif';
 
 
 const Banner = () => {
@@ -31,7 +30,6 @@ const Banner = () => {
                     </Grid>
                     <Grid item xs={6}>
                         <img src={coding} alt="HeaderImage" />                
-                        
                     </Grid>
                     
                 </Grid>
