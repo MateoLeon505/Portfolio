@@ -4,7 +4,6 @@ import { ArrowRightCircle } from 'react-bootstrap-icons'
 import { Grid, Typography } from "@mui/material"
 import styles from './Banner.module.css';
 import coding from '../../assets/img/Code typing-bro.svg';
-import codeTyping from '../../assets/img/Code typing.gif';
 
 
 const Banner = () => {
