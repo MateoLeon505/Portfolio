@@ -11,7 +11,7 @@ const Banner = () => {
 
     return (
         //<div className={styles.bannerContainer}>
-            <section className={styles.Banner} id='home'>
+            <section className={styles.bannerContainer} id='home'>
                 <Grid
                 container
                 direction='row'
@@ -29,11 +29,12 @@ const Banner = () => {
                         </Typography>
                     </Grid>
                     <Grid item xs={6}>
-                        <img src={coding} alt="HeaderImage" />                
+                        <div className={styles.imageContainer}>
+                            <img src={coding} alt="HeaderImage" /> 
+                        </div>               
                     </Grid>
                     
                 </Grid>
-                {/* //<img src={Pauzel} alt="pauzek" /> */}
             </section>
         //</div>
     );

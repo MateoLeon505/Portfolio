@@ -4,12 +4,19 @@
     text-align: center;
 }
 .gridContainer {
-    height: 100vh;
+    height: 100%;
     padding: 5rem;
     align-items: center;
     justify-content: space-between;
 }
+
+.imageContainer {
+    transition: transform 0.5s ease-in-out;
+}
 .image {
     width: 100%;
     border-radius: 2rem;
+}
+.image:hover {
+    transform: scale(8.1);
 }

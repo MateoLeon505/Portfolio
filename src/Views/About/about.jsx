@@ -1,31 +1,33 @@
-import { Grid, Typography } from '@mui/material';
+import { Box, Grid, Typography } from '@mui/material';
 import styles from  './about.module.css';
 import reactImage from '../../assets/img/skills/react.svg';
 
 const About = () => {
 
     return (   
-        <div className={styles.container}>
+        <section className={styles.container}>
             <Grid
             container
             className={styles.gridContainer}
-            spacing={2}>
+            columnSpacing={2}>
                 <Grid item width='80%'>
                     <Typography variant='body1' align='center' gutterBottom >
                         Soy estudiante de ingeniería multimedia y desarrollador web fullstack.
+                    </Typography>
+                    <Typography variant='body1' align='center' gutterBottom>
+                        <b>Mi enfoque está en el desarrollo frontend, donde trabajo para crear soluciones web 
+                        elegantes y funcionales que brinden una experiencia única a los usuarios.</b>
+                    </Typography>
+                    <Typography variant='body1' align='center'>
+                        Mis objetivos profesionales son crecer como desarrollador web, explorar el emocionante 
+                        mundo del desarrollo de aplicaciones móviles y contribuir a proyectos que generen un 
+                        impacto positivo en la sociedad.
                     </Typography>
                 </Grid>
                 <Grid item width='80%'>
                     <Typography variant='body1' align='center' gutterBottom>
                         <b>Mi enfoque está en el desarrollo frontend, donde trabajo para crear soluciones web 
                         elegantes y funcionales que brinden una experiencia única a los usuarios.</b>
-                    </Typography>
-                </Grid>
-                <Grid item width='80%'>
-                    <Typography variant='body1' align='center'>
-                        Mis objetivos profesionales son crecer como desarrollador web, explorar el emocionante 
-                        mundo del desarrollo de aplicaciones móviles y contribuir a proyectos que generen un 
-                        impacto positivo en la sociedad.
                     </Typography>
                 </Grid>
             </Grid>
@@ -86,7 +88,7 @@ const About = () => {
                     </td>
                 </tr>
             </table>  */}
-        </div>         
+        </section>         
     );
 }
 
