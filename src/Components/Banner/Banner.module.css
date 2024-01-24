@@ -10,12 +10,12 @@
 }
 
 .imageContainer {
-    transition: transform 0.5s ease-in-out;
+    /* transition: transform 0.5s ease-in-out; */
 }
 .image {
-    width: 100%;
+    /* width: 100%; */
     border-radius: 2rem;
 }
 .image:hover {
-    transform: scale(8.1);
+    /* transform: scale(8.1); */
 }
