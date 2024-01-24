@@ -6,7 +6,7 @@
     z-index: 9999;
     background-color: #121212 !important;
     transition: all 0.3s ease-in-out;
-    padding-left: 1%;
+    padding-left: 3%;
     padding-right: 5%;
 }
 .navbarScrolled{
@@ -15,7 +15,7 @@
     opacity: 1; 
     animation:  0.3s ease-in-out; 
     border-bottom: 1px solid rgba(255, 252, 252, 0.5);
-    padding-left: 1%;
+    padding-left: 3%;
     padding-right: 5%;
 }
 

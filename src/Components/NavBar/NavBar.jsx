@@ -49,7 +49,7 @@ const NavBar = ()  => {
 
   const onUpdateActiveLink = (value) => {
     setActiveLink(value);
-    handleCloseNavMenu();
+    // handleCloseNavMenu();
   }
 
   return (
@@ -207,6 +207,14 @@ const NavBar = ()  => {
               </IconButton>
               Contacto
             </Button>
+                  {/* <span className={styles.navbar_text}> 
+        <div className={styles.social_icon}>
+          <a href="#"><img src={navIcon1} alt="Linkedin" /></a>
+          <a href="#"><img src={navIcon2} alt="Github" /></a>
+          <a href="#"><img src={navIcon3} alt="StackOverflow" /></a>
+          <button className={styles.connect} onClick={()=>alert('connect') }><span>Let´s connect</span></button>
+        </div> 
+      </span> */}
           </Box>
         </Box>
       </Toolbar>
