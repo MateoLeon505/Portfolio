@@ -1,13 +1,13 @@
 /* CONTAINER */
 .navbar {
     position: fixed;
-    width: 100%;
+    width: 100vw;
     top: 0;
     z-index: 9999;
     background-color: #121212 !important;
     transition: all 0.3s ease-in-out;
-    padding-left: 3%;
-    padding-right: 5%;
+    padding-left: 1vw;
+    padding-right: 2vw;
 }
 .navbarScrolled{
     background-color: rgba(0, 0, 0, 0.5) !important;
@@ -15,9 +15,17 @@
     opacity: 1; 
     animation:  0.3s ease-in-out; 
     border-bottom: 1px solid rgba(255, 252, 252, 0.5);
-    padding-left: 3%;
-    padding-right: 5%;
+    padding-left: 1vw;
+    padding-right: 2vw;
 }
+/* @media (max-width: 768px) {
+    .navbar {
+        padding-left: 1vw;
+        padding-right: 1vw;
+        position: fixed;
+        width: 100vw;
+    }
+} */
 
 .navigation {
     display: flex;
@@ -27,7 +35,7 @@
 
 /* Logo */
 .logo {
-    width: 100px;
+    max-width: 15vw;
 } 
 
 .navbarlink {
