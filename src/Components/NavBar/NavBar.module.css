@@ -18,14 +18,15 @@
     padding-left: 1vw;
     padding-right: 2vw;
 }
-/* @media (max-width: 768px) {
+@media (max-width: 768px) {
     .navbar {
         padding-left: 1vw;
         padding-right: 1vw;
         position: fixed;
         width: 100vw;
+        overflow: hidden;
     }
-} */
+}
 
 .navigation {
     display: flex;

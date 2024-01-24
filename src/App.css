@@ -1,5 +1,5 @@
 /* Fonts: */
-@font-face {
+/* @font-face {
   font-family: Centra;
   src: url('./assets/fonts/CentraNo2-Bold.ttf');
   font-weight: 700;
@@ -13,7 +13,7 @@
   font-family: Centra;
   src: url('./assets/fonts/CentraNo2-Medium.ttf');
   font-weight: 400;
-}
+} */
 
 /* Global styles */
 * {
