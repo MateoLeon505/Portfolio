@@ -5,6 +5,7 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import styles from  './about.module.css';
+import Me from '../../assets/img/Me.jpg';
 
 const About = () => {
 
@@ -15,15 +16,15 @@ const About = () => {
                 direction='row'
                 className={styles.gridContainer}>
                 <Grid item xs={4} md='' xl=''>
-                    <Card sx={{ maxWidth: 345 }}>
+                    <Card sx={{ width: 330, height: 400 }}>
                         <CardMedia
                             sx={{ height: 140 }}
-                            image="/static/images/cards/contemplative-reptile.jpg"
-                            title="green iguana"
+                            image={Me}
+                            title="Mateo León"
                         />
                         <CardContent>
                             <Typography gutterBottom variant="h5" component="div">
-                            Lizard
+                                Desarrollador FullStack/Frontend
                             </Typography>
                             <Typography variant="body2" color="text.secondary">
                             Lizards are a widespread group of squamate reptiles, with over 6,000
