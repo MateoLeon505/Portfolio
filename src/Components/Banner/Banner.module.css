@@ -1,21 +1,22 @@
 .bannerContainer {
-    height: 100vh;
-
+    height: 105vh;
 }
 .gridContainer {
     height: 100%;
-    padding: 5rem;
+    padding-top: 10vh;
+    padding-left: 2vw;
+    padding-right: 3vw;
     align-items: center;
     justify-content: space-between;
 }
+.text{
 
+}
 .imageContainer {
-    /* transition: transform 0.5s ease-in-out; */
+    height: 90%;
 }
 .image {
-    /* width: 100%; */
-    border-radius: 2rem;
-}
-.image:hover {
-    /* transform: scale(8.1); */
+    /* border-radius: 2rem; */
+    height: 80%;
+    object-fit: cover;
 }
