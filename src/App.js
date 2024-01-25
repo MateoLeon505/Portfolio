@@ -1,5 +1,6 @@
+import { Routes, Route } from 'react-router-dom';
 import { NavBar, Footer } from './Components/index.js'
-import { Home, About } from './Views/index.js';
+import { Home, About, Services, Projects, Contact } from './Views/index.js';
 import './App.css'
 
 const App = () => {
@@ -7,8 +8,16 @@ const App = () => {
   return (
     <div> 
       <NavBar/>
-      <Home/>
-      <About/>
+      <Routes>
+        <Route path="/" element={<Home/>} />
+        <Route path="/home" element={<Home/>} />
+        <Route path="/about" element={<About/>} />
+        <Route path="/skills" element={<Services/>} />
+        <Route path="/projects" element={<Projects/>} />
+        <Route path="/contact" element={<Contact/>} />
+      </Routes>
+      {/* <Home/>
+      <About/> */}
       <Footer/>
     </div>
   );

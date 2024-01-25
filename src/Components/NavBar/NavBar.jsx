@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { useNavigate, useLocation } from 'react-router-dom';
 import {
   AppBar,
   Toolbar,
@@ -26,13 +27,16 @@ import styles from './NavBar.module.css';
 
 const NavBar = ()  => {
 
+  const navigate = useNavigate();
+  const location = useLocation();
+
     const [anchorElNav, setAnchorElNav] = useState(null);
 
     const handleOpenNavMenu = (event) => {
       setAnchorElNav(event.currentTarget);
     };
 
-    const [ activeLink, setActiveLink ] = useState('home');
+    // const [ activeLink, setActiveLink ] = useState('home');
     const [ scrolled, setScrolled ] = useState(false);
 
     const handleCloseNavMenu = () => {
@@ -48,9 +52,11 @@ const NavBar = ()  => {
   }, [scrolled]);
 
   const onUpdateActiveLink = (value) => {
-    setActiveLink(value);
+    // setActiveLink(value);
+    navigate(value);
     // handleCloseNavMenu();
   }
+
 
   return (
     <AppBar className={ scrolled ? styles.navbarScrolled : styles.navbar }>
@@ -159,50 +165,50 @@ const NavBar = ()  => {
             <Box display="flex">
               <Button
                 href="#home"
-                className={ activeLink === 'home' ? styles.active_navbarlink : styles.navbarlink }
+                className={ location.pathname === 'home' ? styles.active_navbarlink : styles.navbarlink }
                 onClick={()=> onUpdateActiveLink('home')}
                 sx={{ my: 2, color: 'white', display: 'block' }}>
-                <IconButton size="small"  sx={{ color: activeLink === 'home' ? '#92E3A9' : '#FFFFFF' }}>
+                <IconButton size="small"  sx={{ color: location.pathname === 'home' ? '#92E3A9' : '#FFFFFF' }}>
                     <HomeIcon />
                 </IconButton>
                 Inicio
               </Button>
             <Button
               href="#about"
-              className={ activeLink === 'about' ? styles.active_navbarlink : styles.navbarlink }
+              className={ location.pathname === 'about' ? styles.active_navbarlink : styles.navbarlink }
               onClick={()=> onUpdateActiveLink('about')}
               sx={{ my: 2, color: 'white', display: 'block' }}>
-              <IconButton size="small"  sx={{ color: activeLink === 'about' ? '#92E3A9' : '#FFFFFF' }}>
+              <IconButton size="small"  sx={{ color: location.pathname === 'about' ? '#92E3A9' : '#FFFFFF' }}>
                 <ArticleIcon/>
               </IconButton>
               Sobre mí
             </Button>
             <Button
               href="#skills"
-              className={ activeLink === 'skills' ? styles.active_navbarlink : styles.navbarlink }
+              className={ location.pathname === 'skills' ? styles.active_navbarlink : styles.navbarlink }
               onClick={()=> onUpdateActiveLink('skills')}
               sx={{ my: 2, color: 'white', display: 'block' }}>
-              <IconButton size="small"  sx={{ color: activeLink === 'skills' ? '#92E3A9' : '#FFFFFF' }}>
+              <IconButton size="small"  sx={{ color: location.pathname === 'skills' ? '#92E3A9' : '#FFFFFF' }}>
                 <PsychologyIcon/>
               </IconButton>
               Habilidades
             </Button>
             <Button
               href="#projects"
-              className={ activeLink === 'projects' ? styles.active_navbarlink : styles.navbarlink }
+              className={ location.pathname === 'projects' ? styles.active_navbarlink : styles.navbarlink }
               onClick={()=> onUpdateActiveLink('projects')}
               sx={{ my: 2, color: 'white', display: 'block' }}>
-              <IconButton size="small"  sx={{ color: activeLink === 'projects' ? '#92E3A9' : '#FFFFFF' }}>
+              <IconButton size="small"  sx={{ color: location.pathname === 'projects' ? '#92E3A9' : '#FFFFFF' }}>
                 <IntegrationInstructionsIcon/>
               </IconButton>
               Proyectos
             </Button>
             <Button
               href="#contact"
-              className={ activeLink === 'contact' ? styles.active_navbarlink : styles.navbarlink }
+              className={ location.pathname === 'contact' ? styles.active_navbarlink : styles.navbarlink }
               onClick={()=> onUpdateActiveLink('contact')}
               sx={{ my: 2, color: 'white', display: 'block' }}>
-              <IconButton size="small"  sx={{ color: activeLink === 'contact' ? '#92E3A9' : '#FFFFFF' }}>
+              <IconButton size="small"  sx={{ color: location.pathname === 'contact' ? '#92E3A9' : '#FFFFFF' }}>
                 <ContactMailIcon/>
               </IconButton>
               Contacto
