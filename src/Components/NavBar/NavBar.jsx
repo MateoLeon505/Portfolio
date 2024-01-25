@@ -162,7 +162,7 @@ const NavBar = ()  => {
                 className={ activeLink === 'home' ? styles.active_navbarlink : styles.navbarlink }
                 onClick={()=> onUpdateActiveLink('home')}
                 sx={{ my: 2, color: 'white', display: 'block' }}>
-                <IconButton size="small"  sx={{ color: 'white' }}>
+                <IconButton size="small"  sx={{ color: activeLink === 'home' ? '#92E3A9' : '#FFFFFF' }}>
                     <HomeIcon />
                 </IconButton>
                 Inicio
@@ -172,7 +172,7 @@ const NavBar = ()  => {
               className={ activeLink === 'about' ? styles.active_navbarlink : styles.navbarlink }
               onClick={()=> onUpdateActiveLink('about')}
               sx={{ my: 2, color: 'white', display: 'block' }}>
-              <IconButton size="small"  sx={{ color: 'white' }}>
+              <IconButton size="small"  sx={{ color: activeLink === 'about' ? '#92E3A9' : '#FFFFFF' }}>
                 <ArticleIcon/>
               </IconButton>
               Sobre mí
@@ -182,7 +182,7 @@ const NavBar = ()  => {
               className={ activeLink === 'skills' ? styles.active_navbarlink : styles.navbarlink }
               onClick={()=> onUpdateActiveLink('skills')}
               sx={{ my: 2, color: 'white', display: 'block' }}>
-              <IconButton size="small"  sx={{ color: 'white' }}>
+              <IconButton size="small"  sx={{ color: activeLink === 'skills' ? '#92E3A9' : '#FFFFFF' }}>
                 <PsychologyIcon/>
               </IconButton>
               Habilidades
@@ -192,7 +192,7 @@ const NavBar = ()  => {
               className={ activeLink === 'projects' ? styles.active_navbarlink : styles.navbarlink }
               onClick={()=> onUpdateActiveLink('projects')}
               sx={{ my: 2, color: 'white', display: 'block' }}>
-              <IconButton size="small"  sx={{ color: 'white' }}>
+              <IconButton size="small"  sx={{ color: activeLink === 'projects' ? '#92E3A9' : '#FFFFFF' }}>
                 <IntegrationInstructionsIcon/>
               </IconButton>
               Proyectos
@@ -202,7 +202,7 @@ const NavBar = ()  => {
               className={ activeLink === 'contact' ? styles.active_navbarlink : styles.navbarlink }
               onClick={()=> onUpdateActiveLink('contact')}
               sx={{ my: 2, color: 'white', display: 'block' }}>
-              <IconButton size="small"  sx={{ color: 'white' }}>
+              <IconButton size="small"  sx={{ color: activeLink === 'contact' ? '#92E3A9' : '#FFFFFF' }}>
                 <ContactMailIcon/>
               </IconButton>
               Contacto
