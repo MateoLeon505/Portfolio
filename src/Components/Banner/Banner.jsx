@@ -1,11 +1,15 @@
 import { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Grid, Typography, Button } from "@mui/material"
 import styles from './Banner.module.css';
 import ArrowCircleDownIcon from '@mui/icons-material/ArrowCircleDown';
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import WavingHandIcon from '@mui/icons-material/WavingHand';
 import coding from '../../assets/img/Code typing-bro.svg';
 
 const Banner = () => {
+
+    const navigate = useNavigate();
 
     return (
         <section className={styles.bannerContainer} id='home'>
@@ -28,10 +32,10 @@ const Banner = () => {
                         <span style={{ color: '#92E3A9' }}> Ingeniería Multimedia</span> 
                     </Typography>   
                     <Typography variant='body1' align='center'>
-                    <Button variant="contained" style={{ background: '#ECEFF1', color: '#121212' }}>
-                        <ArrowCircleDownIcon fontSize="small"/>
+                    <Button variant="contained" onClick={()=>navigate('/about')}
+                        style={{ background: '#ECEFF1', color: '#121212' }}>
+                        <AccountCircleIcon fontSize="small"/>
                         Sobre mí
-                        <ArrowCircleDownIcon fontSize="small"/>
                     </Button>  
                     </Typography>     
                     {/* <a href="#h" style={{  color: '#66D9A1' }}>Holaaaaaaaaaaaaaaaa</a>

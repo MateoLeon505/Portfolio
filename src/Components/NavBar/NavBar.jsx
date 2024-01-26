@@ -159,56 +159,51 @@ const NavBar = ()  => {
           {/* Large */}
           <Box sx={{ display: { xs: 'none', md: 'none', xl: 'flex' }}} 
             display="flex" justifyContent="space-between" width="100%">
-            <IconButton href="#home">
+            <IconButton>
               <img src={logo} alt="Logo" className={styles.logo}/>
             </IconButton>
             <Box display="flex">
               <Button
-                href="#home"
-                className={ location.pathname === 'home' ? styles.active_navbarlink : styles.navbarlink }
-                onClick={()=> onUpdateActiveLink('home')}
+                className={ location.pathname === '/' ? styles.active_navbarlink : styles.navbarlink }
+                onClick={()=> onUpdateActiveLink('')}
                 sx={{ my: 2, color: 'white', display: 'block' }}>
-                <IconButton size="small"  sx={{ color: location.pathname === 'home' ? '#92E3A9' : '#FFFFFF' }}>
+                <IconButton size="small"  sx={{ color: location.pathname === '/' ? '#92E3A9' : '#FFFFFF' }}>
                     <HomeIcon />
                 </IconButton>
                 Inicio
               </Button>
             <Button
-              href="#about"
-              className={ location.pathname === 'about' ? styles.active_navbarlink : styles.navbarlink }
+              className={ location.pathname === '/about' ? styles.active_navbarlink : styles.navbarlink }
               onClick={()=> onUpdateActiveLink('about')}
               sx={{ my: 2, color: 'white', display: 'block' }}>
-              <IconButton size="small"  sx={{ color: location.pathname === 'about' ? '#92E3A9' : '#FFFFFF' }}>
+              <IconButton size="small"  sx={{ color: location.pathname === '/about' ? '#92E3A9' : '#FFFFFF' }}>
                 <ArticleIcon/>
               </IconButton>
               Sobre mí
             </Button>
             <Button
-              href="#skills"
-              className={ location.pathname === 'skills' ? styles.active_navbarlink : styles.navbarlink }
+              className={ location.pathname === '/skills' ? styles.active_navbarlink : styles.navbarlink }
               onClick={()=> onUpdateActiveLink('skills')}
               sx={{ my: 2, color: 'white', display: 'block' }}>
-              <IconButton size="small"  sx={{ color: location.pathname === 'skills' ? '#92E3A9' : '#FFFFFF' }}>
+              <IconButton size="small"  sx={{ color: location.pathname === '/skills' ? '#92E3A9' : '#FFFFFF' }}>
                 <PsychologyIcon/>
               </IconButton>
               Habilidades
             </Button>
             <Button
-              href="#projects"
-              className={ location.pathname === 'projects' ? styles.active_navbarlink : styles.navbarlink }
+              className={ location.pathname === '/projects' ? styles.active_navbarlink : styles.navbarlink }
               onClick={()=> onUpdateActiveLink('projects')}
               sx={{ my: 2, color: 'white', display: 'block' }}>
-              <IconButton size="small"  sx={{ color: location.pathname === 'projects' ? '#92E3A9' : '#FFFFFF' }}>
+              <IconButton size="small"  sx={{ color: location.pathname === '/projects' ? '#92E3A9' : '#FFFFFF' }}>
                 <IntegrationInstructionsIcon/>
               </IconButton>
               Proyectos
             </Button>
             <Button
-              href="#contact"
-              className={ location.pathname === 'contact' ? styles.active_navbarlink : styles.navbarlink }
+              className={ location.pathname === '/contact' ? styles.active_navbarlink : styles.navbarlink }
               onClick={()=> onUpdateActiveLink('contact')}
               sx={{ my: 2, color: 'white', display: 'block' }}>
-              <IconButton size="small"  sx={{ color: location.pathname === 'contact' ? '#92E3A9' : '#FFFFFF' }}>
+              <IconButton size="small"  sx={{ color: location.pathname === '/contact' ? '#92E3A9' : '#FFFFFF' }}>
                 <ContactMailIcon/>
               </IconButton>
               Contacto
