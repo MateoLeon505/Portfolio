@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router-dom';
 import { Grid, Typography } from '@mui/material';
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
@@ -16,8 +17,11 @@ import Me from '../../assets/img/Me.jpg';
 import navIcon1 from '../../assets/img/nav-icon1.svg';
 import navIcon2 from '../../assets/img/nav-icon2.svg';
 import navIcon3 from '../../assets/img/nav-icon3.svg';
+import { Navigate } from 'react-router-dom';
 
 const About = () => {
+
+    const navigate = useNavigate();
 
     return (   
         <section className={styles.container}>
@@ -26,7 +30,7 @@ const About = () => {
                 direction='row'
                 className={styles.gridContainer}>
                 <Grid item xs={4} md='' xl=''>
-                    <Card sx={{ minWidth: 275, height:450 }} className={styles.mainCard}>
+                    <Card sx={{ minWidth: 275, height:480 }} className={styles.mainCard}>
                         <CardContent>
                             <Stack>
                                 <Avatar alt="Me" src={Me} sx={{ width: 80, height: 80, zoom: 2.0}} className={styles.avatar}/>
@@ -46,19 +50,21 @@ const About = () => {
                             <Typography variant="body2">
                                 <EmailIcon style={{ color: '#92E3A9' }}/> mateolt505@gmail.com 
                             </Typography>
-                            <Typography variant="body2">
-                                
-                            </Typography>
                             <span className={styles.navbar_text}> 
                                 <div className={styles.social_icon}>
-                                    <a href="#"><img src={navIcon1} alt="Linkedin" /></a>
-                                    <a href="#"><img src={navIcon2} alt="Github" /></a>
-                                    <a href="#"><img src={navIcon3} alt="StackOverflow" /></a>
+                                    <a href="https://www.linkedin.com/in/mateo-le%C3%B3n-097b57268/" target='blank'>
+                                        <LinkedInIcon className={styles.socialMedia}/>
+                                    </a>
+                                    <a href="https://github.com/MateoLeon505" target='blank'>
+                                        <GitHubIcon className={styles.socialMedia}/>
+                                    </a>
                                 </div> 
                             </span>
                         </CardContent>
                         <CardActions>
-                            <button className={styles.connect} onClick={()=>alert('connect') }><span>Let´s connect</span></button>
+                            <Button className={styles.connect} onClick={()=>navigate('/skills')}>
+                                Habilidades
+                            </Button>
                         </CardActions>
                     </Card>
                 </Grid>
