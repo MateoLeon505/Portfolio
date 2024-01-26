@@ -14,6 +14,9 @@
 .mainCard {
     background-color: #E0E0E0;
 }
+.header {
+    background-image: url(../../assets/img/wavey-fingerprint.svg);
+}
 .avatar {
     border: 4px solid #92E3A9;
 }
@@ -95,40 +98,44 @@
 }
 .social_icon a:hover::before {
     transform: scale(1);
+    background-color: #121212;
+    /* border: 1px solid #92E3A9 !important; */
 }
-.social_icon a img {
-    width: 40%;
-    z-index: 1;
-    transition: 0.3s ease-in-out;
-}
-.social_icon a:hover img {
-    filter: brightness(0) saturate(100%) invert(0%) sepia(7%) saturate(98%) hue-rotate(346deg) brightness(95%) contrast(86%);
-}
-.socialMedia {
+.social_icon a .socialMedia {
     width: 100%;
     z-index: 1;
     transition: 0.3s ease-in-out;
-    color: #ffffff;
-}
-.socialMedia:hover {
     color: #121212;
 }
+.social_icon a:hover .socialMedia {
+    color: #92E3A9;
+}
+
 .connect {
+    color: #ffffff;
+    border: 1px solid #92E3A9;
     background-color: #121212;
-    font-weight: 400;
-    height: 45px;
-    color: #fff;
-    border: 1px solid #fff;
+    font-weight: 500;
+    height: 40px;
     border-radius: 15px;
     padding: 10px 10px;
     font-size: 1rem;
     transition: 0.3s ease-in-out;
 }
 .connect:hover {
-    color: #92E3A9;
-    border: 1px solid #92E3A9;
-    background-color: #FFFFFF;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    background-color: #121212;
 }
+
+.anchor {
+    text-decoration: none;
+    color: #121212;
+}
+.anchor:hover:active {
+    color: #3d3c3c;
+}
+
 
 
 

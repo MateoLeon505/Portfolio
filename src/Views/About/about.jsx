@@ -12,12 +12,10 @@ import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import EmailIcon from '@mui/icons-material/Email';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
+import PsychologyIcon from '@mui/icons-material/Psychology';
 import styles from  './about.module.css';
 import Me from '../../assets/img/Me.jpg';
-import navIcon1 from '../../assets/img/nav-icon1.svg';
-import navIcon2 from '../../assets/img/nav-icon2.svg';
-import navIcon3 from '../../assets/img/nav-icon3.svg';
-import { Navigate } from 'react-router-dom';
+import Wavey from "../../assets/img/wavey-fingerprint.svg";
 
 const About = () => {
 
@@ -32,7 +30,7 @@ const About = () => {
                 <Grid item xs={4} md='' xl=''>
                     <Card sx={{ minWidth: 275, height:480 }} className={styles.mainCard}>
                         <CardContent>
-                            <Stack>
+                            <Stack className={styles.header}>
                                 <Avatar alt="Me" src={Me} sx={{ width: 80, height: 80, zoom: 2.0}} className={styles.avatar}/>
                             </Stack>
                             <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
@@ -45,10 +43,14 @@ const About = () => {
                                 Desarrollador Fullstack / Frontend & Estudiante de ingeniería multimedia
                             </Typography>
                             <Typography variant="body2">
-                                <PhoneIcon style={{ color: '#92E3A9' }}/><WhatsAppIcon style={{ color: '#92E3A9' }}/> (+57) 3245310153 
-                            </Typography>
+                                <a href="https://wa.me/3245310156" className={styles.anchor} target='blank'>
+                                    <PhoneIcon style={{ color: '#92E3A9' }}/><WhatsAppIcon style={{ color: '#92E3A9' }}/> (+57) 3245310153 
+                                </a>
+                            </Typography>    
                             <Typography variant="body2">
-                                <EmailIcon style={{ color: '#92E3A9' }}/> mateolt505@gmail.com 
+                                <a href="mailto:mateolt505@gmail.com" className={styles.anchor} target='blank'>
+                                    <EmailIcon style={{ color: '#92E3A9' }}/> mateolt505@gmail.com 
+                                </a>
                             </Typography>
                             <span className={styles.navbar_text}> 
                                 <div className={styles.social_icon}>
@@ -63,7 +65,7 @@ const About = () => {
                         </CardContent>
                         <CardActions>
                             <Button className={styles.connect} onClick={()=>navigate('/skills')}>
-                                Habilidades
+                                <PsychologyIcon/>Habilidades
                             </Button>
                         </CardActions>
                     </Card>
