@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Grid, Typography } from '@mui/material';
 import Card from '@mui/material/Card';
@@ -6,6 +7,10 @@ import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
 import Avatar from '@mui/material/Avatar';
 import Stack from '@mui/material/Stack';
+import Tabs from '@mui/material/Tabs';
+import Tab from '@mui/material/Tab';
+import Paper from '@mui/material/Paper';
+
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import PhoneIcon from '@mui/icons-material/Phone';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
@@ -20,6 +25,11 @@ import Wavey from "../../assets/img/wavey-fingerprint.svg";
 const About = () => {
 
     const navigate = useNavigate();
+    const [value, setValue] = useState('1');
+
+    const handleChange = (event, value) => {
+      setValue(value);
+    };
 
     return (   
         <section className={styles.container}>
@@ -71,20 +81,40 @@ const About = () => {
                     </Card>
                 </Grid>
                 <Grid item xs={4} md='' xl=''>
-                    <Card sx={{ minWidth: 275, height:450 }} className={styles.secondCard}>
+                    <Card sx={{ minWidth: 275, height:480 }} className={styles.secondCard}>
                         <CardContent>
-                            <Typography variant='body1' align='center' gutterBottom >
-                                Soy estudiante de ingeniería multimedia y desarrollador web fullstack.
-                            </Typography>
-                            <Typography variant='body1' align='center' gutterBottom>
-                                <b>Mi enfoque está en el desarrollo frontend, donde trabajo para crear soluciones web 
-                                elegantes y funcionales que brinden una experiencia única a los usuarios.</b>
-                            </Typography>
-                            <Typography variant='body1' align='center'>
-                                Mis objetivos profesionales son crecer como desarrollador web, explorar el emocionante 
-                                mundo del desarrollo de aplicaciones móviles y contribuir a proyectos que generen un 
-                                impacto positivo en la sociedad.
-                            </Typography>
+                            <div>
+                                <Tabs value={value} onChange={handleChange}
+                                    textColor="#92E3A9"
+                                    color="#92E3A9">
+                                    <Tab label="Educación" value='1' 
+                                        className={value === "1" ? styles.tabSelected : styles.tab}
+                                    />
+                                    <Tab label="Experiencia" value='2'                                        
+                                        className={value === "2" ? styles.tabSelected : styles.tab}
+                                    />
+                                </Tabs>
+                                {value === "1" && (
+                                    <Paper className={styles.paper}>
+                                        <Typography variant='body1' align='center' gutterBottom >
+                                            Soy estudiante de ingeniería multimedia y desarrollador web fullstack.
+                                        </Typography>
+                                        <Typography variant='body1' align='center' gutterBottom>
+                                            <b>Mi enfoque está en el desarrollo frontend, donde trabajo para crear soluciones web 
+                                            elegantes y funcionales que brinden una experiencia única a los usuarios.</b>
+                                        </Typography>
+                                    </Paper>
+                                )}
+                                {value === "2" && (
+                                    <Paper className={styles.paper}>
+                                        <Typography variant='body1' align='center'>
+                                            Mis objetivos profesionales son crecer como desarrollador web, explorar el emocionante 
+                                            mundo del desarrollo de aplicaciones móviles y contribuir a proyectos que generen un 
+                                            impacto positivo en la sociedad.
+                                        </Typography>
+                                    </Paper>
+                                )}
+                            </div>
                         </CardContent>
                         <CardActions>
                             <Button size="small">Learn More</Button>

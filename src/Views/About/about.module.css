@@ -21,11 +21,6 @@
     border: 4px solid #92E3A9;
 }
 
-.secondCard {
-    background-color: #121212 !important;
-    color: #ffffff !important;
-}
-
 /* SocialMedia */
 .navbar_text {
     display: flex;
@@ -112,9 +107,9 @@
 }
 
 .connect {
-    color: #ffffff;
-    border: 1px solid #92E3A9;
-    background-color: #121212;
+    color: #ffffff !important;
+    border: 1px solid #92E3A9 !important;
+    background-color: #121212 !important;
     font-weight: 500;
     height: 40px;
     border-radius: 15px;
@@ -123,9 +118,9 @@
     transition: 0.3s ease-in-out;
 }
 .connect:hover {
-    color: #ffffff;
-    border: 1px solid #ffffff;
-    background-color: #121212;
+    color: #ffffff !important;
+    border: 1px solid #ffffff !important;
+    background-color: #121212 !important;
 }
 
 .anchor {
@@ -136,9 +131,18 @@
     color: #3d3c3c;
 }
 
+.secondCard {
+    background-color: #121212 !important;
+    color: #ffffff !important;
+    border: 1px solid #ffffff !important;
+}
 
-
-
+.tab {
+    color: #ffffff !important;
+}
+.tabSelected {
+    /* color: #92E3A9 !important; */
+}
 
 /*  */
 .skills a {
