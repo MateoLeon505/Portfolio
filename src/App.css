@@ -31,8 +31,7 @@ body {
   font-weight: 400;
   overflow-x: hidden;
   position: relative; 
-  /* background-image: url(https://images.unsplash.com/photo-1583446763077-29c444445856?q=80&w=2038&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D); */
-  background-image: url(./assets/img/endless-constellation-darkMode.svg);
+   background-image: url(./assets/img/endless-constellation-darkMode.svg);
   color: #ffff !important;
   font-family: Centra, sans-serif;
 }
