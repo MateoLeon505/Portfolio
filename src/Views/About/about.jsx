@@ -85,8 +85,8 @@ const About = () => {
                         <CardContent>
                             <div>
                                 <Tabs value={value} onChange={handleChange}
-                                    textColor="#92E3A9"
-                                    color="#92E3A9">
+                                    // textColor="#92E3A9"
+                                    >
                                     <Tab label="Educación" value='1' 
                                         className={value === "1" ? styles.tabSelected : styles.tab}
                                     />
