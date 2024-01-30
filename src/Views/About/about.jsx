@@ -76,7 +76,7 @@ const About = () => {
                         </CardContent>
                         <CardActions>
                             <Button className={styles.resume} onClick={()=>window.open('https://docs.google.com/document/d/e/2PACX-1vSzKjJ3hAiBzIkVdRxHXcX22_eJR9VlFzltUmj-XaHPhZi-jXz0Ljn6c_xFuHMedvXoqWKJgqQTcnV9/pub', '_blank')}>
-                                <DocumentScannerIcon/>Curriculum
+                                <DocumentScannerIcon/>CV
                             </Button>
                         </CardActions>
                     </Card>
