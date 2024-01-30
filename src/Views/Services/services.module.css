@@ -1,0 +1,7 @@
+.skillsContainer {
+    min-height: 105vh;
+    position: relative;
+    padding-top: 20vh;
+    padding-left: 2vw;
+    padding-right: 2vw;
+}
