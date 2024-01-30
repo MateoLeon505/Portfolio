@@ -18,6 +18,7 @@ import EmailIcon from '@mui/icons-material/Email';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import PsychologyIcon from '@mui/icons-material/Psychology';
+import DocumentScannerIcon from '@mui/icons-material/DocumentScanner';
 import styles from  './about.module.css';
 import Me from '../../assets/img/Me.jpg';
 import Wavey from "../../assets/img/wavey-fingerprint.svg";
@@ -74,8 +75,8 @@ const About = () => {
                             </span>
                         </CardContent>
                         <CardActions>
-                            <Button className={styles.connect} onClick={()=>navigate('/skills')}>
-                                <PsychologyIcon/>Habilidades
+                            <Button className={styles.resume} onClick={()=>window.open('https://docs.google.com/document/d/e/2PACX-1vSzKjJ3hAiBzIkVdRxHXcX22_eJR9VlFzltUmj-XaHPhZi-jXz0Ljn6c_xFuHMedvXoqWKJgqQTcnV9/pub', '_blank')}>
+                                <DocumentScannerIcon/>Curriculum
                             </Button>
                         </CardActions>
                     </Card>
@@ -96,28 +97,61 @@ const About = () => {
                                 </Tabs>
                                 {value === "1" && (
                                     <Paper className={styles.paper}>
-                                        <Typography variant='body1' align='center' gutterBottom >
-                                            Soy estudiante de ingeniería multimedia y desarrollador web fullstack.
+                                        <Typography variant='h5' align='center'  style={{ color: '#92E3A9' }}>
+                                            Desarrollador FullStack 
                                         </Typography>
-                                        <Typography variant='body1' align='center' gutterBottom>
-                                            <b>Mi enfoque está en el desarrollo frontend, donde trabajo para crear soluciones web 
-                                            elegantes y funcionales que brinden una experiencia única a los usuarios.</b>
+                                        <Typography variant='body1' align='center' >
+                                            <a href="https://certificates.soyhenry.com/new-cert?id=3af51b507287f18ecd58ebabbd94c9c5cb8adf8671032854b18e34051a448e28"
+                                                target='blank' style={{ color: '#FFFFFF' }}>
+                                                <b>Bootcamp SoyHenry</b> 
+                                            </a> 
+                                        </Typography>
+                                        <Typography variant='body1' align='center' >
+                                            2023 
+                                        </Typography>
+                                        <Typography variant='body2' align='center' gutterBottom marginBottom={[10]} >
+                                            <b> +800 </b> horas de cursada
+                                        </Typography>
+                                        <Typography variant='h5' align='center'  style={{ color: '#92E3A9' }}>
+                                            Ingeniería multimedia 
+                                        </Typography>
+                                        <Typography variant='body1' align='center' >
+                                        <b> UNAD</b> 
+                                            <a href="https://www.unad.edu.co/"
+                                                target='blank' style={{ color: '#FFFFFF' }}>
+                                                
+                                            </a>  
+                                        </Typography>
+                                        <Typography variant='body1' align='center' >
+                                            2022 - En curso actualmente
+                                        </Typography>
+                                        <Typography variant='body2' align='center' >
+                                            <b>10 </b> semestres
                                         </Typography>
                                     </Paper>
                                 )}
                                 {value === "2" && (
                                     <Paper className={styles.paper}>
-                                        <Typography variant='body1' align='center'>
-                                            Mis objetivos profesionales son crecer como desarrollador web, explorar el emocionante 
-                                            mundo del desarrollo de aplicaciones móviles y contribuir a proyectos que generen un 
-                                            impacto positivo en la sociedad.
+                                        <Typography variant='h5' align='center' style={{ color: '#92E3A9' }} marginTop={[10]} >
+                                            Proyecto Final SoyHenry
                                         </Typography>
+                                        <Typography variant='body1' align='center' >
+                                            <b>E-commerce 'Las Encinas Boutique'</b> 
+                                        </Typography>
+                                        <Typography variant='body1' align='center' >
+                                            Oct. 2023 - Nov. 2023 
+                                        </Typography>
+                                        {/* <Typography variant='body2' align='center' gutterBottom >
+                                            <b> +800 </b> horas de cursada
+                                        </Typography> */}
                                     </Paper>
                                 )}
                             </div>
                         </CardContent>
                         <CardActions>
-                            <Button size="small">Learn More</Button>
+                            <Button className={styles.skills} onClick={()=>navigate('/skills')}>
+                                <PsychologyIcon/>Habilidades
+                            </Button>
                         </CardActions>
                     </Card>
                 </Grid>
