@@ -4,3 +4,10 @@
     padding-left: 2vw;
     padding-right: 2vw;
 }
+.cardTool {
+    background-color: transparent;
+    border: 1px solid transparent !important;
+}
+.icon {
+    height: 80px;
+}

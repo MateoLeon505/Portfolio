@@ -116,7 +116,7 @@ const About = () => {
                                             Ingeniería multimedia 
                                         </Typography>
                                         <Typography variant='body1' align='center' >
-                                        <b> UNAD</b> 
+                                        <b> UMNG</b> 
                                             <a href="https://www.unad.edu.co/"
                                                 target='blank' style={{ color: '#FFFFFF' }}>
                                                 
