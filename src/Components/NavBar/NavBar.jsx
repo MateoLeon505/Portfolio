@@ -15,13 +15,8 @@ import ArticleIcon from '@mui/icons-material/Article';
 import PsychologyIcon from '@mui/icons-material/Psychology';
 import IntegrationInstructionsIcon from '@mui/icons-material/IntegrationInstructions';
 import ContactMailIcon from '@mui/icons-material/ContactMail';
-// import { InfoIcon, HomeIcon } from '@mui/icons-material';
 import MenuIcon from '@mui/icons-material/Menu';
-
 import logo from '../../assets/img/logo.svg';
-import navIcon1 from '../../assets/img/nav-icon1.svg';
-import navIcon2 from '../../assets/img/nav-icon2.svg';
-import navIcon3 from '../../assets/img/nav-icon3.svg';
 import styles from './NavBar.module.css';
 
 

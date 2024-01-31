@@ -1,11 +1,18 @@
 .skillsContainer {
     min-height: 105vh;
-    padding-top: 20vh;
+    padding-top: 13vh;
     padding-left: 2vw;
     padding-right: 2vw;
-    padding-bottom: 2vh;
+    padding-bottom: 5vh;
     width: 100vw;
     margin: 0 auto;
+}
+.gridContainer {
+    border: 1px solid #FFFFFF;
+    border-radius: 20px;
+    margin-top: 0vh;
+    margin-bottom: 2vh;
+    padding-bottom: 1vh;
 }
 .gridTool {
     background-color: transparent;
@@ -14,10 +21,13 @@
     align-items: center;
 }
 .title {
-    color: #92E3A9;
+    color: #FFFFFF;
     font-weight: 400;
 }
 .icon {
     font-size: 50px;
     border: 1px solid white;
+}
+.projects {
+    margin: 1%;
 }
