@@ -9,7 +9,6 @@ import { SiJavascript } from "react-icons/si";
 import { FaReact } from "react-icons/fa";
 import { SiRedux } from "react-icons/si";
 import { SiPostgresql } from "react-icons/si";
-
 import { SiVisualstudiocode } from "react-icons/si";
 import { FaGithub } from "react-icons/fa";
 import { AiFillSlackCircle } from "react-icons/ai";
@@ -24,22 +23,22 @@ const Services = () => {
   const navigate = useNavigate();
 
   const devTools = [
-    {name: 'HTML', image1: <FaHtml5 style={{ fontSize: '70px' }} classname={styles.icon}/>},
-    {name: 'CSS', image1: <FaCss3Alt style={{ fontSize: '70px' }} />},
-    {name: 'JS', image1: <SiJavascript style={{ fontSize: '70px' }} />},
-    {name: 'React', image1: <FaReact style={{ fontSize: '70px' }} />},
-    {name: 'Redux', image1: <SiRedux style={{ fontSize: '70px' }} />},
-    {name: 'PGAdmin', image1: <SiPostgresql style={{ fontSize: '70px' }} /> },
+    {name: 'HTML', image1: <FaHtml5 className={styles.icon}/>},
+    {name: 'CSS', image1: <FaCss3Alt className={styles.icon}/>},
+    {name: 'JS', image1: <SiJavascript className={styles.icon}/>},
+    {name: 'React', image1: <FaReact style={{ fontSize: '70px' }} className={styles.icon}/>},
+    {name: 'Redux', image1: <SiRedux className={styles.icon}/>},
+    {name: 'PGAdmin', image1: <SiPostgresql className={styles.icon}/> },
     {name: 'SQL', image1: FaHtml5}
   ];
 
   const tools = [
-    {name: 'VSCode', image1: <SiVisualstudiocode style={{ fontSize: '70px' }} classname={styles.icon}/>},
-    {name: 'GitHub', image1: <FaGithub style={{ fontSize: '70px' }} />},
-    {name: 'Slack', image1: <AiFillSlackCircle style={{ fontSize: '70px' }} />},
-    {name: 'GHProjects', image1: <GrProjects style={{ fontSize: '70px' }} />},
-    {name: 'Trello', image1: <FaTrello style={{ fontSize: '70px' }} />},
-    {name: 'Git', image1: <FaGitAlt style={{ fontSize: '70px' }} /> },
+    {name: 'VSCode', image1: <SiVisualstudiocode className={styles.icon}/>},
+    {name: 'GitHub', image1: <FaGithub className={styles.icon}/>},
+    {name: 'Slack', image1: <AiFillSlackCircle className={styles.icon}/>},
+    {name: 'GHProjects', image1: <GrProjects className={styles.icon}/>},
+    {name: 'Trello', image1: <FaTrello style={{ fontSize: '70px' }} className={styles.icon}/>},
+    {name: 'Git', image1: <FaGitAlt className={styles.icon}/> },
   ];
 
     return (
