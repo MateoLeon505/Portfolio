@@ -1,18 +1,23 @@
 .skillsContainer {
     min-height: 105vh;
-    padding-top: 25vh;
+    padding-top: 20vh;
     padding-left: 2vw;
     padding-right: 2vw;
+    padding-bottom: 2vh;
     width: 100vw;
     margin: 0 auto;
 }
 .gridTool {
     background-color: transparent;
-
     justify-content: center;
     display: flex;
     align-items: center;
 }
+.title {
+    color: #92E3A9;
+    font-weight: 400;
+}
 .icon {
-    height: 80px;
+    font-size: 50px;
+    border: 1px solid white;
 }
