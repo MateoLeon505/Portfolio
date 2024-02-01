@@ -1,22 +1,11 @@
-import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import Box from '@mui/material/Box';
-import { Grid, Typography, Button } from '@mui/material';
-import styles from './services.module.css';
-import { FaHtml5 } from "react-icons/fa";
-import { FaCss3Alt } from "react-icons/fa";
-import { SiJavascript } from "react-icons/si";
-import { FaReact } from "react-icons/fa";
-import { SiRedux } from "react-icons/si";
-import { SiPostgresql } from "react-icons/si";
-import { SiVisualstudiocode } from "react-icons/si";
-import { FaGithub } from "react-icons/fa";
+import { Box, Grid, Typography, Button } from '@mui/material';
+import { FaHtml5, FaCss3Alt, FaReact, FaGithub, FaTrello, FaGitAlt } from "react-icons/fa";
+import { SiJavascript, SiRedux, SiPostgresql, SiVisualstudiocode } from "react-icons/si";
 import { AiFillSlackCircle } from "react-icons/ai";
 import { GrProjects } from "react-icons/gr";
-import { FaTrello } from "react-icons/fa";
-import { FaGitAlt } from "react-icons/fa";
-
 import IntegrationInstructionsIcon from '@mui/icons-material/IntegrationInstructions';
+import styles from './services.module.css';
 
 const Services = () => {
 

@@ -1,15 +1,16 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Grid, Typography } from '@mui/material';
-import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
-import CardContent from '@mui/material/CardContent';
-import Button from '@mui/material/Button';
-import Avatar from '@mui/material/Avatar';
-import Stack from '@mui/material/Stack';
-import Tabs from '@mui/material/Tabs';
-import Tab from '@mui/material/Tab';
-import Paper from '@mui/material/Paper';
+import { Grid, 
+    Typography, 
+    Card, 
+    CardActions, 
+    CardContent, 
+    Button, 
+    Avatar, 
+    Stack, 
+    Tabs, 
+    Tab, 
+    Paper } from '@mui/material';
 
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import PhoneIcon from '@mui/icons-material/Phone';
@@ -19,9 +20,8 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import PsychologyIcon from '@mui/icons-material/Psychology';
 import DocumentScannerIcon from '@mui/icons-material/DocumentScanner';
-import styles from  './about.module.css';
 import Me from '../../assets/img/Me.jpg';
-import Wavey from "../../assets/img/wavey-fingerprint.svg";
+import styles from  './about.module.css';
 
 const About = () => {
 
