@@ -11,8 +11,15 @@
     border: 1px solid #FFFFFF;
     border-radius: 20px;
     margin-top: 0vh !important;
-    margin-bottom: 2vh;
+    margin-bottom: 3vh;
     padding-bottom: 1vh;
+}
+.skillContainer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 .gridTool {
     background-color: transparent;
@@ -20,19 +27,32 @@
     display: flex;
     align-items: center;
 }
+.gridTool .skillName {
+    position: absolute;
+    bottom: -10px;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+.gridTool:hover .skillName {
+    opacity: 1;
+}
+.gridTool:hover {
+    color :#92E3A9;
+}
+.gridTool:hover .iconContainer{
+    color :#92E3A9;
+    transform: translateY(-10px);
+    transition: transform 0.2s ease;
+}
 
 .title {
     color: #FFFFFF;
     font-weight: 400;
 }
 .icon {
-    font-size: 70px;
+    font-size: 60px;
 }
-.icon:hover {
-    color :#92E3A9;
-    transform: translateY(-5px);
-    transition: transform 0.2s ease;
-}
+
 .projects {
     margin: 1vh;
 }

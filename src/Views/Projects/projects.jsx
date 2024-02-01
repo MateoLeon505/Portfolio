@@ -68,11 +68,6 @@ const Projects = () => {
               <Grid item xs={2} sm={4} md={4} className={styles.gridProject}>
                 <Card sx={{ maxWidth: 370 }}>
                   <CardHeader
-                    // avatar={
-                    //   <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
-                    //     P
-                    //   </Avatar>
-                    // }
                     action={
                       <IconButton aria-label="settings">
                         <MoreVertIcon />
@@ -130,6 +125,12 @@ const Projects = () => {
               </Grid>
             ))}
         </Grid>
+        <Typography variant='body1' align='center'>
+          <Button className={styles.bontactButton} variant="contained" onClick={()=>navigate('/contact')}
+              style={{ background: '#ECEFF1', color: '#121212' }}>
+              Contáctame
+          </Button>
+        </Typography>
       </Box>
     );
 };

@@ -6,19 +6,20 @@ import { AiFillSlackCircle } from "react-icons/ai";
 import { GrProjects } from "react-icons/gr";
 import IntegrationInstructionsIcon from '@mui/icons-material/IntegrationInstructions';
 import styles from './services.module.css';
+import { style } from '@mui/system';
 
 const Services = () => {
 
   const navigate = useNavigate();
 
   const devTools = [
-    {name: 'HTML', image1: <FaHtml5 className={styles.icon}/>},
-    {name: 'CSS', image1: <FaCss3Alt className={styles.icon}/>},
-    {name: 'JS', image1: <SiJavascript className={styles.icon}/>},
+    {name: 'HTML5', image1: <FaHtml5 className={styles.icon}/>},
+    {name: 'CSS3', image1: <FaCss3Alt className={styles.icon}/>},
+    {name: 'JavaScript', image1: <SiJavascript className={styles.icon}/>},
     {name: 'React', image1: <FaReact style={{ fontSize: '70px' }} className={styles.icon}/>},
     {name: 'Redux', image1: <SiRedux className={styles.icon}/>},
-    {name: 'PGAdmin', image1: <SiPostgresql className={styles.icon}/> },
-    {name: 'SQL', image1: FaHtml5}
+    {name: 'PostgreSQL', image1: <SiPostgresql className={styles.icon}/> },
+    // {name: 'SQL', image1: FaHtml5}
   ];
 
   const tools = [
@@ -40,10 +41,14 @@ const Services = () => {
           className={styles.gridContainer} >
           {devTools.map((tool, index) => (
             <Grid item xs={2} sm={4} md={4} key={index} className={styles.gridTool}>
-              <span>{tool.image1}</span>
-              {/* <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
-                {tool.name}
-              </Typography> */}
+              <span className={styles.skillContainer}>
+                <span className={styles.iconContainer}>
+                  {tool.image1}
+                </span>
+                <Typography sx={{ fontSize: 14 }} className={styles.skillName}>
+                  {tool.name}
+                </Typography>
+              </span>
             </Grid>
           ))}
         </Grid>
@@ -55,10 +60,14 @@ const Services = () => {
           className={styles.gridContainer}>
           {tools.map((tool, index) => (
             <Grid item xs={2} sm={4} md={4} key={index} className={styles.gridTool}>
-              <span>{tool.image1}</span>
-              {/* <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
-                {tool.name}
-              </Typography> */}
+              <span className={styles.skillContainer}>
+                <span className={styles.iconContainer}>
+                  {tool.image1}
+                </span>
+                <Typography sx={{ fontSize: 14 }} className={styles.skillName}>
+                  {tool.name}
+                </Typography>
+              </span>
             </Grid>
           ))}
         </Grid>
