@@ -1,4 +1,19 @@
 .projectsContainer {
     min-height: 102vh;
-    padding-top: 13vh;
+    padding-top: 15vh;
+    margin-bottom: 6vh;
+    padding-left: 5vw;
+    padding-right: 5vw;
+}
+.gridContainer {
+    border-radius: 20px;
+    margin: 0 auto;
+}
+.gridProject {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cardVideo {
+
 }
