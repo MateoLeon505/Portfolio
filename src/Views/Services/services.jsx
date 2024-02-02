@@ -1,12 +1,11 @@
 import { useNavigate } from 'react-router-dom';
 import { Box, Grid, Typography, Button } from '@mui/material';
-import { FaHtml5, FaCss3Alt, FaReact, FaGithub, FaTrello, FaGitAlt } from "react-icons/fa";
+import { FaHtml5, FaCss3Alt, FaReact, FaGithub, FaTrello, FaGitAlt, FaGitSquare  } from "react-icons/fa";
 import { SiJavascript, SiRedux, SiPostgresql, SiVisualstudiocode } from "react-icons/si";
 import { AiFillSlackCircle } from "react-icons/ai";
 import { GrProjects } from "react-icons/gr";
 import IntegrationInstructionsIcon from '@mui/icons-material/IntegrationInstructions';
 import styles from './services.module.css';
-import { style } from '@mui/system';
 
 const Services = () => {
 
@@ -19,14 +18,13 @@ const Services = () => {
     {name: 'React', image1: <FaReact style={{ fontSize: '70px' }} className={styles.icon}/>},
     {name: 'Redux', image1: <SiRedux className={styles.icon}/>},
     {name: 'PostgreSQL', image1: <SiPostgresql className={styles.icon}/> },
-    // {name: 'SQL', image1: FaHtml5}
   ];
 
   const tools = [
     {name: 'VSCode', image1: <SiVisualstudiocode className={styles.icon}/>},
     {name: 'GitHub', image1: <FaGithub className={styles.icon}/>},
     {name: 'Slack', image1: <AiFillSlackCircle className={styles.icon}/>},
-    {name: 'GHProjects', image1: <GrProjects className={styles.icon}/>},
+    {name: 'GHProjects', image1: <FaGitSquare className={styles.icon}/>},
     {name: 'Trello', image1: <FaTrello style={{ fontSize: '70px' }} className={styles.icon}/>},
     {name: 'Git', image1: <FaGitAlt className={styles.icon}/> },
   ];

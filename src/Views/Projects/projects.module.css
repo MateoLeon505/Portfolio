@@ -10,10 +10,10 @@
     margin: 0 auto;
 }
 .gridProject {
-    display: flex;
-    align-items: center;
+    display:flex;
+    align-items:flex-start;
     justify-content: center;
 }
 .bontactButton {
-    margin: 5vh;
+    margin: 15vh !important;
 }

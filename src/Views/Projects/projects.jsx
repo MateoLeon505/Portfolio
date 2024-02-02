@@ -10,38 +10,24 @@ import { Grid,
   CardContent, 
   CardActions,
   Collapse, 
-  Avatar, 
   IconButton, } from '@mui/material';
-import FavoriteIcon from '@mui/icons-material/Favorite';
-import ShareIcon from '@mui/icons-material/Share';
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore'; 
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import { red } from '@mui/material/colors';
 import { styled } from '@mui/material/styles';
+import FavoriteIcon from '@mui/icons-material/Favorite';
 import lasEncinasBoutique from '../../assets/img/projects/Las-Encinas-Boutique.png';
+import { FaGithub, FaYoutube  } from "react-icons/fa";
 import raceHub from '../../assets/img/projects/Race-Hub.png';
+import { IoLogoVercel } from "react-icons/io5";
 import styles from './projects.module.css';
 
 const Projects = () => {
 
   const navigate = useNavigate();
 
-  const projects = [
-    // {name: 'Rick & Morty', date: 'Mayo, 2023', image: lasEncinasBoutique, technologies:'', 
-    //   repo:'https://github.com/MateoLeon505/rick_and_morty', deploy:'', description: ''
-    // },
-    {name: 'Pokemons', date: 'Septiembre, 2023', image: lasEncinasBoutique,  technologies:'', 
-      repo:'https://github.com/MateoLeon505/PI-Pokemon-main', deploy:'', description: ''
-    },
-    {name: 'RaceHub', date: 'Octubre, 2023', image: raceHub, technologies: 'React, Redux, Node, Express y Sequelize', 
-      repo: 'https://github.com/MateoLeon505/PI-Drivers', deploy: '', 
-      description: 'SPA desarrollada con una API con pilotos de F1.'
-    },
-    {name: 'Las Encinas Boutique', date: 'Noviembre, 2023', image: lasEncinasBoutique, technologies:'', 
-      repo:'https://github.com/thomasrey99/Las-Encinas-Boutique-', deploy:'', 
-      description: 'E-Commerce para chocolatería artesanal ubicada en San Miguel de Tucuman'
-    },
-  ];
+  const [expanded, setExpanded] = useState(false);
+  const [expanded2, setExpanded2] = useState(false);
 
   const ExpandMore = styled((props) => {
     const { expand, ...other } = props;
@@ -54,11 +40,26 @@ const Projects = () => {
     }),
   }));
 
-  const [expanded, setExpanded] = useState(false);
-
-  const handleExpandClick = () => {
-    setExpanded(!expanded);
+  const handleExpandClick = (id) => {
+    id === '1' ? setExpanded(!expanded)
+    : setExpanded2(!expanded2);
   };
+
+  const projects = [
+    {name: 'RaceHub', date: 'Octubre, 2023', image: raceHub, technologies: 'React, Redux, Node, Express y Sequelize', 
+      repo: 'https://github.com/MateoLeon505/PI-Drivers', deploy: '', video: '',
+      description: 'SPA desarrollada con una API con pilotos de F1. Este fue un proyecto individual para el bootcamp de SOYHENRY.',
+      expanded: expanded,
+      id: '1', title: 'Desarrollo del proyecto:', details:''
+    },
+    {name: 'Las Encinas Boutique', date: 'Noviembre, 2023', image: lasEncinasBoutique, technologies:'', 
+      repo:'https://github.com/thomasrey99/Las-Encinas-Boutique-', deploy:'https://las-encinas-boutique-omega.vercel.app/home', 
+      video: 'https://www.youtube.com/watch?v=ld3ZKo4DfjE&t=58s',
+      description: 'E-Commerce de chocolatería artesanal ubicada en Tucumán. Fue el proyecto grupal final del bootcamp de SOYHENRY.',
+      expanded: expanded2,
+      id: '2', title: 'Participación en el proyecto:', details:''
+    }
+  ];
 
     return (
       <Box sx={{ flexGrow: 1 }} className={styles.projectsContainer}>
@@ -68,17 +69,11 @@ const Projects = () => {
               <Grid item xs={2} sm={4} md={4} className={styles.gridProject}>
                 <Card sx={{ maxWidth: 370 }}>
                   <CardHeader
-                    action={
-                      <IconButton aria-label="settings">
-                        <MoreVertIcon />
-                      </IconButton>
-                    }
                     title={project.name}
                     subheader={project.date}
                   />
                     <CardMedia
                       component="img"
-                      // height="200"
                       image={project.image}
                       alt={project.name}
                     />
@@ -88,24 +83,36 @@ const Projects = () => {
                       </Typography>
                     </CardContent>
                     <CardActions disableSpacing>
-                      <IconButton aria-label="add to favorites">
+                      {/* <IconButton aria-label="add to favorites">
                         <FavoriteIcon />
+                      </IconButton> */}
+                      <IconButton aria-label="add to favorites">
+                        <a target='blank' href={project.repo}>
+                          <FaGithub />                        
+                        </a>
                       </IconButton>
-                      <IconButton aria-label="share">
-                        <ShareIcon />
+                      <IconButton aria-label="add to favorites">
+                        <a target='blank' href={project.deploy}>
+                          <IoLogoVercel />
+                        </a>
+                      </IconButton>
+                      <IconButton aria-label="add to favorites">
+                        <a target='blank' href={project.video}>
+                          <FaYoutube/>
+                        </a>
                       </IconButton>
                       <ExpandMore
-                        expand={expanded}
-                        onClick={handleExpandClick}
-                        aria-expanded={expanded}
+                        expand={project.expanded}
+                        onClick={()=>handleExpandClick(project.id)}
+                        aria-expanded={project.expanded}
                         aria-label="show more"
                       >
                         <ExpandMoreIcon />
                       </ExpandMore>
                     </CardActions>
-                    <Collapse in={expanded} timeout="auto" unmountOnExit>
+                    <Collapse in={project.expanded} timeout="auto" unmountOnExit id={project.id}>
                       <CardContent>
-                        <Typography paragraph>Descripción:</Typography>
+                        <Typography variant="h6" gutterBottom align='center'>{project.title}</Typography>
                         <Typography paragraph>
                           Heat 1/2 cup of the broth in a pot until simmering, add saffron and set
                           aside for 10 minutes.
