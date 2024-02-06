@@ -47,7 +47,7 @@ const Projects = () => {
 
   const projects = [
     {name: 'RaceHub', date: 'Octubre, 2023', image: raceHub, technologies: 'React, Redux, Node, Express y Sequelize', 
-      repo: 'https://github.com/MateoLeon505/PI-Drivers', deploy: '', video: '',
+      repo: 'https://github.com/MateoLeon505/PI-Drivers', deploy: 'https://deploy-eight-xi.vercel.app/', video: '',
       description: 'SPA desarrollada con una API con pilotos de F1. Este fue un proyecto individual para el bootcamp de SOYHENRY.',
       expanded: expanded,
       id: '1', title: 'Desarrollo del proyecto:', details:''
@@ -63,6 +63,12 @@ const Projects = () => {
 
     return (
       <Box sx={{ flexGrow: 1 }} className={styles.projectsContainer}>
+              <Typography variant='body1' align='center'>
+          <Button className={styles.bontactButton} variant="contained" onClick={()=>navigate('/contact')}
+              style={{ background: '#ECEFF1', color: '#121212' }}>
+              Contáctame
+          </Button>
+        </Typography>
         <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }} justifyContent='center' 
           className={styles.gridContainer} >
             {projects.map((project) => (
@@ -96,11 +102,12 @@ const Projects = () => {
                           <IoLogoVercel />
                         </a>
                       </IconButton>
+                      {project.video &&                       
                       <IconButton aria-label="add to favorites">
                         <a target='blank' href={project.video}>
                           <FaYoutube/>
                         </a>
-                      </IconButton>
+                      </IconButton>}
                       <ExpandMore
                         expand={project.expanded}
                         onClick={()=>handleExpandClick(project.id)}
@@ -132,12 +139,6 @@ const Projects = () => {
               </Grid>
             ))}
         </Grid>
-        <Typography variant='body1' align='center'>
-          <Button className={styles.bontactButton} variant="contained" onClick={()=>navigate('/contact')}
-              style={{ background: '#ECEFF1', color: '#121212' }}>
-              Contáctame
-          </Button>
-        </Typography>
       </Box>
     );
 };
