@@ -46,18 +46,31 @@ const Projects = () => {
   };
 
   const projects = [
-    {name: 'RaceHub', date: 'Octubre, 2023', image: raceHub, technologies: 'React, Redux, Node, Express y Sequelize', 
+    {name: 'RaceHub', date: 'Octubre, 2023', image: raceHub,
       repo: 'https://github.com/MateoLeon505/PI-Drivers', deploy: 'https://deploy-eight-xi.vercel.app/', video: '',
-      description: 'SPA desarrollada con una API con pilotos de F1. Este fue un proyecto individual para el bootcamp de SOYHENRY.',
+      description: 'SPA desarrollada con una API con pilotos de F1. Fue un proyecto para el bootcamp de SOYHENRY.',
       expanded: expanded,
-      id: '1', title: 'Desarrollo del proyecto:', details:''
+      id: '1', title: 'Desarrollo del proyecto:', 
+      challenges: 'Integrar la API, optimizar el rendimiento y gestionar el estado de la aplicación.',
+      skills: 'Desarrollo Fullstack, UI/UX, React, Redux, Node, Express, Sequelize, CSS.',
+      impact: 'El proyecto me permitió mejorar mis habilidades como desarrollador y crear una aplicación completa y funcional.',
+      title2: 'Funcionalidades:',
+      details: 'La aplicación permite: Buscar pilotos, visualizar la información de los mismos, filtrarlos, ordenarlos y crear nuevos pilotos.',
+      time: '3 Semanas'
     },
-    {name: 'Las Encinas Boutique', date: 'Noviembre, 2023', image: lasEncinasBoutique, technologies:'', 
+    {name: 'Las Encinas Boutique', date: 'Noviembre, 2023', image: lasEncinasBoutique,  
       repo:'https://github.com/thomasrey99/Las-Encinas-Boutique-', deploy:'https://las-encinas-boutique-omega.vercel.app/home', 
       video: 'https://www.youtube.com/watch?v=ld3ZKo4DfjE&t=58s',
-      description: 'E-Commerce de chocolatería artesanal ubicada en Tucumán. Fue el proyecto grupal final del bootcamp de SOYHENRY.',
+      description: 'E-Commerce de chocolatería artesanal. Fue el proyecto grupal final del bootcamp de SOYHENRY.',
       expanded: expanded2,
-      id: '2', title: 'Participación en el proyecto:', details:''
+      id: '2', title:'Participación en el proyecto:',  
+      challenges: 'Implementar una interfaz de usuario atractiva y fácil de usar, integrar diferentes tecnologías y optimizar el rendimiento de la aplicación',
+      skills: 'Desarrollo Front-End/Fullstack, React, Redux Toolkit, Node, Express, Sequelize, Cloudinary, Firebase, Ant Design, UI/UX, Trabajo en equipo.',
+      impact: 'El proyecto me permitió aprender nuevas tecnologías, desarrollar habilidades blandas y trabajar en equipo de forma eficaz.',
+      title2: 'Funcionalidades:',
+      details: 'Usuarios: Registro/inicio de sesión, búsqueda/compra de productos, favoritos, perfil, historial, chat, 4 idiomas.',
+      details2: 'Administradores: Gestión de productos, usuarios, pedidos y pagos.',
+      time: '4 semanas'
     }
   ];
 
@@ -119,19 +132,25 @@ const Projects = () => {
                     </CardActions>
                     <Collapse in={project.expanded} timeout="auto" unmountOnExit id={project.id}>
                       <CardContent>
-                        <Typography variant="h6" gutterBottom align='center'>{project.title}</Typography>
-                        <Typography paragraph>
-                          Heat 1/2 cup of the broth in a pot until simmering, add saffron and set
-                          aside for 10 minutes.
+                      <Typography variant="h6" align='center'>{project.title}</Typography>
+                        <Typography variant="body2" >
+                          <span className={styles.subtitle}>  Habilidades: </span>
+                          {project.skills}
                         </Typography>
-                        <Typography paragraph>
-                          Heat oil paella pan or a large, deep skillet over
-                          medium-high heat. Add chicken, shrimp and chorizo, and cook, stirring
-                          occasionally until lightly browned, 6 to 8 minutes. Transfer shrimp to a
-                          large plate and set aside, leaving chicken and chorizo in the pan. Add
-                          pimentón, bay leaves, garlic, tomatoes, onion, salt and pepper, and cook,
-                          stirring often until thickened and fragrant, about 10 minutes. Add
-                          saffron broth and remaining 4 1/2 cups chicken broth; bring to a boil.
+                        <Typography variant="body2" >
+                          <span className={styles.subtitle}>Desafíos: </span>
+                          {project.challenges}
+                        </Typography>
+                        <Typography variant="body2" gutterBottom>
+                        <span className={styles.subtitle}>Impacto: </span>
+                          {project.impact}
+                        </Typography>
+                        <Typography variant="h6" align='center'>{project.title2}</Typography>
+                        <Typography variant="body2">
+                          {project.details}
+                        </Typography>
+                        <Typography variant="body2">
+                          {project.details2}
                         </Typography>
                       </CardContent>
                     </Collapse>

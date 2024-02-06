@@ -17,3 +17,8 @@
 .bontactButton {
     margin: 5vh !important;
 }
+.subtitle {
+    font-size: 1rem !important;
+    margin-right: 0.2rem;
+    font-weight: 700;
+}
