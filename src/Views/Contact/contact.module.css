@@ -11,5 +11,5 @@ min-height: 102vh;
     color: #FFFFFF !important;
 }
 .textField {
-    background-color: #121212;
+    backdrop-filter: blur(1px) !important;
 }
