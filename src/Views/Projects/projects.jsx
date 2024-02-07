@@ -86,10 +86,12 @@ const Projects = () => {
           className={styles.gridContainer} >
             {projects.map((project) => (
               <Grid item xs={2} sm={4} md={4} className={styles.gridProject}>
-                <Card sx={{ maxWidth: 370 }}>
+                <Card sx={{ maxWidth: 370 }} className={styles.card}>
                   <CardHeader
                     title={project.name}
                     subheader={project.date}
+                    style={{ color: ' #92E3A9' }}
+                    subheaderTypographyProps={{ style: { color: '#FFFFFF' } }}
                   />
                     <CardMedia
                       component="img"
@@ -97,7 +99,7 @@ const Projects = () => {
                       alt={project.name}
                     />
                     <CardContent>
-                      <Typography variant="body2" color="text.secondary">
+                      <Typography variant="body2" color="text.secondary" style={{ color: '#FFFFFF' }}>
                         {project.description}
                       </Typography>
                     </CardContent>
@@ -106,18 +108,18 @@ const Projects = () => {
                         <FavoriteIcon />
                       </IconButton> */}
                       <IconButton aria-label="add to favorites">
-                        <a target='blank' href={project.repo}>
+                        <a target='blank' href={project.repo} className={styles.link}>
                           <FaGithub />                        
                         </a>
                       </IconButton>
                       <IconButton aria-label="add to favorites">
-                        <a target='blank' href={project.deploy}>
+                        <a target='blank' href={project.deploy} className={styles.link}>
                           <IoLogoVercel />
                         </a>
                       </IconButton>
                       {project.video &&                       
                       <IconButton aria-label="add to favorites">
-                        <a target='blank' href={project.video}>
+                        <a target='blank' href={project.video} className={styles.link}>
                           <FaYoutube/>
                         </a>
                       </IconButton>}
@@ -125,31 +127,32 @@ const Projects = () => {
                         expand={project.expanded}
                         onClick={()=>handleExpandClick(project.id)}
                         aria-expanded={project.expanded}
+                        style={{ color: '#FFFFFF' }}
                         aria-label="show more"
                       >
                         <ExpandMoreIcon />
                       </ExpandMore>
                     </CardActions>
-                    <Collapse in={project.expanded} timeout="auto" unmountOnExit id={project.id}>
+                    <Collapse in={project.expanded} timeout="auto" unmountOnExit id={project.id} className={styles.collapse}>
                       <CardContent>
-                      <Typography variant="h6" align='center'>{project.title}</Typography>
-                        <Typography variant="body2" >
+                      <Typography variant="h6" align='center' style={{ color: ' #92E3A9' }}>{project.title}</Typography>
+                        <Typography variant="body2" style={{ color: '#FFFFFF' }}>
                           <span className={styles.subtitle}>  Habilidades: </span>
                           {project.skills}
                         </Typography>
-                        <Typography variant="body2" >
+                        <Typography variant="body2" style={{ color: '#FFFFFF' }}>
                           <span className={styles.subtitle}>Desafíos: </span>
                           {project.challenges}
                         </Typography>
-                        <Typography variant="body2" gutterBottom>
+                        <Typography variant="body2" gutterBottom style={{ color: '#FFFFFF' }}>
                         <span className={styles.subtitle}>Impacto: </span>
                           {project.impact}
                         </Typography>
-                        <Typography variant="h6" align='center'>{project.title2}</Typography>
-                        <Typography variant="body2">
+                        <Typography variant="h6" align='center' style={{ color: ' #92E3A9' }}>{project.title2}</Typography>
+                        <Typography variant="body2" style={{ color: '#FFFFFF' }}>
                           {project.details}
                         </Typography>
-                        <Typography variant="body2">
+                        <Typography variant="body2" style={{ color: '#FFFFFF' }}>
                           {project.details2}
                         </Typography>
                       </CardContent>
