@@ -76,7 +76,7 @@ const Projects = () => {
 
     return (
       <Box sx={{ flexGrow: 1 }} className={styles.projectsContainer}>
-              <Typography variant='body1' align='center'>
+        <Typography variant='body1' align='center'>
           <Button className={styles.bontactButton} variant="contained" onClick={()=>navigate('/contact')}
               style={{ background: '#ECEFF1', color: '#121212' }}>
               Contáctame
