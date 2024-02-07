@@ -9,11 +9,7 @@ min-height: 102vh;
     align-items: center;
     justify-content: center;
     color: #FFFFFF !important;
-    background-color: #FFFFFF;
 }
-.textField .MuiOutlinedInput-root {
-    color: #FFFFFF !important;
-    border-color: #FFFFFF;
-
-    /* background-color: white; */
+.textField {
+    background-color: #121212;
 }

@@ -10,7 +10,8 @@ const Contact = () => {
     <div className={styles.mainContainer}>
       <FormControl className={styles.formContainer}>
         <FormLabel>Contacto</FormLabel>
-          <TextField label="Nombre" variant="outlined" color="secondary" focused  className={styles.textField}/>
+          <TextField label="Nombre"  focused color="primary" inputProps={{ style: { color: '#FFFFFF' } }} 
+            className={styles.textField}/>
           <Box sx={{ display: 'flex', alignItems: 'flex-end' }}>
             <AccountCircle sx={{ color: 'action.active', mr: 1, my: 0.5 }} />
             <TextField id="input-with-sx" label="Correo Electrónico" variant="standard" type="email" className={styles.textField} />
