@@ -1,0 +1,19 @@
+.mainContainer {
+min-height: 102vh;
+}
+.formContainer {
+    margin-top: 15vh;
+    height: 80vh;
+    border: 1px solid #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFFFFF !important;
+    background-color: #FFFFFF;
+}
+.textField .MuiOutlinedInput-root {
+    color: #FFFFFF !important;
+    border-color: #FFFFFF;
+
+    /* background-color: white; */
+}
