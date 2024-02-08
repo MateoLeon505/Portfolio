@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useForm, ValidationError } from '@formspree/react';
 import { FormControl } from '@mui/base/FormControl';
 import { FormLabel } from '@mui/material';
 import { Grid, Typography, Button } from "@mui/material"
@@ -11,6 +12,8 @@ import { FaMessage } from "react-icons/fa6";
 import styles from './contact.module.css';
 
 const Contact = () => {
+
+  const [state, handleSubmit] = useForm("xgegaboy");
 
   const [ contactData, setContactData ] = useState({
     name: '',
@@ -27,13 +30,23 @@ const Contact = () => {
     console.log(contactData);
   }
 
-  const isDataValid = () => {
-
-  }
+  if (state.succeeded) {
+    return <p>¡Gracias por contactarme!</p>;
+}
 
   const submitData = (event) => {
 
     event.preventDefault();
+
+    handleSubmit(event).then(() => {
+      if (state.succeeded) {
+        setContactData({
+          name: '',
+          email: '',
+          message: ''
+        })
+      }
+    })
 
   }
 
@@ -64,7 +77,7 @@ const Contact = () => {
             </Typography>     
         </Grid>
         <Grid item xs={12} md={6} lg={6} spacing={2}>
-          <FormControl className={styles.formContainer}>
+          <form className={styles.formContainer} onSubmit={submitData}>
             <div className={styles.organizer}>
               <div className={styles.formRow}>
                 <FormLabel className={styles.formTitle}>Contacto</FormLabel>   
@@ -86,6 +99,11 @@ const Contact = () => {
                     style: { color: '#92E3A9' },
                   }}
                 />
+                <ValidationError 
+                  prefix="Message" 
+                  field="message"
+                  errors={state.errors}
+                />
                 <TextField
                   id="2" color="primary" focused label="Correo Electrónico" type="email" variant="outlined"
                   name="email" value={contactData.email} onChange={updateData}
@@ -101,6 +119,11 @@ const Contact = () => {
                   InputLabelProps={{
                     style: { color: '#92E3A9' },
                   }}
+                />
+                <ValidationError 
+                  prefix="Email" 
+                  field="email"
+                  errors={state.errors}
                 />
               </div>
               <div className={styles.formRow}>
@@ -122,16 +145,20 @@ const Contact = () => {
                     style: { color: '#92E3A9' },
                   }}
                 />
+                <ValidationError 
+                  prefix="Message" 
+                  field="message"
+                  errors={state.errors}
+                />
               </div>
               <div className={styles.formRow}>
-                <Button variant="contained" className={styles.buttonSubmit}
-                  style={{ background: '#ECEFF1', color: '#121212' }}
-                  onClick={submitData}>
+                <Button variant="contained" className={styles.buttonSubmit} type='submit'
+                  style={{ background: '#ECEFF1', color: '#121212' }}>
                   Envíar
                 </Button>  
               </div>
             </div>
-          </FormControl>           
+          </form>           
         </Grid>   
       </Grid>
     </section>
