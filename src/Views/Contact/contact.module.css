@@ -1,15 +1,40 @@
 .mainContainer {
-min-height: 102vh;
+    margin-top: 15vh;
+    min-height: 102vh;
+}
+.gridContainer {
+    height: 80vh;
 }
 .formContainer {
-    margin-top: 15vh;
-    height: 80vh;
-    border: 1px solid #FFFFFF;
+    height: 90%;
+
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #FFFFFF !important;
+    flex-direction: column;
 }
-.textField {
+/* .organizer {
+    flex-direction: column;
+} */
+.formRow {
+    display: flex;
+    justify-content: space-between; 
+    margin-bottom: 20px;
+}
+.formTitle {
+    margin: 0 auto !important;
+    font-size: 2.5rem !important;
+    color: #92E3A9 !important;
+}
+.textFieldHalf {
     backdrop-filter: blur(1px) !important;
+    flex: 0.49;
+
+}
+.textFieldFull{
+    backdrop-filter: blur(1px) !important;
+    flex: 2;
+}
+.buttonSubmit {
+    margin: 0 auto !important;
 }
