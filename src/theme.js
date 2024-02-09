@@ -12,7 +12,8 @@ const theme = createTheme({
         main: '#121212',
       },
       success: {
-        main: '#FFA500',
+        // main: '#FFA500',
+        main: '#008080',
       },
       danger: {
         main: '#FF0000',
