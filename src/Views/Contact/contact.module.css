@@ -5,17 +5,23 @@
 .gridContainer {
     height: 80vh;
 }
+.socialMediaContact {
+    border: 1px solid #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column !important;
+}
+.formLabelHere {
+    color: #FFFFFF;
+}
 .formContainer {
     height: 90%;
-
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
 }
-/* .organizer {
-    flex-direction: column;
-} */
 .formRow {
     display: flex;
     justify-content: space-between; 

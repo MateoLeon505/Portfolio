@@ -82,21 +82,27 @@ const Contact = () => {
         container
         direction='row'
         className={styles.gridContainer}>
-        <Grid item xs={12} md={6} lg={6} className={styles.text}>
-            <Typography variant='h2' align='center' gutterBottom >Bienvenido a mi portfolio  
-            </Typography>
+        <Grid item xs={12} md={6} lg={6} className={styles.socialMediaContact}>
+          <div>
+            <Typography variant='h4' align='center' gutterBottom >Encuentrame <span>en:</span></Typography>
+          </div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div>            
             <Typography variant='body1' align='center'>
-            <Button variant="contained" 
-                style={{ background: '#ECEFF1', color: '#121212' }}>
-                Sobre mí
-            </Button>  
+              <Button variant="contained" 
+                  style={{ background: '#ECEFF1', color: '#121212' }}>
+                  Sobre mí
+              </Button>  
             </Typography>     
+          </div>
         </Grid>
         <Grid item xs={12} md={6} lg={6} spacing={2}>
           <form className={styles.formContainer} onSubmit={submitData}>
             <div className={styles.organizer}>
               <div className={styles.formRow}>
-                <FormLabel className={styles.formTitle}>Contacto</FormLabel>   
+                <FormLabel className={styles.formTitle}> <span className={styles.formLabelHere}>¡Contáctame</span> aquí!</FormLabel>   
               </div>
               <div className={styles.formRow}>
                 <TextField
