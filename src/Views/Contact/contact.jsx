@@ -3,12 +3,16 @@ import { useForm, ValidationError } from '@formspree/react';
 import { FormControl } from '@mui/base/FormControl';
 import { FormLabel } from '@mui/material';
 import { Grid, Typography, Button } from "@mui/material"
-import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import InputAdornment from '@mui/material/InputAdornment';
-
+import Alert from '@mui/material/Alert';
+import AlertTitle from '@mui/material/AlertTitle';
+import Box from '@mui/material/Box';
+import Collapse from '@mui/material/Collapse';
 import { MdEmail, MdAccountCircle } from "react-icons/md";
 import { FaMessage } from "react-icons/fa6";
+import IconButton from '@mui/material/IconButton';
+import CloseIcon from '@mui/icons-material/Close';
 import styles from './contact.module.css';
 
 const Contact = () => {
@@ -21,6 +25,8 @@ const Contact = () => {
     message: ''
   });
 
+  const [ alertOpen, setAlertOpen ] = useState(true);
+
   const updateData = (event) => {
 
     const property = event.target.name;
@@ -29,10 +35,6 @@ const Contact = () => {
     setContactData({...contactData, [property]: value})
     console.log(contactData);
   }
-
-  if (state.succeeded) {
-    return <p>¡Gracias por contactarme!</p>;
-}
 
   const submitData = (event) => {
 
@@ -52,6 +54,30 @@ const Contact = () => {
 
   return (
     <section className={styles.mainContainer}>
+      { state.succeeded && 
+        <Box className={styles.alertBox}>
+          <Collapse in={alertOpen}>
+            <Alert severity="success"
+              action={
+                <IconButton
+                  aria-label="close"
+                  color="inherit"
+                  size="small"
+                  onClick={() => {
+                    setAlertOpen(false);
+                  }} 
+                >
+                  <CloseIcon fontSize="inherit" />
+                </IconButton>
+              }
+              sx={{ mb: 2 }}
+            >
+            <AlertTitle>¡Gracias por contactarme!</AlertTitle>
+            Pronto te daré una respuesta...
+          </Alert>
+          </Collapse>
+        </Box>
+      }
       <Grid
         container
         direction='row'
@@ -59,16 +85,6 @@ const Contact = () => {
         <Grid item xs={12} md={6} lg={6} className={styles.text}>
             <Typography variant='h2' align='center' gutterBottom >Bienvenido a mi portfolio  
             </Typography>
-            <Typography variant='h4' align='center'> Soy
-                <span style={{ color: '#92E3A9' }}> Mateo León</span>
-            </Typography>
-                    
-            <Typography variant='body1' align='center'>Desarrollador 
-                <span style={{ color: '#92E3A9' }}> Fullstack / Frontend</span> &
-            </Typography>
-            <Typography variant='body1' align='center' gutterBottom>Estudiante de 
-                <span style={{ color: '#92E3A9' }}> Ingeniería Multimedia</span> 
-            </Typography>   
             <Typography variant='body1' align='center'>
             <Button variant="contained" 
                 style={{ background: '#ECEFF1', color: '#121212' }}>
