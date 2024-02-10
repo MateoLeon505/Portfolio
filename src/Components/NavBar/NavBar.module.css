@@ -28,6 +28,10 @@
     }
 }
 
+.menuIcon {
+    color: #ffffff !important;
+}
+
 .navigation {
     display: flex;
     justify-content: space-between; 
@@ -53,6 +57,14 @@
 .active_navbarlink {
     font-weight: 400;
     color: #92E3A9 !important;
+    letter-spacing: 0.8px;
+    padding: 0 25px;
+    font-size: 1rem;
+    opacity: 50;
+}
+.active_navbarlinkResponsive {
+    font-weight: 400;
+    color: #FFFFFF !important;
     letter-spacing: 0.8px;
     padding: 0 25px;
     font-size: 1rem;

@@ -69,7 +69,7 @@ const NavBar = ()  => {
               aria-haspopup="true"
               onClick={handleOpenNavMenu}
               color="inherit">
-              <MenuIcon />
+              <MenuIcon className={styles.menuIcon}/>
             </IconButton>
             <Menu
               id="menu-appbar"
@@ -91,23 +91,21 @@ const NavBar = ()  => {
             >
               <MenuItem sx={{ bgcolor: 'black', color: 'white' }}>
                 <Button
-                  href="#home"
-                  // className={ activeLink === 'home' ? styles.active_navbarlink : styles.navbarlink }
-                  onClick={()=> onUpdateActiveLink('home')}
+                  className={ location.pathname === '/' ? styles.active_navbarlinkResponsive : styles.navbarlink }
+                  onClick={()=> onUpdateActiveLink('')}
                   sx={{ my: 2, color: 'white', display: 'block' }}>
-                  <IconButton size="0.2rem"  sx={{ color: 'white' }}>
-                    <HomeIcon />
+                  <IconButton size="small"  sx={{ color: location.pathname === '/' ? '#121212' : '#FFFFFF' }}>
+                      <HomeIcon />
                   </IconButton>
                   Inicio
                 </Button>
               </MenuItem>
               <MenuItem sx={{ bgcolor: 'black', color: 'white' }}>
                 <Button
-                  href="#about"
-                  // className={ activeLink === 'about' ? styles.active_navbarlink : styles.navbarlink }
+                  className={ location.pathname === '/about' ? styles.active_navbarlink : styles.navbarlink }
                   onClick={()=> onUpdateActiveLink('about')}
                   sx={{ my: 2, color: 'white', display: 'block' }}>
-                  <IconButton size="small"  sx={{ color: 'white' }}>
+                  <IconButton size="small"  sx={{ color: location.pathname === '/about' ? '#92E3A9' : '#FFFFFF' }}>
                     <ArticleIcon/>
                   </IconButton>
                   Sobre mí
@@ -115,11 +113,10 @@ const NavBar = ()  => {
               </MenuItem>
               <MenuItem sx={{ bgcolor: 'black', color: 'white' }}>
                 <Button
-                  href="#skills"
-                  // className={ activeLink === 'skills' ? styles.active_navbarlink : styles.navbarlink }
+                  className={ location.pathname === '/skills' ? styles.active_navbarlink : styles.navbarlink }
                   onClick={()=> onUpdateActiveLink('skills')}
                   sx={{ my: 2, color: 'white', display: 'block' }}>
-                  <IconButton size="small"  sx={{ color: 'white' }}>
+                  <IconButton size="small"  sx={{ color: location.pathname === '/skills' ? '#92E3A9' : '#FFFFFF' }}>
                     <PsychologyIcon/>
                   </IconButton>
                   Habilidades
@@ -127,11 +124,10 @@ const NavBar = ()  => {
               </MenuItem>
               <MenuItem sx={{ bgcolor: 'black', color: 'white' }}>
                 <Button
-                  href="#projects"
-                  // className={ activeLink === 'projects' ? styles.active_navbarlink : styles.navbarlink }
+                  className={ location.pathname === '/projects' ? styles.active_navbarlink : styles.navbarlink }
                   onClick={()=> onUpdateActiveLink('projects')}
                   sx={{ my: 2, color: 'white', display: 'block' }}>
-                  <IconButton size="small"  sx={{ color: 'white' }}>
+                  <IconButton size="small"  sx={{ color: location.pathname === '/projects' ? '#92E3A9' : '#FFFFFF' }}>
                     <IntegrationInstructionsIcon/>
                   </IconButton>
                   Proyectos
@@ -139,11 +135,10 @@ const NavBar = ()  => {
               </MenuItem>
               <MenuItem sx={{ bgcolor: 'black', color: 'white' }}>
                 <Button
-                  href="#contact"
-                  // className={ activeLink === 'contact' ? styles.active_navbarlink : styles.navbarlink }
+                  className={ location.pathname === '/contact' ? styles.active_navbarlink : styles.navbarlink }
                   onClick={()=> onUpdateActiveLink('contact')}
                   sx={{ my: 2, color: 'white', display: 'block' }}>
-                  <IconButton size="small"  sx={{ color: 'white' }}>
+                  <IconButton size="small"  sx={{ color: location.pathname === '/contact' ? '#92E3A9' : '#FFFFFF' }}>
                     <ContactMailIcon/>
                   </IconButton>
                   Contacto
@@ -151,6 +146,7 @@ const NavBar = ()  => {
               </MenuItem>
             </Menu>
           </Box>
+
           {/* Large */}
           <Box sx={{ display: { xs: 'none', md: 'none', xl: 'flex' }}} 
             display="flex" justifyContent="space-between" width="100%">
@@ -167,52 +163,44 @@ const NavBar = ()  => {
                 </IconButton>
                 Inicio
               </Button>
-            <Button
-              className={ location.pathname === '/about' ? styles.active_navbarlink : styles.navbarlink }
-              onClick={()=> onUpdateActiveLink('about')}
-              sx={{ my: 2, color: 'white', display: 'block' }}>
-              <IconButton size="small"  sx={{ color: location.pathname === '/about' ? '#92E3A9' : '#FFFFFF' }}>
-                <ArticleIcon/>
-              </IconButton>
-              Sobre mí
-            </Button>
-            <Button
-              className={ location.pathname === '/skills' ? styles.active_navbarlink : styles.navbarlink }
-              onClick={()=> onUpdateActiveLink('skills')}
-              sx={{ my: 2, color: 'white', display: 'block' }}>
-              <IconButton size="small"  sx={{ color: location.pathname === '/skills' ? '#92E3A9' : '#FFFFFF' }}>
-                <PsychologyIcon/>
-              </IconButton>
-              Habilidades
-            </Button>
-            <Button
-              className={ location.pathname === '/projects' ? styles.active_navbarlink : styles.navbarlink }
-              onClick={()=> onUpdateActiveLink('projects')}
-              sx={{ my: 2, color: 'white', display: 'block' }}>
-              <IconButton size="small"  sx={{ color: location.pathname === '/projects' ? '#92E3A9' : '#FFFFFF' }}>
-                <IntegrationInstructionsIcon/>
-              </IconButton>
-              Proyectos
-            </Button>
-            <Button
-              className={ location.pathname === '/contact' ? styles.active_navbarlink : styles.navbarlink }
-              onClick={()=> onUpdateActiveLink('contact')}
-              sx={{ my: 2, color: 'white', display: 'block' }}>
-              <IconButton size="small"  sx={{ color: location.pathname === '/contact' ? '#92E3A9' : '#FFFFFF' }}>
-                <ContactMailIcon/>
-              </IconButton>
-              Contacto
-            </Button>
-                  {/* <span className={styles.navbar_text}> 
-        <div className={styles.social_icon}>
-          <a href="#"><img src={navIcon1} alt="Linkedin" /></a>
-          <a href="#"><img src={navIcon2} alt="Github" /></a>
-          <a href="#"><img src={navIcon3} alt="StackOverflow" /></a>
-          <button className={styles.connect} onClick={()=>alert('connect') }><span>Let´s connect</span></button>
-        </div> 
-      </span> */}
+              <Button
+                className={ location.pathname === '/about' ? styles.active_navbarlink : styles.navbarlink }
+                onClick={()=> onUpdateActiveLink('about')}
+                sx={{ my: 2, color: 'white', display: 'block' }}>
+                <IconButton size="small"  sx={{ color: location.pathname === '/about' ? '#92E3A9' : '#FFFFFF' }}>
+                  <ArticleIcon/>
+                </IconButton>
+                Sobre mí
+              </Button>
+              <Button
+                className={ location.pathname === '/skills' ? styles.active_navbarlink : styles.navbarlink }
+                onClick={()=> onUpdateActiveLink('skills')}
+                sx={{ my: 2, color: 'white', display: 'block' }}>
+                <IconButton size="small"  sx={{ color: location.pathname === '/skills' ? '#92E3A9' : '#FFFFFF' }}>
+                  <PsychologyIcon/>
+                </IconButton>
+                Habilidades
+              </Button>
+              <Button
+                className={ location.pathname === '/projects' ? styles.active_navbarlink : styles.navbarlink }
+                onClick={()=> onUpdateActiveLink('projects')}
+                sx={{ my: 2, color: 'white', display: 'block' }}>
+                <IconButton size="small"  sx={{ color: location.pathname === '/projects' ? '#92E3A9' : '#FFFFFF' }}>
+                  <IntegrationInstructionsIcon/>
+                </IconButton>
+                Proyectos
+              </Button>
+              <Button
+                className={ location.pathname === '/contact' ? styles.active_navbarlink : styles.navbarlink }
+                onClick={()=> onUpdateActiveLink('contact')}
+                sx={{ my: 2, color: 'white', display: 'block' }}>
+                <IconButton size="small"  sx={{ color: location.pathname === '/contact' ? '#92E3A9' : '#FFFFFF' }}>
+                  <ContactMailIcon/>
+                </IconButton>
+                Contacto
+              </Button>
+            </Box>
           </Box>
-        </Box>
       </Toolbar>
     </AppBar>
   );
