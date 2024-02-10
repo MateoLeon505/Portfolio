@@ -59,7 +59,7 @@ const NavBar = ()  => {
           {/* Small - Medium */}
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'flex', xl:'none' } }}
             display="flex" justifyContent="space-between" width="100%">
-            <IconButton href="#home">
+            <IconButton>
               <img src={logo} alt="Logo" className={styles.logo}/>
             </IconButton>
             <IconButton
@@ -89,10 +89,9 @@ const NavBar = ()  => {
                 display: { xs: 'block', sm: 'block', md: 'block' },
               }}
             >
-              <MenuItem sx={{ bgcolor: 'black', color: 'white' }}>
+              <MenuItem sx={{ bgcolor: 'black' }} onClick={()=> onUpdateActiveLink('')}>
                 <Button
                   className={ location.pathname === '/' ? styles.active_navbarlinkResponsive : styles.navbarlink }
-                  onClick={()=> onUpdateActiveLink('')}
                   sx={{ my: 2, color: 'white', display: 'block' }}>
                   <IconButton size="small"  sx={{ color: location.pathname === '/' ? '#121212' : '#FFFFFF' }}>
                       <HomeIcon />
