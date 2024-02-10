@@ -82,22 +82,6 @@ const Contact = () => {
         container
         direction='row'
         className={styles.gridContainer}>
-        <Grid item xs={12} md={6} lg={6} className={styles.socialMediaContact}>
-          <div>
-            <Typography variant='h4' align='center' gutterBottom >Encuentrame <span>en:</span></Typography>
-          </div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div>            
-            <Typography variant='body1' align='center'>
-              <Button variant="contained" 
-                  style={{ background: '#ECEFF1', color: '#121212' }}>
-                  Sobre mí
-              </Button>  
-            </Typography>     
-          </div>
-        </Grid>
         <Grid item xs={12} md={6} lg={6} spacing={2}>
           <form className={styles.formContainer} onSubmit={submitData}>
             <div className={styles.organizer}>
@@ -182,6 +166,26 @@ const Contact = () => {
             </div>
           </form>           
         </Grid>   
+        <Grid item xs={12} md={6} lg={6} className={styles.socialMediaContact}>
+          <div>
+            <Typography variant='h4' align='center' gutterBottom >O encuentrame 
+              <span className={styles.letterMedia}> en:</span>
+            </Typography>
+          </div>
+          <div>
+            
+          </div>
+          <div></div>
+          <div></div>
+          <div>            
+            <Typography variant='body1' align='center'>
+              <Button variant="contained" 
+                  style={{ background: '#ECEFF1', color: '#121212' }}>
+                  Sobre mí
+              </Button>  
+            </Typography>     
+          </div>
+        </Grid>
       </Grid>
     </section>
   );

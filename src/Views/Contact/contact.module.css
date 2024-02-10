@@ -12,6 +12,12 @@
     justify-content: center;
     flex-direction: column !important;
 }
+/* .socialMediaContact * {
+    border: 1px solid #FFFFFF;
+} */
+.letterMedia {
+    color: #92E3A9;
+}
 .formLabelHere {
     color: #FFFFFF;
 }
