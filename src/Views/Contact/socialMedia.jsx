@@ -20,12 +20,12 @@ const Item = styled(Paper)(({ theme }) => ({
 }));
 
 const icons = [
-    {icon: <FaLinkedin/>, link: 'https://www.linkedin.com/in/mateo-le%C3%B3n-097b57268/'},
-    {icon: <FaGithub/>, link: 'https://github.com/MateoLeon505'},
-    {icon: <FaStackOverflow/>, link: 'https://stackoverflow.com/users/22949021/mateo-leon'},
-    {icon: <SiGmail/>, link: 'mailto:mateolt505@gmail.com'},
-    {icon: <FaSlack/>, link: 'https://join.slack.com/t/mty-talk/shared_invite/zt-2cf0l55n9-T3joKkxbw~JvRRwl8XgF2Q'},
-    {icon: <IoLogoWhatsapp/>, link: 'https://wa.me/3245310156'},
+    {icon: <FaLinkedin className={styles.icon}/>, link: 'https://www.linkedin.com/in/mateo-le%C3%B3n-097b57268/'},
+    {icon: <FaGithub className={styles.icon}/>, link: 'https://github.com/MateoLeon505'},
+    {icon: <FaStackOverflow className={styles.icon}/>, link: 'https://stackoverflow.com/users/22949021/mateo-leon'},
+    {icon: <SiGmail className={styles.icon}/>, link: 'mailto:mateolt505@gmail.com'},
+    {icon: <FaSlack className={styles.icon}/>, link: 'https://join.slack.com/t/mty-talk/shared_invite/zt-2cf0l55n9-T3joKkxbw~JvRRwl8XgF2Q'},
+    {icon: <IoLogoWhatsapp className={styles.icon}/>, link: 'https://wa.me/3245310156'},
 ]
 
 export default function SocialMedia() {
@@ -33,8 +33,8 @@ export default function SocialMedia() {
     <Box sx={{ flexGrow: 1 }}>
       <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
         {icons.map((item, index) => (
-          <Grid item xs={2} sm={4} md={4} key={index}>
-            <div>{item.icon}</div>
+          <Grid item xs={2} sm={4} md={4} key={index} className={styles.gridChildren}>
+            <div><a href={item.link} target='blank'>{item.icon}</a></div>
           </Grid>
         ))}
       </Grid>

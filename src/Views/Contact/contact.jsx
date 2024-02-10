@@ -177,12 +177,12 @@ const Contact = () => {
             <SocialMedia/>
           </div>
           <div className={styles.gridElement}>            
-            <Typography variant='body1' align='center'>
+            {/* <Typography variant='body1' align='center'>
               <Button variant="contained" 
                   style={{ background: '#ECEFF1', color: '#121212' }}>
                   Sobre mí
               </Button>  
-            </Typography>     
+            </Typography>      */}
           </div>
         </Grid>
       </Grid>
