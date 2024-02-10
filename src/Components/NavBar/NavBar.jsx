@@ -91,7 +91,7 @@ const NavBar = ()  => {
             >
               <MenuItem sx={{ bgcolor: 'black' }} onClick={()=> onUpdateActiveLink('')}>
                 <Button
-                  className={ location.pathname === '/' ? styles.active_navbarlinkResponsive : styles.navbarlink }
+                  className={ location.pathname === '/' ? styles.active_navbarlinkResponsive : styles.navbarlinkResponsive }
                   // sx={{ my: 2, color: 'white', display: 'block' }}
                   >
                   <IconButton size="small"  sx={{ color: location.pathname === '/' ? '#121212' : '#FFFFFF' }}>
@@ -102,10 +102,10 @@ const NavBar = ()  => {
               </MenuItem>
               <MenuItem sx={{ bgcolor: 'black', color: 'white' }} onClick={()=> onUpdateActiveLink('about')}>
                 <Button
-                  className={ location.pathname === '/about' ? styles.active_navbarlinkResponsive : styles.navbarlink }
+                  className={ location.pathname === '/about' ? styles.active_navbarlinkResponsive : styles.navbarlinkResponsive }
                   // sx={{ my: 2, color: 'white', display: 'block' }}
                   >
-                  <IconButton size="small"  sx={{ color: location.pathname === '/about' ? '#92E3A9' : '#FFFFFF' }}>
+                  <IconButton size="small"  sx={{ color: location.pathname === '/about' ? '#008080' : '#FFFFFF' }}>
                     <ArticleIcon/>
                   </IconButton>
                   Sobre mí
@@ -113,10 +113,10 @@ const NavBar = ()  => {
               </MenuItem>
               <MenuItem sx={{ bgcolor: 'black', color: 'white' }} onClick={()=> onUpdateActiveLink('skills')}> 
                 <Button
-                  className={ location.pathname === '/skills' ? styles.active_navbarlinkResponsive : styles.navbarlink }
+                  className={ location.pathname === '/skills' ? styles.active_navbarlinkResponsive : styles.navbarlinkResponsive }
                   // sx={{ my: 2, color: 'white', display: 'block' }}
                   >
-                  <IconButton size="small"  sx={{ color: location.pathname === '/skills' ? '#92E3A9' : '#FFFFFF' }}>
+                  <IconButton size="small"  sx={{ color: location.pathname === '/skills' ? '#008080' : '#FFFFFF' }}>
                     <PsychologyIcon/>
                   </IconButton>
                   Habilidades
@@ -124,10 +124,10 @@ const NavBar = ()  => {
               </MenuItem>
               <MenuItem sx={{ bgcolor: 'black', color: 'white' }} onClick={()=> onUpdateActiveLink('projects')}>
                 <Button
-                  className={ location.pathname === '/projects' ? styles.active_navbarlinkResponsive : styles.navbarlink }
+                  className={ location.pathname === '/projects' ? styles.active_navbarlinkResponsive : styles.navbarlinkResponsive }
                   // sx={{ my: 2, color: 'white', display: 'block' }}
                   >
-                  <IconButton size="small"  sx={{ color: location.pathname === '/projects' ? '#92E3A9' : '#FFFFFF' }}>
+                  <IconButton size="small"  sx={{ color: location.pathname === '/projects' ? '#008080' : '#FFFFFF' }}>
                     <IntegrationInstructionsIcon/>
                   </IconButton>
                   Proyectos
@@ -135,10 +135,10 @@ const NavBar = ()  => {
               </MenuItem>
               <MenuItem sx={{ bgcolor: 'black', color: 'white' }} onClick={()=> onUpdateActiveLink('contact')}>
                 <Button
-                  className={ location.pathname === '/contact' ? styles.active_navbarlink : styles.navbarlink }
+                  className={ location.pathname === '/contact' ? styles.active_navbarlinkResponsive : styles.navbarlinkResponsive }
                   // sx={{ my: 2, color: 'white', display: 'block' }}
                   >
-                  <IconButton size="small"  sx={{ color: location.pathname === '/contact' ? '#92E3A9' : '#FFFFFF' }}>
+                  <IconButton size="small"  sx={{ color: location.pathname === '/contact' ? '#008080' : '#FFFFFF' }}>
                     <ContactMailIcon/>
                   </IconButton>
                   Contacto
