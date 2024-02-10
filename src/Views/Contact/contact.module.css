@@ -5,19 +5,7 @@
 .gridContainer {
     height: 80vh;
 }
-.socialMediaContact {
-    border: 1px solid #FFFFFF;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column !important;
-}
-/* .socialMediaContact * {
-    border: 1px solid #FFFFFF;
-} */
-.letterMedia {
-    color: #92E3A9;
-}
+
 .formLabelHere {
     color: #FFFFFF;
 }
@@ -58,4 +46,17 @@
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 9999;
+}
+
+.socialMediaContact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column !important;
+}
+.gridElement {
+    margin-bottom: 40px !important;
+}
+.letterMedia {
+    color: #92E3A9;
 }

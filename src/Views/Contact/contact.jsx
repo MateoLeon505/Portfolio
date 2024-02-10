@@ -1,3 +1,4 @@
+import SocialMedia from './socialMedia';
 import { useState } from 'react';
 import { useForm, ValidationError } from '@formspree/react';
 import { FormControl } from '@mui/base/FormControl';
@@ -167,17 +168,15 @@ const Contact = () => {
           </form>           
         </Grid>   
         <Grid item xs={12} md={6} lg={6} className={styles.socialMediaContact}>
-          <div>
+          <div className={styles.gridElement}>
             <Typography variant='h4' align='center' gutterBottom >O encuentrame 
               <span className={styles.letterMedia}> en:</span>
             </Typography>
           </div>
-          <div>
-            
+          <div className={styles.gridElement}>
+            <SocialMedia/>
           </div>
-          <div></div>
-          <div></div>
-          <div>            
+          <div className={styles.gridElement}>            
             <Typography variant='body1' align='center'>
               <Button variant="contained" 
                   style={{ background: '#ECEFF1', color: '#121212' }}>
