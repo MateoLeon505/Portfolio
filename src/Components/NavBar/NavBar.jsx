@@ -92,51 +92,52 @@ const NavBar = ()  => {
               <MenuItem sx={{ bgcolor: 'black' }} onClick={()=> onUpdateActiveLink('')}>
                 <Button
                   className={ location.pathname === '/' ? styles.active_navbarlinkResponsive : styles.navbarlink }
-                  sx={{ my: 2, color: 'white', display: 'block' }}>
+                  // sx={{ my: 2, color: 'white', display: 'block' }}
+                  >
                   <IconButton size="small"  sx={{ color: location.pathname === '/' ? '#121212' : '#FFFFFF' }}>
                       <HomeIcon />
                   </IconButton>
                   Inicio
                 </Button>
               </MenuItem>
-              <MenuItem sx={{ bgcolor: 'black', color: 'white' }}>
+              <MenuItem sx={{ bgcolor: 'black', color: 'white' }} onClick={()=> onUpdateActiveLink('about')}>
                 <Button
-                  className={ location.pathname === '/about' ? styles.active_navbarlink : styles.navbarlink }
-                  onClick={()=> onUpdateActiveLink('about')}
-                  sx={{ my: 2, color: 'white', display: 'block' }}>
+                  className={ location.pathname === '/about' ? styles.active_navbarlinkResponsive : styles.navbarlink }
+                  // sx={{ my: 2, color: 'white', display: 'block' }}
+                  >
                   <IconButton size="small"  sx={{ color: location.pathname === '/about' ? '#92E3A9' : '#FFFFFF' }}>
                     <ArticleIcon/>
                   </IconButton>
                   Sobre mí
                 </Button>
               </MenuItem>
-              <MenuItem sx={{ bgcolor: 'black', color: 'white' }}>
+              <MenuItem sx={{ bgcolor: 'black', color: 'white' }} onClick={()=> onUpdateActiveLink('skills')}> 
                 <Button
-                  className={ location.pathname === '/skills' ? styles.active_navbarlink : styles.navbarlink }
-                  onClick={()=> onUpdateActiveLink('skills')}
-                  sx={{ my: 2, color: 'white', display: 'block' }}>
+                  className={ location.pathname === '/skills' ? styles.active_navbarlinkResponsive : styles.navbarlink }
+                  // sx={{ my: 2, color: 'white', display: 'block' }}
+                  >
                   <IconButton size="small"  sx={{ color: location.pathname === '/skills' ? '#92E3A9' : '#FFFFFF' }}>
                     <PsychologyIcon/>
                   </IconButton>
                   Habilidades
                 </Button>
               </MenuItem>
-              <MenuItem sx={{ bgcolor: 'black', color: 'white' }}>
+              <MenuItem sx={{ bgcolor: 'black', color: 'white' }} onClick={()=> onUpdateActiveLink('projects')}>
                 <Button
-                  className={ location.pathname === '/projects' ? styles.active_navbarlink : styles.navbarlink }
-                  onClick={()=> onUpdateActiveLink('projects')}
-                  sx={{ my: 2, color: 'white', display: 'block' }}>
+                  className={ location.pathname === '/projects' ? styles.active_navbarlinkResponsive : styles.navbarlink }
+                  // sx={{ my: 2, color: 'white', display: 'block' }}
+                  >
                   <IconButton size="small"  sx={{ color: location.pathname === '/projects' ? '#92E3A9' : '#FFFFFF' }}>
                     <IntegrationInstructionsIcon/>
                   </IconButton>
                   Proyectos
                 </Button>
               </MenuItem>
-              <MenuItem sx={{ bgcolor: 'black', color: 'white' }}>
+              <MenuItem sx={{ bgcolor: 'black', color: 'white' }} onClick={()=> onUpdateActiveLink('contact')}>
                 <Button
                   className={ location.pathname === '/contact' ? styles.active_navbarlink : styles.navbarlink }
-                  onClick={()=> onUpdateActiveLink('contact')}
-                  sx={{ my: 2, color: 'white', display: 'block' }}>
+                  // sx={{ my: 2, color: 'white', display: 'block' }}
+                  >
                   <IconButton size="small"  sx={{ color: location.pathname === '/contact' ? '#92E3A9' : '#FFFFFF' }}>
                     <ContactMailIcon/>
                   </IconButton>
