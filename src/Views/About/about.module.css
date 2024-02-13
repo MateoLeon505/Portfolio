@@ -4,13 +4,13 @@
 }
 .gridContainer {
     margin-top: 2vh;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     padding: 5rem;
     height: 100%;
 }
 .firstGrid {
-    margin-bottom: 5%;
+    margin: 5% !important;
 }
 
 .mainCard {

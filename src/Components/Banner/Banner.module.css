@@ -1,5 +1,6 @@
 .bannerContainer {
-    height: 102vh;
+    margin-top: 4vh;
+    min-height: 100vh;
 }
 .gridContainer {
     height: 100%;

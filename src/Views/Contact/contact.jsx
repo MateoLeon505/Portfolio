@@ -83,7 +83,7 @@ const Contact = () => {
         container
         direction='row'
         className={styles.gridContainer}>
-        <Grid item xs={12} md={6} lg={6} spacing={2}>
+        <Grid item xs={12} sm={8} md={6} lg={6}  spacing={2}>
           <form className={styles.formContainer} onSubmit={submitData}>
             <div className={styles.organizer}>
               <div className={styles.formRow}>
@@ -167,7 +167,7 @@ const Contact = () => {
             </div>
           </form>           
         </Grid>   
-        <Grid item xs={12} md={6} lg={6} className={styles.socialMediaContact}>
+        <Grid item xs={12} sm={8} md={6} lg={6} className={styles.socialMediaContact}>
           <div className={styles.gridElement}>
             <Typography variant='h4' align='center' gutterBottom >O encuentrame 
               <span className={styles.letterMedia}> en:</span>
