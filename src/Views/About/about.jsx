@@ -10,7 +10,9 @@ import { Grid,
     Stack, 
     Tabs, 
     Tab, 
-    Paper } from '@mui/material';
+    Paper, 
+    useTheme,
+    useMediaQuery } from '@mui/material';
 
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import PhoneIcon from '@mui/icons-material/Phone';
@@ -28,6 +30,9 @@ const About = () => {
     const navigate = useNavigate();
     const [value, setValue] = useState('1');
 
+    const theme = useTheme();
+    const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'));
+
     const handleChange = (event, value) => {
       setValue(value);
     };
@@ -38,7 +43,7 @@ const About = () => {
                 container
                 direction='row'
                 className={styles.gridContainer}>
-                <Grid item xs={4} md='' xl=''>
+                <Grid item  xs={isSmallScreen ? 12 : 4} sm={8} md={5} lg={4} className={styles.firstGrid}>
                     <Card sx={{ minWidth: 275, height:480 }} className={styles.mainCard}>
                         <CardContent>
                             <Stack className={styles.header}>
@@ -81,7 +86,7 @@ const About = () => {
                         </CardActions>
                     </Card>
                 </Grid>
-                <Grid item xs={4} md='' xl=''>
+                <Grid item  xs={isSmallScreen ? 12 : 4} sm={8} md={5} lg={4}>
                     <Card sx={{ minWidth: 275, height:480 }} className={styles.secondCard}>
                         <CardContent>
                             <div>
