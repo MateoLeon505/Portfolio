@@ -14,13 +14,13 @@
 }
 
 .mainCard {
-    background-color: #E0E0E0;
+    background-color: #181A1B !important;
 }
 .header {
     background-image: url(../../assets/img/wavey-fingerprint.svg);
 }
 .avatar {
-    border: 4px solid #92E3A9;
+    border: 4px solid #1D7235;
 }
 
 .navbar_text {
@@ -73,37 +73,37 @@
 .social_icon a {
     width: 42px;
     height: 42px;
-    background-color: #92E3A9;
+    background-color: #1D7235;
     display: inline-flex;
     margin-right: 6px;
     align-items: center;
     justify-content: center;
     line-height: 1;
     border-radius: 50%;
-    border: 1px solid rgba(255, 255, 255, 0.5);
+    /* border: 1px solid #D8D4CF; */
 }
 .social_icon a::before {
     content: "";
     width: 42px;
     height: 42px;
     position: absolute;
-    background-color: #ffffff;
+    background-color: #D8D4CF;
     border-radius: 50%;
     transform: scale(0);
     transition: 0.3s ease-in-out;
 }
 .social_icon a:hover::before {
     transform: scale(1);
-    background-color: #121212;
+    background-color: #D8D4CF;
 }
 .social_icon a .socialMedia {
     width: 100%;
     z-index: 1;
     transition: 0.3s ease-in-out;
-    color: #121212;
+    color: #D8D4CF;
 }
 .social_icon a:hover .socialMedia {
-    color: #92E3A9;
+    color: #1D7235;
 }
 
 .resume {
@@ -120,12 +120,12 @@
 .resume:hover {
     color: #121212 !important;
     border: 2px solid #121212 !important;
-    background-color: #92E3A9 !important;
+    background-color: #FFFFFF !important;
 }
 
 .anchor {
     text-decoration: none;
-    color: #121212;
+    color: #D8D4CF ;
 }
 .anchor:hover:active {
     color: #3d3c3c;

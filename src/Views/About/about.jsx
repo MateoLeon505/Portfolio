@@ -49,13 +49,13 @@ const About = () => {
                             <Stack className={styles.header}>
                                 <Avatar alt="Me" src={Me} sx={{ width: 80, height: 80, zoom: 2.0}} className={styles.avatar}/>
                             </Stack>
-                            <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
+                            <Typography sx={{ fontSize: 14 }} color="#D8D4CF" gutterBottom>
                                 Bogotá, Colombia <LocationOnIcon/> 
                             </Typography>
-                            <Typography variant="h5" component="div">
+                            <Typography variant="h5" component="div" color="#FFFFFF">
                                 Mateo León
                             </Typography>
-                            <Typography sx={{ mb: 1.5 }} color="text.secondary">
+                            <Typography sx={{ mb: 1.5 }} color="#D8D4CF">
                                 Desarrollador Fullstack / Frontend & Estudiante de ingeniería multimedia
                             </Typography>
                             <Typography variant="body2">
