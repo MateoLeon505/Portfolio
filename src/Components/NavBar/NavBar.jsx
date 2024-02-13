@@ -94,7 +94,7 @@ const NavBar = ()  => {
                   className={ location.pathname === '/' ? styles.active_navbarlinkResponsive : styles.navbarlinkResponsive }
                   // sx={{ my: 2, color: 'white', display: 'block' }}
                   >
-                  <IconButton size="small"  sx={{ color: location.pathname === '/' ? '#121212' : '#FFFFFF' }}>
+                  <IconButton size="small"  sx={{ color: location.pathname === '/' ? '#008080' : '#FFFFFF' }}>
                       <HomeIcon />
                   </IconButton>
                   Inicio
