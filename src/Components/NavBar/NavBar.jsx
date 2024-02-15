@@ -16,7 +16,7 @@ import PsychologyIcon from '@mui/icons-material/Psychology';
 import IntegrationInstructionsIcon from '@mui/icons-material/IntegrationInstructions';
 import ContactMailIcon from '@mui/icons-material/ContactMail';
 import MenuIcon from '@mui/icons-material/Menu';
-import logo from '../../assets/img/logo.svg';
+import Logo from "../../assets/img/Logo.png";
 import styles from './NavBar.module.css';
 
 
@@ -60,7 +60,8 @@ const NavBar = ()  => {
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'flex', xl:'none' } }}
             display="flex" justifyContent="space-between" width="100%">
             <IconButton>
-              <img src={logo} alt="Logo" className={styles.logo}/>
+              <img src={Logo} alt="Logo" className={styles.logo}/>
+              <span>ML</span>
             </IconButton>
             <IconButton
               size="large"
@@ -151,7 +152,7 @@ const NavBar = ()  => {
           <Box sx={{ display: { xs: 'none', md: 'none', xl: 'flex' }}} 
             display="flex" justifyContent="space-between" width="100%">
             <IconButton>
-              <img src={logo} alt="Logo" className={styles.logo}/>
+              <img src={Logo} alt="Logo" className={styles.logo}/>
             </IconButton>
             <Box display="flex">
               <Button

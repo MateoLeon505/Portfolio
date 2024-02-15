@@ -1,9 +1,7 @@
-import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Grid, Typography, Button } from "@mui/material"
 import CircularProgress from '@mui/material/CircularProgress';
 import styles from './Banner.module.css';
-import ArrowCircleDownIcon from '@mui/icons-material/ArrowCircleDown';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import WavingHandIcon from '@mui/icons-material/WavingHand';
 import coding from '../../assets/img/Code typing-bro.svg';
@@ -25,7 +23,7 @@ const Banner = () => {
                     <Typography variant='h4' align='center'> Soy
                         <span style={{ color: '#92E3A9' }}> Mateo León</span>
                     </Typography>
-                    <CircularProgress disableShrink style={{ color: '#1D7235', fontSize: '50' }} />
+                    {/* <CircularProgress disableShrink style={{ color: '#1D7235', fontSize: '50' }} /> */}
                     <Typography variant='body1' align='center'>Desarrollador 
                         <span style={{ color: '#92E3A9' }}> Fullstack / Frontend</span> &
                     </Typography>

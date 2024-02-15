@@ -121,7 +121,7 @@ const About = () => {
                                             Ingeniería multimedia 
                                         </Typography>
                                         <Typography variant='body1' align='center' >
-                                        <b> UMNG</b> 
+                                        <b> UNAD (Universidad Nacional a Distancia)</b> 
                                             <a href="https://www.unad.edu.co/"
                                                 target='blank' style={{ color: '#FFFFFF' }}>
                                                 
@@ -130,9 +130,9 @@ const About = () => {
                                         <Typography variant='body1' align='center' >
                                             2022 - En curso actualmente
                                         </Typography>
-                                        <Typography variant='body2' align='center' >
+                                        {/* <Typography variant='body2' align='center' >
                                             <b>10 </b> semestres
-                                        </Typography>
+                                        </Typography> */}
                                     </Paper>
                                 )}
                                 {value === "2" && (
