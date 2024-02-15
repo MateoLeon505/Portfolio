@@ -40,9 +40,11 @@
 
 /* Logo */
 .logo {
-    max-width: 10vw;
+    max-width: 5vw;
 } 
-
+.logoResponsive{
+    max-width: 10vw;
+}
 .navbarlink {
     font-weight: 400;
     color: #f5f5f5 !important;

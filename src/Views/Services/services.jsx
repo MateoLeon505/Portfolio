@@ -51,7 +51,7 @@ const Services = () => {
           ))}
         </Grid>
         <Typography  variant="h5" gutterBottom align='center' className={styles.title} >
-          Herramientas |
+          Complementos |
           <span style={{ color: '#92E3A9' }}> Gestión</span>
         </Typography>
         <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }} justifyContent='center' 
