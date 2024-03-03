@@ -3,8 +3,8 @@ import { Box, Grid, Typography, Button } from '@mui/material';
 import { FaHtml5, FaCss3Alt, FaReact, FaGithub, FaTrello, FaGitAlt, FaGitSquare  } from "react-icons/fa";
 import { SiJavascript, SiRedux, SiPostgresql, SiVisualstudiocode } from "react-icons/si";
 import { AiFillSlackCircle } from "react-icons/ai";
-import { GrProjects } from "react-icons/gr";
 import IntegrationInstructionsIcon from '@mui/icons-material/IntegrationInstructions';
+import { PiMonitorPlayFill } from "react-icons/pi";
 import styles from './services.module.css';
 
 const Services = () => {
@@ -72,7 +72,7 @@ const Services = () => {
         <Typography variant='body1' align='center'>
           <Button className={styles.projects} variant="contained" onClick={()=>navigate('/projects')}
             style={{ background: '#ECEFF1', color: '#121212' }}>
-            Proyectos <IntegrationInstructionsIcon/>
+            Proyectos <PiMonitorPlayFill/>
           </Button>
         </Typography>
       </Box>
