@@ -20,9 +20,8 @@ import { FaLocationDot } from "react-icons/fa6";
 import { FaPhoneAlt } from "react-icons/fa";
 import { IoLogoWhatsapp } from "react-icons/io";
 import { MdEmail } from "react-icons/md";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import { IoLogoLinkedin } from "react-icons/io5";
-import GitHubIcon from "@mui/icons-material/GitHub";
+import { FaGithub } from "react-icons/fa6";
 import PsychologyIcon from "@mui/icons-material/Psychology";
 import DocumentScannerIcon from "@mui/icons-material/DocumentScanner";
 import Me from "../../assets/img/Me.jpg";
@@ -96,10 +95,10 @@ const About = () => {
                     href="https://www.linkedin.com/in/mateo-le%C3%B3n-097b57268/"
                     target="blank"
                   >
-                    <LinkedInIcon className={styles.socialMedia} />
+                    <IoLogoLinkedin className={styles.socialMedia} />
                   </a>
                   <a href="https://github.com/MateoLeon505" target="blank">
-                    <GitHubIcon className={styles.socialMedia} />
+                    <FaGithub className={styles.socialMedia} />
                   </a>
                 </div>
               </span>
