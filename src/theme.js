@@ -6,10 +6,13 @@ const theme = createTheme({
         main: '#92E3A9',
       },
       secondary: {
-        main: '#FFFFFF',
+        main: '#D8D4CF',
       },
       tertiary: {
         main: '#121212',
+      },
+      cuaretiary: {
+        main: '#1D7235',
       },
       success: {
         // main: '#FFA500',

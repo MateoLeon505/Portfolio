@@ -1,0 +1,8 @@
+.floatButton:hover >.contactIcon {
+    color: #1D7235;
+}
+
+.contactIcon {
+    font-size: 40px;
+    color: #D8D4CF;
+}
