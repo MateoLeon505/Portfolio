@@ -3,7 +3,6 @@ import { Box, Grid, Typography, Button } from '@mui/material';
 import { FaHtml5, FaCss3Alt, FaReact, FaGithub, FaTrello, FaGitAlt, FaGitSquare  } from "react-icons/fa";
 import { SiJavascript, SiRedux, SiPostgresql, SiVisualstudiocode } from "react-icons/si";
 import { AiFillSlackCircle } from "react-icons/ai";
-import IntegrationInstructionsIcon from '@mui/icons-material/IntegrationInstructions';
 import { PiMonitorPlayFill } from "react-icons/pi";
 import styles from './services.module.css';
 
