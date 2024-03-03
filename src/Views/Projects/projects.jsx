@@ -73,12 +73,6 @@ const Projects = () => {
 
     return (
       <Box sx={{ flexGrow: 1 }} className={styles.projectsContainer}>
-        {/* <Typography variant='body1' align='center'>
-          <Button className={styles.bontactButton} variant="contained" onClick={()=>navigate('/contact')}
-              style={{ background: '#ECEFF1', color: '#121212' }}>
-              Contáctame
-          </Button>
-        </Typography> */}
         <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }} justifyContent='center' 
           className={styles.gridContainer}>
             {projects.map((project) => (
