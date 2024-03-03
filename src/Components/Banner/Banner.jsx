@@ -2,7 +2,7 @@ import { useNavigate } from 'react-router-dom';
 import { Grid, Typography, Button } from "@mui/material"
 import CircularProgress from '@mui/material/CircularProgress';
 import styles from './Banner.module.css';
-import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import { MdAccountCircle } from "react-icons/md";
 import WavingHandIcon from '@mui/icons-material/WavingHand';
 import coding from '../../assets/img/Code typing-bro.svg';
 
@@ -33,7 +33,7 @@ const Banner = () => {
                     <Typography variant='body1' align='center'>
                     <Button variant="contained" onClick={()=>navigate('/about')}
                         style={{ background: '#ECEFF1', color: '#121212' }}>
-                        <AccountCircleIcon fontSize="small"/>
+                        <MdAccountCircle fontSize="large"/>
                         Sobre mí
                     </Button>  
                     </Typography>     
