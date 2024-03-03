@@ -1,8 +1,6 @@
 import SocialMedia from './socialMedia';
 import { useState } from 'react';
 import { useForm, ValidationError } from '@formspree/react';
-import { FormControl } from '@mui/base/FormControl';
-import { FormLabel } from '@mui/material';
 import { Grid, Typography, Button } from "@mui/material"
 import TextField from '@mui/material/TextField';
 import InputAdornment from '@mui/material/InputAdornment';
@@ -12,6 +10,7 @@ import Box from '@mui/material/Box';
 import Collapse from '@mui/material/Collapse';
 import { MdEmail, MdAccountCircle } from "react-icons/md";
 import { FaMessage } from "react-icons/fa6";
+import { BsFillSendFill } from "react-icons/bs";
 import IconButton from '@mui/material/IconButton';
 import CloseIcon from '@mui/icons-material/Close';
 import styles from './contact.module.css';
@@ -164,7 +163,7 @@ const Contact = () => {
               <div className={styles.formRow}>
                 <Button variant="contained" className={styles.buttonSubmit} type='submit'
                   style={{ background: '#ECEFF1', color: '#121212' }}>
-                  Envíar
+                  <BsFillSendFill style={{fontSize: '15', marginRight: '5'}}/> Envíar
                 </Button>  
               </div>
             </div>
