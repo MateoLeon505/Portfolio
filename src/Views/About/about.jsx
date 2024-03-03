@@ -24,6 +24,7 @@ import { IoLogoLinkedin } from "react-icons/io5";
 import { FaGithub } from "react-icons/fa6";
 import PsychologyIcon from "@mui/icons-material/Psychology";
 import DocumentScannerIcon from "@mui/icons-material/DocumentScanner";
+import { MdDocumentScanner } from "react-icons/md";
 import Me from "../../assets/img/Me.jpg";
 import styles from "./about.module.css";
 
@@ -75,8 +76,8 @@ const About = () => {
                   className={styles.anchor}
                   target="blank"
                 >
-                  <FaPhoneAlt style={{ color: "#92E3A9" }} />
-                  <IoLogoWhatsapp style={{ color: "#92E3A9" }} /> (+57) 3245310153
+                  <FaPhoneAlt style={{ color: "#92E3A9", fontSize: '18' }} />
+                  <IoLogoWhatsapp style={{ color: "#92E3A9", fontSize: '18' }} /> (+57) 3245310153
                 </a>
               </Typography>
               <Typography variant="body2">
@@ -85,7 +86,7 @@ const About = () => {
                   className={styles.anchor}
                   target="blank"
                 >
-                  <MdEmail style={{ color: "#92E3A9" }} />{" "}
+                  <MdEmail style={{ color: "#92E3A9", fontSize: '18' }} />{" "}
                   mateolt505@gmail.com
                 </a>
               </Typography>
@@ -113,7 +114,7 @@ const About = () => {
                   )
                 }
               >
-                <DocumentScannerIcon />
+                <MdDocumentScanner style={{fontSize: '22'}} />
                 CV
               </Button>
             </CardActions>

@@ -96,6 +96,9 @@
     transform: scale(1);
     background-color: #D8D4CF;
 }
+.socialMedia {
+    font-size: 23px;
+}
 .social_icon a .socialMedia {
     width: 100%;
     z-index: 1;
