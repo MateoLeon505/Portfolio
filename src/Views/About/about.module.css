@@ -23,12 +23,12 @@
     border: 4px solid #1D7235;
 }
 
-.navbar_text {
+.contactIcons {
     display: flex;
     align-items: center;
     margin-top: 2%;
 }
-.navbar_text button {
+.contactIcons button {
     font-weight: 400;
     color: #fff;
     border: 1px solid #fff;
@@ -40,10 +40,10 @@
     background-color: transparent;
     transition: 0.3s ease-in-out;
 }
-.navbar_text button span {
+.contactIcons button span {
     z-index: 1;
 }
-.navbar_text button::before {
+.contactIcons button::before {
     content: "";
     width: 0%;
     height: 100%;
@@ -55,10 +55,10 @@
     z-index: -1;
 	transition: 0.5s ease-in-out;
 }
-.navbar_text button:hover {
+.contactIcons button:hover {
     color: #121212;
 }
-.navbar_text button:hover::before {
+.contactIcons button:hover::before {
     content: "";
     width: 100%;
     border-radius: 15px;
@@ -115,7 +115,7 @@
     background-color: #121212 !important;
     font-weight: 500;
     height: 40px;
-    border-radius: 15px;
+    border-radius: 10px;
     padding: 10px 10px;
     font-size: 1rem;
     transition: 0.3s ease-in-out;

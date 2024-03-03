@@ -23,8 +23,8 @@ import { MdEmail } from "react-icons/md";
 import { IoLogoLinkedin } from "react-icons/io5";
 import { FaGithub } from "react-icons/fa6";
 import PsychologyIcon from "@mui/icons-material/Psychology";
-import DocumentScannerIcon from "@mui/icons-material/DocumentScanner";
 import { MdDocumentScanner } from "react-icons/md";
+import { PiFileCodeFill } from "react-icons/pi";
 import Me from "../../assets/img/Me.jpg";
 import styles from "./about.module.css";
 
@@ -90,7 +90,7 @@ const About = () => {
                   mateolt505@gmail.com
                 </a>
               </Typography>
-              <span className={styles.navbar_text}>
+              <span className={styles.contactIcons}>
                 <div className={styles.social_icon}>
                   <a
                     href="https://www.linkedin.com/in/mateo-le%C3%B3n-097b57268/"
@@ -223,7 +223,7 @@ const About = () => {
                 className={styles.skills}
                 onClick={() => navigate("/skills")}
               >
-                <PsychologyIcon />
+                <PiFileCodeFill style={{fontSize:'23'}} />
                 Habilidades
               </Button>
             </CardActions>
