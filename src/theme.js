@@ -22,6 +22,35 @@ const theme = createTheme({
         main: '#FFFF00',
       },
   },
+  typography: {
+    h1: {
+      fontFamily: "Madimi One",
+    },
+    h2: {
+      fontFamily: "Madimi One",
+    },
+    h3: {
+      fontFamily: "Madimi One",
+    },
+    h4: {
+      fontFamily: "Madimi One",
+    },
+    h5: {
+      fontFamily: "Madimi One",
+    },
+    h6: {
+      fontFamily: "Madimi One",
+    },
+    body1: {
+      fontFamily: "Ubuntu"
+    },
+    body2: {
+      fontFamily: "Ubuntu"
+    },
+    button: {
+      fontFamily: "Open Sans",
+    }
+  }
 });
 
 export default theme;

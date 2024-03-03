@@ -87,7 +87,10 @@ const Contact = () => {
           <form className={styles.formContainer} onSubmit={submitData}>
             <div className={styles.organizer}>
               <div className={styles.formRow}>
-                <FormLabel className={styles.formTitle}> <span className={styles.formLabelHere}>¡Contáctame</span> aquí!</FormLabel>   
+                <Typography  variant="h3" gutterBottom align='center' className={styles.formTitle}>
+                  ¡Contáctame
+                  <span style={{ color: '#92E3A9' }}> aquí!</span>
+                </Typography>
               </div>
               <div className={styles.formRow}>
                 <TextField

@@ -10,9 +10,6 @@
     height: 100%;
 }
 
-.formLabelHere {
-    color: #FFFFFF;
-}
 .formContainer {
     height: 90%;
     display: flex;
@@ -28,7 +25,6 @@
 .formTitle {
     margin: 0 auto !important;
     font-size: 2.5rem !important;
-    color: #92E3A9 !important;
 }
 .textFieldHalf {
     backdrop-filter: blur(1px) !important;

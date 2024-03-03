@@ -60,7 +60,7 @@ const NavBar = ()  => {
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'flex', xl:'none' } }}
             display="flex" justifyContent="space-between" width="100%">
             <IconButton>
-              <img src={Logo} alt="Logo" className={styles.logoResponsive}/>
+              <img src={Logo} alt="Logo" className={styles.logoResponsive} onClick={()=> navigate('/')}/>
             </IconButton>
             <IconButton
               size="large"
@@ -151,7 +151,7 @@ const NavBar = ()  => {
           <Box sx={{ display: { xs: 'none', md: 'none', xl: 'flex' }}} 
             display="flex" justifyContent="space-between" width="100%">
             <IconButton>
-              <img src={Logo} alt="Logo" className={styles.logo}/>
+              <img src={Logo} alt="Logo" className={styles.logo} onClick={()=> navigate('/')}/>
             </IconButton>
             <Box display="flex">
               <Button

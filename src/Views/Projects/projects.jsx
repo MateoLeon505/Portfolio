@@ -148,7 +148,7 @@ const Projects = () => {
                         <span className={styles.subtitle}>Impacto: </span>
                           {project.impact}
                         </Typography>
-                        <Typography variant="h6" align='center' style={{ color: ' #92E3A9' }}>{project.title2}</Typography>
+                        <Typography variant="h6" align='center' style={{ color: ' #92E3A9' }}>Funcionalidades</Typography>
                         <Typography variant="body2" style={{ color: '#FFFFFF' }}>
                           {project.details}
                         </Typography>
