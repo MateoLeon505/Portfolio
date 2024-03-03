@@ -12,10 +12,7 @@ import { Grid,
   Collapse, 
   IconButton, } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore'; 
-import MoreVertIcon from '@mui/icons-material/MoreVert';
-import { red } from '@mui/material/colors';
 import { styled } from '@mui/material/styles';
-import FavoriteIcon from '@mui/icons-material/Favorite';
 import lasEncinasBoutique from '../../assets/img/projects/Las-Encinas-Boutique.png';
 import { FaGithub, FaYoutube  } from "react-icons/fa";
 import raceHub from '../../assets/img/projects/Race-Hub.png';
