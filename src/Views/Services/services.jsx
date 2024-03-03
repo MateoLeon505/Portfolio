@@ -71,7 +71,7 @@ const Services = () => {
         <Typography variant='body1' align='center'>
           <Button className={styles.projects} variant="contained" onClick={()=>navigate('/projects')}
             style={{ background: '#ECEFF1', color: '#121212' }}>
-            Proyectos <PiMonitorPlayFill/>
+            <PiMonitorPlayFill style={{fontSize: '23'}}/> Proyectos 
           </Button>
         </Typography>
       </Box>
