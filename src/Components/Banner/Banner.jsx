@@ -11,6 +11,7 @@ const Banner = () => {
 
   return (
     <section>
+      {/* <CircularProgress disableShrink style={{ color: '#1D7235', fontSize: '50' }} /> */}
       <Grid container direction="row" className={styles.gridContainer}>
         <Grid item xs={12} md={6} lg={6} className={styles.text}>
           <Typography variant="h2" align="center" gutterBottom>
@@ -22,7 +23,6 @@ const Banner = () => {
             Soy
             <span style={{ color: "#92E3A9" }}> Mateo León</span>
           </Typography>
-          {/* <CircularProgress disableShrink style={{ color: '#1D7235', fontSize: '50' }} /> */}
           <Typography variant="body1" align="center">
             Desarrollador
             <span style={{ color: "#92E3A9" }}> Fullstack / Frontend</span> &
@@ -35,7 +35,7 @@ const Banner = () => {
             <Button
               variant="contained"
               onClick={() => navigate("/about")}
-              style={{ background: "#ECEFF1", color: "#121212" }}
+              style={{ background: "#D8D4CF", color: "#121212" }}
             >
               <MdAccountCircle fontSize="large" />
               Sobre mí

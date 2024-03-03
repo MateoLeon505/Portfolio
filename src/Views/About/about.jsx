@@ -12,8 +12,6 @@ import {
   Tabs,
   Tab,
   Paper,
-  useTheme,
-  useMediaQuery,
 } from "@mui/material";
 
 import { FaLocationDot } from "react-icons/fa6";
@@ -22,7 +20,6 @@ import { IoLogoWhatsapp } from "react-icons/io";
 import { MdEmail } from "react-icons/md";
 import { IoLogoLinkedin } from "react-icons/io5";
 import { FaGithub } from "react-icons/fa6";
-import PsychologyIcon from "@mui/icons-material/Psychology";
 import { MdDocumentScanner } from "react-icons/md";
 import { PiFileCodeFill } from "react-icons/pi";
 import Me from "../../assets/img/Me.jpg";
@@ -31,9 +28,6 @@ import styles from "./about.module.css";
 const About = () => {
   const navigate = useNavigate();
   const [value, setValue] = useState("1");
-
-  const theme = useTheme();
-  const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
 
   const handleChange = (event, value) => {
     setValue(value);
@@ -44,11 +38,10 @@ const About = () => {
       <Grid container direction="row" className={styles.gridContainer}>
         <Grid
           item
-          xs={isSmallScreen ? 12 : 4}
+          xs={12}
           sm={8}
           md={5}
           lg={4}
-          className={styles.firstGrid}
         >
           <Card sx={{ minWidth: 275, height: 480 }} className={styles.mainCard}>
             <CardContent>
@@ -120,7 +113,7 @@ const About = () => {
             </CardActions>
           </Card>
         </Grid>
-        <Grid item xs={isSmallScreen ? 12 : 4} sm={8} md={5} lg={4}>
+        <Grid item xs={12} sm={8} md={5} lg={4}>
           <Card
             sx={{ minWidth: 275, height: 480 }}
             className={styles.secondCard}

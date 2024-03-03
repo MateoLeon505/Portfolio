@@ -10,6 +10,7 @@ html {
 }
 
 body {
+  position: relative !important;
   overflow-x: hidden;
   background-image: url(./assets/img/endless-constellation-darkMode.svg);
   color: #D8D4CF;
