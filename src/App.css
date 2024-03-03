@@ -10,18 +10,11 @@ html {
 }
 
 body {
-  font-weight: 400;
   overflow-x: hidden;
-  position: relative; 
   background-image: url(./assets/img/endless-constellation-darkMode.svg);
-  color: #ffff;
-  min-height: 100vh;
+  color: #D8D4CF;
+  min-height: 100vh !important;
+  margin-top: 5vh !important; 
 }
 
-/* @media (min-width:1700px) {
-	main .container {
-		max-width: 100%;
-		padding: 0 150px;
-	}
-} */
 

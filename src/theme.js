@@ -53,7 +53,7 @@ const theme = createTheme({
     button: {
       fontFamily: "Open Sans",
     }
-  }
+  },
 });
 
 export default theme;
