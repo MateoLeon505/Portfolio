@@ -17,9 +17,14 @@
     display: flex;
     gap: 0.5rem;
 }
-
+a {
+    color: #D7D3C9;
+}
+a:hover, a::before {
+    color: #FFFFFF;
+}
 .icon {
-    font-size: 2.5rem;
+    font-size: 2.6rem;
 }
 
 .copyright {

@@ -1,18 +1,14 @@
 import React from "react";
+import Info from "../info/Info.jsx";
 import { Typography } from "@mui/material";
-import { BsFillInfoCircleFill } from "react-icons/bs";
-import { FaLinkedin } from "react-icons/fa";
-import { TiSocialLinkedinCircular } from "react-icons/ti";
-import { FaGithub } from "react-icons/fa";
+import { FaLinkedin, FaGithub } from "react-icons/fa";
 import styles from "./footer.module.css";
 
 const Footer = () => {
   return (
     <footer className={styles.footer}>
       <div>
-        <Typography variant="body1" align="center">
-          <BsFillInfoCircleFill /> Info +
-        </Typography>
+        <Info />
       </div>
       <div>
         <div>
@@ -21,9 +17,15 @@ const Footer = () => {
           </Typography>
         </div>
         <div className={styles.iconsContainer}>
-          <FaLinkedin className={styles.icon} />  
-          <FaGithub className={styles.icon} />
-          <TiSocialLinkedinCircular className={styles.icon} />
+          <a
+            href="https://www.linkedin.com/in/mateo-le%C3%B3n-097b57268/"
+            target="_blank"
+          >
+            <FaLinkedin className={styles.icon} />
+          </a>
+          <a href="https://github.com/MateoLeon505" target="_blank">
+            <FaGithub className={styles.icon} />
+          </a>
         </div>
       </div>
       <div className={styles.copyright}>
