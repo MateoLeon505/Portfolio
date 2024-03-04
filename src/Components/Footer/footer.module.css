@@ -1,13 +1,32 @@
 .footer {
-    height: 100px;
-    width: 100%;
-    position: static;
-    bottom: 0;
+  height: 6rem;
+  width: 100%;
+  position: static;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;    
+  background-color: #121212;
+  color: #D8D4CF;
+  transition: all 0.3s ease-in-out;
+  border-top: 1px solid rgba(250, 250, 250, 0.5);
+}
+
+.footerSections {
     display: flex;
-    background-color: #121212;
-    color: #fff;
+    justify-content: space-around;
     align-items: center;
-    justify-content: center;
-    transition: all 0.3s ease-in-out;
-    border-top: 1px solid rgba(250, 250, 250, 0.5);
+}
+
+.iconsContainer {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.icon {
+    font-size: 2.5rem;
+}
+
+.copyright {
+    align-self: center;
 }
