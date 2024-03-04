@@ -1,6 +1,6 @@
 .gridContainer {
   height: 100vh;
-  margin-top: 20vh;
+  padding-top: 20vh;
 }
 .gridProject {
   display: flex;

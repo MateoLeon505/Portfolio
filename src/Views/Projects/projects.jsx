@@ -1,6 +1,4 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import Box from "@mui/material/Box";
 import {
   Grid,
   Typography,
@@ -22,8 +20,6 @@ import { IoLogoVercel } from "react-icons/io5";
 import styles from "./projects.module.css";
 
 const Projects = () => {
-  const navigate = useNavigate();
-
   const [expanded, setExpanded] = useState(false);
   const [expanded2, setExpanded2] = useState(false);
 
@@ -125,9 +121,6 @@ const Projects = () => {
               </Typography>
             </CardContent>
             <CardActions disableSpacing>
-              {/* <IconButton aria-label="add to favorites">
-                        <FavoriteIcon />
-                      </IconButton> */}
               <IconButton aria-label="add to favorites">
                 <a target="blank" href={project.repo} className={styles.link}>
                   <FaGithub />
