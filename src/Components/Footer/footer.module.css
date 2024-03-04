@@ -4,19 +4,14 @@
   position: static;
   bottom: 0;
   display: flex;
-  flex-direction: column;
   justify-content: space-around;    
+  align-items: center;
   background-color: #121212;
   color: #D8D4CF;
   transition: all 0.3s ease-in-out;
   border-top: 1px solid rgba(250, 250, 250, 0.5);
 }
 
-.footerSections {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
 
 .iconsContainer {
     display: flex;
