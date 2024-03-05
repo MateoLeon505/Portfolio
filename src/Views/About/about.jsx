@@ -36,13 +36,7 @@ const About = () => {
   return (
     <section className={styles.container}>
       <Grid container direction="row" className={styles.gridContainer}>
-        <Grid
-          item
-          xs={12}
-          sm={8}
-          md={5}
-          lg={4}
-        >
+        <Grid item xs={12} sm={8} md={5} lg={4}>
           <Card sx={{ minWidth: 275, height: 480 }} className={styles.mainCard}>
             <CardContent>
               <Stack className={styles.header}>
@@ -69,8 +63,11 @@ const About = () => {
                   className={styles.anchor}
                   target="blank"
                 >
-                  <FaPhoneAlt style={{ color: "#92E3A9", fontSize: '18' }} />
-                  <IoLogoWhatsapp style={{ color: "#92E3A9", fontSize: '18' }} /> (+57) 3245310156
+                  <FaPhoneAlt style={{ color: "#92E3A9", fontSize: "18" }} />
+                  <IoLogoWhatsapp
+                    style={{ color: "#92E3A9", fontSize: "18" }}
+                  />{" "}
+                  (+57) 3245310156
                 </a>
               </Typography>
               <Typography variant="body2">
@@ -79,7 +76,7 @@ const About = () => {
                   className={styles.anchor}
                   target="blank"
                 >
-                  <MdEmail style={{ color: "#92E3A9", fontSize: '18' }} />{" "}
+                  <MdEmail style={{ color: "#92E3A9", fontSize: "18" }} />{" "}
                   mateolt505@gmail.com
                 </a>
               </Typography>
@@ -98,8 +95,8 @@ const About = () => {
               </span>
             </CardContent>
             <CardActions>
-              <Button
-                className={styles.resume}
+              <button
+                className={styles.resumeButton}
                 onClick={() =>
                   window.open(
                     "https://docs.google.com/document/d/e/2PACX-1vSzKjJ3hAiBzIkVdRxHXcX22_eJR9VlFzltUmj-XaHPhZi-jXz0Ljn6c_xFuHMedvXoqWKJgqQTcnV9/pub",
@@ -107,8 +104,15 @@ const About = () => {
                   )
                 }
               >
-                <MdDocumentScanner style={{fontSize: '22'}} />
-                CV
+
+                <span>CV</span> 
+              </button>
+              <Button
+                className={styles.skillsButton}
+                onClick={() => navigate("/skills")}
+              >
+                <PiFileCodeFill style={{ fontSize: "23" }} />
+                Habilidades
               </Button>
             </CardActions>
           </Card>
@@ -211,15 +215,7 @@ const About = () => {
                 )}
               </div>
             </CardContent>
-            <CardActions>
-              <Button
-                className={styles.skills}
-                onClick={() => navigate("/skills")}
-              >
-                <PiFileCodeFill style={{fontSize:'23'}} />
-                Habilidades
-              </Button>
-            </CardActions>
+            <CardActions></CardActions>
           </Card>
         </Grid>
       </Grid>
