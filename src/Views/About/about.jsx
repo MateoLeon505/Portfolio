@@ -104,8 +104,10 @@ const About = () => {
                   )
                 }
               >
-
-                <span>CV</span> 
+                <span>
+                <MdDocumentScanner style={{ fontSize: 20 }} />
+                CV
+                </span>
               </button>
               <Button
                 className={styles.skillsButton}

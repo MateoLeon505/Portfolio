@@ -105,49 +105,41 @@
 
 .resumeButton {
   border: 0;
+  cursor: pointer;
   background-image: linear-gradient(
     150deg,
-    #9500ff,
-    #09f,
-    #00ddff
-    /* #92e3a9,
-    #ffffff,
     #008080,
-    #eceff1,
-    #5c9c7f,
-    #dbd4cf,
-    #009999,
-    #1d7235 */
+    #2d6c45,
+    #99dd5f
   );
   border-radius: 8px;
-  color: #ffffff !important;
+  color: #D8D4CF!important;
   display: flex;
-  padding: 4px !important;
+  padding: 3px !important;
   transition: 0.3s;
-  /* border: 2px solid #ffffff !important;
-    background-color: #121212 !important;
-    font-weight: 500;
-    height: 40px;
-    border-radius: 10px;
-    padding: 10px 10px;
-    font-size: 1rem;
-    transition: 0.3s ease-in-out; */
+  height: 40px;
 }
 .resumeButton span {
   background-color: #121212;
-  padding: 16px 24px;
+  font-family: "Open Sans";
+  font-weight: 600;
+  font-size: 13px;
+  padding: 8px 20px;
   border-radius: 6px;
   transition: 0.3s;
+  display: flex;
+  align-items: center;
 }
 .resumeButton:hover span {
   background: none;
 }
 .resumeButton:active {
-    transform: scale(0.9);
+  transform: scale(0.9);
 }
 .resumeButton:hover {
-  /* color: #121212 !important;
-    border: 2px solid #121212 !important;
+  color: #ffffff !important;
+  /* color: #121212 !important; */
+  /* border: 2px solid #121212 !important;
     background-color: #FFFFFF !important; */
 }
 .skillsButton {
