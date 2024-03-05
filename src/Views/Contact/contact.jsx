@@ -1,7 +1,7 @@
-import SocialMedia from "./socialMedia";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useForm, ValidationError } from "@formspree/react";
 import { Grid, Typography, Button } from "@mui/material";
+import SocialMedia from "./socialMedia";
 import TextField from "@mui/material/TextField";
 import InputAdornment from "@mui/material/InputAdornment";
 import Alert from "@mui/material/Alert";
@@ -16,6 +16,14 @@ import CloseIcon from "@mui/icons-material/Close";
 import styles from "./contact.module.css";
 
 const Contact = () => {
+  useEffect(() => {
+    let btn = document.querySelector("a");
+    btn.addEventListener("mousemove", (e) => {
+      let rect = e.target.getBoundingClientRect();
+      let x = e.clientX - rect.left;
+      btn.style.setProperty("--x", x + "deg");
+    });
+  }, []);
   const [state, handleSubmit] = useForm("xgegaboy");
 
   const [contactData, setContactData] = useState({
@@ -31,7 +39,6 @@ const Contact = () => {
     const value = event.target.value;
 
     setContactData({ ...contactData, [property]: value });
-    console.log(contactData);
   };
 
   const submitData = (event) => {
@@ -77,7 +84,11 @@ const Contact = () => {
       )}
       <Grid container direction="row" className={styles.gridContainer}>
         <Grid item xs={12} sm={8} md={6} lg={6} spacing={2}>
-          <form className={styles.formContainer} onSubmit={submitData} autoComplete="off">
+          <form
+            className={styles.formContainer}
+            onSubmit={submitData}
+            autoComplete="off"
+          >
             <div className={styles.organizer}>
               <div className={styles.formRow}>
                 <Typography
@@ -99,7 +110,6 @@ const Contact = () => {
                   type="text"
                   variant="outlined"
                   name="name"
-                  
                   value={contactData.name}
                   onChange={updateData}
                   className={styles.textFieldHalf}
@@ -186,15 +196,23 @@ const Contact = () => {
               </div>
               <div className={styles.formRow}>
                 <Button
-                  variant="contained"
+                  variant="text"
                   className={styles.buttonSubmit}
                   type="submit"
-                  style={{ background: "#ECEFF1", color: "#121212" }}
+                  style={{
+                    margin: "0 auto",
+                  }}
                 >
-                  <BsFillSendFill
-                    style={{ fontSize: "15", marginRight: "5" }}
-                  />{" "}
-                  Envíar
+                  <a>
+                    <i></i>
+                    <i></i>
+                    <span>
+                      <BsFillSendFill
+                        style={{ fontSize: "15", marginRight: "5" }}
+                      />{" "}
+                      Envíar
+                    </span>
+                  </a>
                 </Button>
               </div>
             </div>
