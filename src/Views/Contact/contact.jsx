@@ -77,7 +77,7 @@ const Contact = () => {
       )}
       <Grid container direction="row" className={styles.gridContainer}>
         <Grid item xs={12} sm={8} md={6} lg={6} spacing={2}>
-          <form className={styles.formContainer} onSubmit={submitData}>
+          <form className={styles.formContainer} onSubmit={submitData} autoComplete="off">
             <div className={styles.organizer}>
               <div className={styles.formRow}>
                 <Typography
@@ -99,6 +99,7 @@ const Contact = () => {
                   type="text"
                   variant="outlined"
                   name="name"
+                  
                   value={contactData.name}
                   onChange={updateData}
                   className={styles.textFieldHalf}
@@ -127,6 +128,7 @@ const Contact = () => {
                   type="email"
                   variant="outlined"
                   name="email"
+                  autoComplete="new-password"
                   value={contactData.email}
                   onChange={updateData}
                   className={styles.textFieldHalf}
@@ -214,14 +216,6 @@ const Contact = () => {
           </div>
           <div className={styles.gridElement}>
             <SocialMedia />
-          </div>
-          <div className={styles.gridElement}>
-            {/* <Typography variant='body1' align='center'>
-              <Button variant="contained" 
-                  style={{ background: '#ECEFF1', color: '#121212' }}>
-                  Sobre mí
-              </Button>  
-            </Typography>      */}
           </div>
         </Grid>
       </Grid>

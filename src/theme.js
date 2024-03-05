@@ -54,6 +54,9 @@ const theme = createTheme({
       fontFamily: "Open Sans",
     }
   },
+  textField: {
+    color: "white"
+  }
 });
 
 export default theme;
