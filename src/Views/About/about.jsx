@@ -70,7 +70,7 @@ const About = () => {
                   target="blank"
                 >
                   <FaPhoneAlt style={{ color: "#92E3A9", fontSize: '18' }} />
-                  <IoLogoWhatsapp style={{ color: "#92E3A9", fontSize: '18' }} /> (+57) 3245310153
+                  <IoLogoWhatsapp style={{ color: "#92E3A9", fontSize: '18' }} /> (+57) 3245310156
                 </a>
               </Typography>
               <Typography variant="body2">

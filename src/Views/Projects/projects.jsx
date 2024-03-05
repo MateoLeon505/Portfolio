@@ -1,104 +1,52 @@
 import { useState } from "react";
+import projectsList from "./projectsList.js";
 import {
   Grid,
   Typography,
-  Button,
   Card,
   CardHeader,
   CardMedia,
   CardContent,
   CardActions,
-  Collapse,
   IconButton,
+  Box,
+  Modal,
 } from "@mui/material";
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { styled } from "@mui/material/styles";
-import lasEncinasBoutique from "../../assets/img/projects/Las-Encinas-Boutique.png";
 import { FaGithub, FaYoutube } from "react-icons/fa";
-import raceHub from "../../assets/img/projects/Race-Hub.png";
 import { IoLogoVercel } from "react-icons/io5";
+import { IoIosEye } from "react-icons/io";
+import { IoIosEyeOff } from "react-icons/io";
+import { IoMdCloseCircle } from "react-icons/io";
 import styles from "./projects.module.css";
 
 const Projects = () => {
-  const [expanded, setExpanded] = useState(false);
-  const [expanded2, setExpanded2] = useState(false);
+  const projects = projectsList();
 
-  const ExpandMore = styled((props) => {
-    const { expand, ...other } = props;
-    return <IconButton {...other} />;
-  })(({ theme, expand }) => ({
-    transform: !expand ? "rotate(0deg)" : "rotate(180deg)",
-    marginLeft: "auto",
-    transition: theme.transitions.create("transform", {
-      duration: theme.transitions.duration.shortest,
-    }),
-  }));
+  const [selectedProject, setSelectedProject] = useState(null);
 
-  const handleExpandClick = (id) => {
-    id === "1" ? setExpanded(!expanded) : setExpanded2(!expanded2);
-  };
+  const handleOpen = (id) => setSelectedProject(id);
 
-  const projects = [
-    {
-      name: "RaceHub",
-      date: "Octubre, 2023",
-      image: raceHub,
-      repo: "https://github.com/MateoLeon505/PI-Drivers",
-      deploy: "https://deploy-eight-xi.vercel.app/",
-      video: "",
-      description:
-        "SPA desarrollada con una API con pilotos de F1. Fue un proyecto para el bootcamp de SOYHENRY.",
-      expanded: expanded,
-      id: "1",
-      title: "Desarrollo del proyecto:",
-      challenges:
-        "Integrar la API, optimizar el rendimiento y gestionar el estado de la aplicación.",
-      skills:
-        "Desarrollo Fullstack, UI/UX, React, Redux, Node, Express, Sequelize, CSS.",
-      impact:
-        "El proyecto me permitió mejorar mis habilidades como desarrollador y crear una aplicación completa y funcional.",
-      title2: "Funcionalidades:",
-      details:
-        "La aplicación permite: Buscar pilotos, visualizar la información de los mismos, filtrarlos, ordenarlos y crear nuevos pilotos.",
-      time: "3 Semanas",
-    },
-    {
-      name: "Las Encinas Boutique",
-      date: "Noviembre, 2023",
-      image: lasEncinasBoutique,
-      repo: "https://github.com/thomasrey99/Las-Encinas-Boutique-",
-      deploy: "https://las-encinas-boutique-omega.vercel.app/home",
-      video: "https://www.youtube.com/watch?v=ld3ZKo4DfjE&t=58s",
-      description:
-        "E-Commerce de chocolatería artesanal. Fue el proyecto grupal final del bootcamp de SOYHENRY.",
-      expanded: expanded2,
-      id: "2",
-      title: "Participación en el proyecto:",
-      challenges:
-        "Implementar una interfaz de usuario atractiva y fácil de usar, integrar diferentes tecnologías y optimizar el rendimiento de la aplicación",
-      skills:
-        "Desarrollo Front-End/Fullstack, React, Redux Toolkit, Node, Express, Sequelize, Cloudinary, Firebase, Ant Design, UI/UX, Trabajo en equipo.",
-      impact:
-        "El proyecto me permitió aprender nuevas tecnologías, desarrollar habilidades blandas y trabajar en equipo de forma eficaz.",
-      title2: "Funcionalidades:",
-      details:
-        "Usuarios: Registro/inicio de sesión, búsqueda/compra de productos, favoritos, perfil, historial, chat, 4 idiomas.",
-      details2:
-        "Administradores: Gestión de productos, usuarios, pedidos y pagos.",
-      time: "4 semanas",
-    },
-  ];
+  const handleClose = () => setSelectedProject(null);
 
   return (
     <Grid
       container
       spacing={{ xs: 2, md: 3 }}
-      columns={{ xs: 4, sm: 8, md: 12 }}
+      columns={{ xs: 4, sm: 8, md: 18 }}
       justifyContent="center"
       className={styles.gridContainer}
     >
       {projects.map((project) => (
-        <Grid item xs={12} sm={8} md={5} lg={4} className={styles.gridProject}>
+        <Grid
+          item
+          xs={12}
+          sm={8}
+          md={5}
+          lg={4}
+          className={styles.gridProject}
+          key={project.id}
+        >
           <Card sx={{ maxWidth: 370 }} className={styles.card}>
             <CardHeader
               title={project.name}
@@ -110,6 +58,7 @@ const Projects = () => {
               component="img"
               image={project.image}
               alt={project.name}
+              // style={{height: 170}}
             />
             <CardContent>
               <Typography
@@ -142,24 +91,35 @@ const Projects = () => {
                   </a>
                 </IconButton>
               )}
+
               <ExpandMore
-                expand={project.expanded}
-                onClick={() => handleExpandClick(project.id)}
-                aria-expanded={project.expanded}
+                onClick={() => handleOpen(project.id)}
                 style={{ color: "#FFFFFF" }}
                 aria-label="show more"
               >
-                <ExpandMoreIcon />
+                {selectedProject === project.id ? (
+                  <IoIosEye />
+                ) : (
+                  <IoIosEyeOff />
+                )}
               </ExpandMore>
             </CardActions>
-            <Collapse
-              in={project.expanded}
-              timeout="auto"
-              unmountOnExit
-              id={project.id}
-              className={styles.collapse}
+            <Modal
+              open={selectedProject === project.id}
+              onClose={handleClose}
+              aria-labelledby="modal-modal-title"
+              aria-describedby="modal-modal-description"
             >
-              <CardContent>
+              <Box sx={style}>
+                <IconButton
+                  edge="end"
+                  color="inherit"
+                  onClick={handleClose}
+                  aria-label="Cerrar"
+                  sx={{ position: "absolute", top: 0, right: 0, margin: 1 }}
+                >
+                  <IoMdCloseCircle />
+                </IconButton>
                 <Typography
                   variant="h6"
                   align="center"
@@ -196,8 +156,8 @@ const Projects = () => {
                 <Typography variant="body2" style={{ color: "#FFFFFF" }}>
                   {project.details2}
                 </Typography>
-              </CardContent>
-            </Collapse>
+              </Box>
+            </Modal>
           </Card>
         </Grid>
       ))}
@@ -206,3 +166,25 @@ const Projects = () => {
 };
 
 export default Projects;
+
+const style = {
+  position: "absolute",
+  top: "50%",
+  left: "50%",
+  transform: "translate(-50%, -50%)",
+  width: 400,
+  bgcolor: "#121212",
+  border: "2px solid #181A1B",
+  boxShadow: 24,
+  p: 4,
+};
+const ExpandMore = styled((props) => {
+  const { expand, ...other } = props;
+  return <IconButton {...other} />;
+})(({ theme, expand }) => ({
+  transform: !expand ? "rotate(0deg)" : "rotate(180deg)",
+  marginLeft: "auto",
+  transition: theme.transitions.create("transform", {
+    duration: theme.transitions.duration.shortest,
+  }),
+}));

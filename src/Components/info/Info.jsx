@@ -32,7 +32,6 @@ const Info = () => {
             onClick={handleClose}
             aria-label="Cerrar"
             sx={{ position: "absolute", top: 0, right: 0, margin: 1 }}
-            // className={styles.closeIcon}
           >
             <IoMdCloseCircle />
           </IconButton>

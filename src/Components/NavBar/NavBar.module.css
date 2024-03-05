@@ -7,8 +7,7 @@
     z-index: 9999;
     background-color: #121212 !important;
     transition: all 0.3s ease-in-out;
-    padding-left: 1vw;
-    padding-right: 2vw;
+    padding: 0 3rem;
 }
 .navbarScrolled{
     background-color: rgba(0, 0, 0, 0.5) !important;
