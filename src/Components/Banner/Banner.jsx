@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { Grid, Typography, Button } from "@mui/material";
-import CircularProgress from "@mui/material/CircularProgress";
+
 import styles from "./Banner.module.css";
 import { MdAccountCircle } from "react-icons/md";
 import WavingHandIcon from "@mui/icons-material/WavingHand";
@@ -11,7 +11,6 @@ const Banner = () => {
 
   return (
     <section>
-      {/* <CircularProgress disableShrink style={{ color: '#1D7235', fontSize: '50' }} /> */}
       <Grid container direction="row" className={styles.gridContainer}>
         <Grid item xs={12} md={6} lg={6} className={styles.text}>
           <Typography variant="h2" align="center" gutterBottom>
