@@ -22,6 +22,9 @@ import { IoLogoLinkedin } from "react-icons/io5";
 import { FaGithub } from "react-icons/fa6";
 import { MdDocumentScanner } from "react-icons/md";
 import { PiFileCodeFill } from "react-icons/pi";
+import { FaArrowAltCircleRight } from "react-icons/fa";
+import { PiMonitorPlayFill } from "react-icons/pi";
+import { CgWebsite } from "react-icons/cg";
 import Me from "../../assets/img/Me.jpg";
 import styles from "./about.module.css";
 
@@ -105,13 +108,18 @@ const About = () => {
                 }
               >
                 <span>
-                <MdDocumentScanner style={{ fontSize: 20 }} />
-                CV
+                  <MdDocumentScanner style={{ fontSize: 20 }} />
+                  CV
                 </span>
               </button>
               <Button
-                className={styles.skillsButton}
+                className={`${styles.skillsButton} ${styles.effectSkillsButton}`}
                 onClick={() => navigate("/skills")}
+                style={{
+                  background: "#000000",
+                  color: "#ffffff",
+                  border: "0.1rem solid #2d6c45",
+                }}
               >
                 <PiFileCodeFill style={{ fontSize: "23" }} />
                 Habilidades
@@ -126,93 +134,203 @@ const About = () => {
           >
             <CardContent>
               <div>
-                <Tabs
-                  value={value}
-                  onChange={handleChange}
-                  // textColor="#92E3A9"
-                >
+                <Tabs value={value} onChange={handleChange}>
+                  <Tab
+                    label="Acerca de"
+                    value="1"
+                    className={value !== "1" && styles.tab}
+                  />
                   <Tab
                     label="Educación"
-                    value="1"
-                    className={value === "1" ? styles.tabSelected : styles.tab}
+                    value="2"
+                    className={value !== "2" && styles.tab}
                   />
                   <Tab
                     label="Experiencia"
-                    value="2"
-                    className={value === "2" ? styles.tabSelected : styles.tab}
+                    value="3"
+                    className={value !== "3" && styles.tab}
+                  />
+                  <Tab
+                    label="Habilidades blandas"
+                    value="4"
+                    className={value !== "4" && styles.tab}
                   />
                 </Tabs>
                 {value === "1" && (
                   <Paper className={styles.paper}>
-                    <Typography
-                      variant="h5"
-                      align="center"
-                      style={{ color: "#92E3A9" }}
-                    >
-                      Desarrollador FullStack
-                    </Typography>
-                    <Typography variant="body1" align="center">
-                      <a
-                        href="https://certificates.soyhenry.com/new-cert?id=3af51b507287f18ecd58ebabbd94c9c5cb8adf8671032854b18e34051a448e28"
-                        target="blank"
-                        style={{ color: "#FFFFFF" }}
-                      >
-                        <b>Bootcamp SoyHenry</b>
-                      </a>
-                    </Typography>
-                    <Typography variant="body1" align="center">
-                      2023
-                    </Typography>
-                    <Typography
-                      variant="body2"
-                      align="center"
-                      gutterBottom
-                      marginBottom={[10]}
-                    >
-                      <b> +800 </b> horas de cursada
-                    </Typography>
-                    <Typography
-                      variant="h5"
-                      align="center"
-                      style={{ color: "#92E3A9" }}
-                    >
-                      Ingeniería multimedia
-                    </Typography>
-                    <Typography variant="body1" align="center">
-                      <b> UNAD (Universidad Nacional a Distancia)</b>
-                      <a
-                        href="https://www.unad.edu.co/"
-                        target="blank"
-                        style={{ color: "#FFFFFF" }}
-                      ></a>
-                    </Typography>
-                    <Typography variant="body1" align="center">
-                      2022 - En curso actualmente
-                    </Typography>
-                    {/* <Typography variant='body2' align='center' >
-                                            <b>10 </b> semestres
-                                        </Typography> */}
+                    <div>
+                      <Typography variant="h5" style={{ color: "#92E3A9" }}>
+                        ¿Quién soy?
+                      </Typography>
+                      <Typography variant="body2" align="left">
+                        Soy estudiante de ingeniería multimedia y desarrollador
+                        web fullstack. Mi enfoque principal se encuentra en el
+                        desarrollo frontend, donde siempre busco fusionar la
+                        creatividad visual con la funcionalidad impecable.
+                      </Typography>
+                    </div>
+                    <div>
+                      <Typography variant="h5" style={{ color: "#92E3A9" }}>
+                        ¿Qué hago?
+                      </Typography>
+                      <Typography variant="body2" gutterBottom align="left">
+                        Actualmente, me encuentro desarrollando proyectos que me
+                        permiten mejorar mis habilidades al implementar
+                        innovaciones y curso mi carrera de ingeniería
+                        multimedia.
+                      </Typography>
+                    </div>
+                    <div>
+                      <Typography variant="h5" style={{ color: "#92E3A9" }}>
+                        ¿Adónde me dirijo?
+                      </Typography>
+                      <Typography variant="body2" gutterBottom align="left">
+                        Mis objetivos profesionales son crecer como
+                        desarrollador web, explorar el emocionante mundo del
+                        desarrollo de aplicaciones móviles y contribuir a
+                        proyectos que generen un impacto positivo en la
+                        sociedad. Siempre estoy abierto a nuevas oportunidades y
+                        desafíos emocionantes.
+                      </Typography>
+                    </div>
                   </Paper>
                 )}
                 {value === "2" && (
                   <Paper className={styles.paper}>
-                    <Typography
-                      variant="h5"
-                      align="center"
-                      style={{ color: "#92E3A9" }}
-                      marginTop={[10]}
-                    >
-                      Proyecto Final SoyHenry
-                    </Typography>
-                    <Typography variant="body1" align="center">
-                      <b>E-commerce 'Las Encinas Boutique'</b>
-                    </Typography>
-                    <Typography variant="body1" align="center">
-                      Oct. 2023 - Nov. 2023
-                    </Typography>
-                    {/* <Typography variant='body2' align='center' gutterBottom >
-                                            <b> +800 </b> horas de cursada
-                                        </Typography> */}
+                    <div>
+                      <Typography variant="h5" style={{ color: "#92E3A9" }}>
+                        Desarrollador web FullStack
+                      </Typography>
+                      <Typography variant="body1">
+                        <a
+                          href="https://certificates.soyhenry.com/new-cert?id=3af51b507287f18ecd58ebabbd94c9c5cb8adf8671032854b18e34051a448e28"
+                          target="blank"
+                          style={{ color: "#FFFFFF", textDecoration: "none" }}
+                        >
+                          <b>Bootcamp SoyHenry</b>
+                        </a>
+                      </Typography>
+                      <Typography variant="body1">2023</Typography>
+                      <Typography
+                        variant="body2"
+                        gutterBottom
+                        marginBottom={[10]}
+                      >
+                        <b> +800 </b> horas de cursada
+                      </Typography>
+                    </div>
+                    <div>
+                      <Typography variant="h5" style={{ color: "#92E3A9" }}>
+                        Ingeniería multimedia
+                      </Typography>
+                      <Typography variant="body1">
+                        <b>UNAD (Universidad Nacional abierta y a Distancia)</b>
+                      </Typography>
+                      <Typography variant="body1">Modalidad virtual</Typography>
+                      <Typography variant="body1">
+                        2022 - En curso actualmente
+                      </Typography>
+                    </div>
+                  </Paper>
+                )}
+                {value === "3" && (
+                  <Paper className={styles.paper}>
+                    <div>
+                      <Typography variant="h5" style={{ color: "#92E3A9" }}>
+                        Proyecto Final SoyHenry
+                      </Typography>
+                      <Typography variant="body1" align="left">
+                        <b>E-commerce 'Las Encinas Boutique'.</b>
+                      </Typography>
+                      <Typography variant="body2" align="left">
+                        Oct. 2023 - Nov. 2023.
+                      </Typography>
+                    </div>
+                    <div>
+                      <Typography variant="body2" align="left">
+                        El proyecto me brindó la oportunidad de fortalecer tanto{" "}
+                        <span
+                          onClick={() => navigate("/skills")}
+                          style={{ color: "#92E3A9", cursor: "pointer" }}
+                        >
+                          mis habilidades técnicas
+                        </span>{" "}
+                        como{" "}
+                        <span
+                          onClick={() => setValue("4")}
+                          style={{ color: "#92E3A9", cursor: "pointer" }}
+                        >
+                          mis habilidades blandas
+                        </span>{" "}
+                        al enfrentar una diversidad de desafíos durante su
+                        desarrollo. Esencialmente, logramos cohesionar un equipo
+                        en el que aprendimos nuevas tecnologías y colaboramos de
+                        manera eficaz en grupo.
+                      </Typography>
+                      <Typography align="right">
+                        <Button
+                          onClick={() =>
+                            window.open(
+                              "https://las-encinas-boutique-omega.vercel.app/home"
+                            )
+                          }
+                        >
+                          <CgWebsite style={{ fontSize: 20, marginRight: 5 }} />
+                          Sitio Web
+                        </Button>
+                      </Typography>
+                    </div>
+                    <div></div>
+                    <div>
+                      <Button
+                        onClick={() => navigate("/projects")}
+                        className={`${styles.skillsButton} ${styles.effectSkillsButton}`}
+                        style={{
+                          background: "#000000",
+                          color: "#ffffff",
+                          border: "0.1rem solid #2d6c45",
+                        }}
+                      >
+                        <PiMonitorPlayFill
+                          style={{ fontSize: 20, marginRight: 7 }}
+                        />
+                        Mis proyectos
+                      </Button>
+                    </div>
+                  </Paper>
+                )}
+                {value === "4" && (
+                  <Paper className={styles.paper}>
+                    <div>
+                      <Typography variant="h6" align="left">
+                        <FaArrowAltCircleRight style={{ color: "#92E3A9" }} />{" "}
+                        Autodidacta
+                      </Typography>
+                    </div>
+                    <div>
+                      <Typography variant="h6" align="left">
+                        <FaArrowAltCircleRight style={{ color: "#92E3A9" }} />{" "}
+                        Proactivo
+                      </Typography>
+                    </div>
+                    <div>
+                      <Typography variant="h6" align="left">
+                        <FaArrowAltCircleRight style={{ color: "#92E3A9" }} />{" "}
+                        Creatividad
+                      </Typography>
+                    </div>
+                    <div>
+                      <Typography variant="h6" align="left">
+                        <FaArrowAltCircleRight style={{ color: "#92E3A9" }} />{" "}
+                        Adaptabilidad
+                      </Typography>
+                    </div>
+                    <div>
+                      <Typography variant="h6" align="left">
+                        <FaArrowAltCircleRight style={{ color: "#92E3A9" }} />{" "}
+                        Trabajo en equipo
+                      </Typography>
+                    </div>
                   </Paper>
                 )}
               </div>
