@@ -3,6 +3,14 @@
   padding: 0;
   box-sizing: border-box;
 }
+@media (max-width: 767px) {
+  * {
+    padding: 10px 0 0 0;
+  }
+  body {
+    margin-top: 0; 
+  }
+}
 
 html {
   scroll-behavior: smooth;
