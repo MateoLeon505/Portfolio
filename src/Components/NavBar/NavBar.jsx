@@ -223,6 +223,7 @@ const NavBar = () => {
           sx={{ display: { xs: "none", md: "none", xl: "flex" } }}
           display="flex"
           justifyContent="space-between"
+          alignItems="flex-start"
           width="100%"
         >
           <IconButton>

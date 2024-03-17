@@ -1,167 +1,169 @@
 /* CONTAINER */
 .navbar {
-    position: fixed;
-    width: 100vw;
-    height: 5rem;
-    top: 0;
-    z-index: 9999;
-    background-color: #121212 !important;
-    transition: all 0.3s ease-in-out;
-    padding: 0 3rem;
+  position: fixed;
+  width: 100vw;
+  height: 5rem;
+  top: 0;
+  z-index: 9999;
+  background-color: #121212 !important;
+  transition: all 0.3s ease-in-out;
+  padding: 0 2rem;
 }
-.navbarScrolled{
-    background-color: rgba(0, 0, 0, 0.5) !important;
-    height: 4.8rem;
-    backdrop-filter: blur(5px);
-    opacity: 1; 
-    border-bottom: 1px solid rgba(255, 252, 252, 0.5);
-    padding: 0 3rem;
+.navbarScrolled {
+  background-color: rgba(0, 0, 0, 0.5) !important;
+  height: 4.8rem;
+  backdrop-filter: blur(5px);
+  opacity: 1;
+  border-bottom: 1px solid rgba(255, 252, 252, 0.5);
+  padding: 0 2rem;
 }
-/* @media (max-width: 768px) {
-    .navbar {
-        padding-left: 1vw;
-        padding-right: 1vw;
-        position: fixed;
-        width: 100vw;
-        overflow: hidden;
-    }
-} */
+@media (max-width: 768px) {
+  .navbar {
+    height: 3rem;
+    padding: 0 1px 0 1px;
+    overflow: hidden;
+  }
+  .navbarScrolled {
+    height: 3rem;
+    padding: 0 1px 0 1px;
+    overflow: hidden;
+  }
+}
 
 .menuIcon {
-    color: #ffffff !important;
+  color: #ffffff !important;
 }
 
 .navigation {
-    display: flex;
-    justify-content: space-between; 
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 /* Logo */
 .logo {
-    max-width: 5vw;
-} 
-.logoResponsive{
-    max-width: 10vw;
+  /* max-width: 5vw; */
+  height: 5rem;
+}
+.logoResponsive {
+  height: 4rem;
 }
 .navbarlink {
-    font-weight: 400;
-    color: #f5f5f5 !important;
-    letter-spacing: 0.8px;
-    padding: 0 25px;
-    font-size: 1rem;
-    opacity: 0.75;
+  font-weight: 400;
+  color: #f5f5f5 !important;
+  letter-spacing: 0.8px;
+  padding: 0 25px;
+  font-size: 1rem;
+  opacity: 0.75;
 }
-.navbarlink:hover, .navbarlink.active {
-    opacity: 1;
+.navbarlink:hover,
+.navbarlink.active {
+  opacity: 1;
 }
 .active_navbarlink {
-    font-weight: 400;
-    color: #92E3A9 !important;
-    letter-spacing: 0.8px;
-    padding: 0 25px;
-    font-size: 1rem;
-    opacity: 50;
+  font-weight: 400;
+  color: #92e3a9 !important;
+  letter-spacing: 0.8px;
+  padding: 0 25px;
+  font-size: 1rem;
+  opacity: 50;
 }
 .navbarlinkResponsive {
-    color: #FFFFFF !important;
-    width: 100% !important;
-    height: 100% !important;
-    font-weight: 500;
-    letter-spacing: 0.8px;
-    padding: 0 25px;
-    font-size: 1rem;
-    opacity: 50;
+  color: #ffffff !important;
+  width: 100% !important;
+  height: 100% !important;
+  font-weight: 500;
+  letter-spacing: 0.8px;
+  padding: 0 25px;
+  font-size: 1rem;
+  opacity: 50;
 }
 .active_navbarlinkResponsive {
-    color: #008080 !important;
-    width: 100% !important;
-    height: 100% !important;
-    border-bottom: 2px solid #ffffff !important;
-    letter-spacing: 0.8px;
-    padding: 0 25px;
-    font-size: 1rem;
-    opacity: 50;
+  color: #008080 !important;
+  width: 100% !important;
+  height: 100% !important;
+  border-bottom: 2px solid #ffffff !important;
+  letter-spacing: 0.8px;
+  padding: 0 25px;
+  font-size: 1rem;
+  opacity: 50;
 }
-  
 
 .navbar_text {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 .navbar_text button {
-    font-weight: 400;
-    color: #fff;
-    border: 1px solid #fff;
-    border-radius: 15px;
-    padding: 10px 20px;
-    font-size: 1rem;
-    margin-left: 18px;
-    position: relative;
-    background-color: transparent;
-    transition: 0.3s ease-in-out;
+  font-weight: 400;
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 15px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  margin-left: 18px;
+  position: relative;
+  background-color: transparent;
+  transition: 0.3s ease-in-out;
 }
 .navbar_text button span {
-    z-index: 1;
+  z-index: 1;
 }
 .navbar_text button::before {
-    content: "";
-    width: 0%;
-    height: 100%;
-    border-radius: 15px;
-    position: absolute;
-    background-color: #fff !important;
-    left: 0;
-    top: 0;
-    z-index: -1;
-	transition: 0.5s ease-in-out;
+  content: "";
+  width: 0%;
+  height: 100%;
+  border-radius: 15px;
+  position: absolute;
+  background-color: #fff !important;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  transition: 0.5s ease-in-out;
 }
 .navbar_text button:hover {
-    color: #121212;
+  color: #121212;
 }
 .navbar_text button:hover::before {
-    content: "";
-    width: 100%;
-    border-radius: 15px;
-    height: 100%;
-    position: absolute;
+  content: "";
+  width: 100%;
+  border-radius: 15px;
+  height: 100%;
+  position: absolute;
 }
-  
-  
+
 .social_icon {
-    display: inline-block;
+  display: inline-block;
 }
 .social_icon a {
-    width: 42px;
-    height: 42px;
-    background: rgba(217, 217, 217, 0.1);
-    display: inline-flex;
-    margin-right: 6px;
-    align-items: center;
-    justify-content: center;
-    line-height: 1;
-    border-radius: 50%;
-    border: 1px solid rgba(255, 255, 255, 0.5);
+  width: 42px;
+  height: 42px;
+  background: rgba(217, 217, 217, 0.1);
+  display: inline-flex;
+  margin-right: 6px;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.5);
 }
 .social_icon a::before {
-    content: "";
-    width: 42px;
-    height: 42px;
-    position: absolute;
-    background-color: #ffffff;
-    border-radius: 50%;
-    transform: scale(0);
-    transition: 0.3s ease-in-out;
+  content: "";
+  width: 42px;
+  height: 42px;
+  position: absolute;
+  background-color: #ffffff;
+  border-radius: 50%;
+  transform: scale(0);
+  transition: 0.3s ease-in-out;
 }
 .social_icon a:hover::before {
-    transform: scale(1);
+  transform: scale(1);
 }
 .social_icon a img {
-    width: 40%;
-    z-index: 1;
-    transition: 0.3s ease-in-out;
+  width: 40%;
+  z-index: 1;
+  transition: 0.3s ease-in-out;
 }
 .social_icon a:hover img {
-    filter: brightness(0) saturate(100%) invert(0%) sepia(7%) saturate(98%) hue-rotate(346deg) brightness(95%) contrast(86%);
+  filter: brightness(0) saturate(100%) invert(0%) sepia(7%) saturate(98%)
+    hue-rotate(346deg) brightness(95%) contrast(86%);
 }
-  

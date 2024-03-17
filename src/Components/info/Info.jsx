@@ -12,7 +12,7 @@ const Info = () => {
     <div>
       <div
         onClick={handleOpen}
-        style={{ display: "flex", alignItems: "center" }}
+        style={{ display: "flex", alignItems: "center",  padding: 0 }}
       >
         <BsFillInfoCircleFill style={{ fontSize: "1.5rem", marginRight: 1 }} />
         <Typography
@@ -20,6 +20,7 @@ const Info = () => {
           align="center"
           sx={{ ":hover": { color: "#92E3A9" } }}
         >
+          {" "}
           Info +
         </Typography>
       </div>
