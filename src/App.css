@@ -8,7 +8,7 @@
     padding: 10px 0 0 0;
   }
   body {
-    margin-top: 0; 
+    margin-top: 0;
   }
 }
 
@@ -21,9 +21,7 @@ body {
   position: relative !important;
   overflow-x: hidden;
   background-image: url(./assets/img/endless-constellation-darkMode.svg);
-  color: #D8D4CF;
+  color: #d8d4cf;
   min-height: 100vh !important;
-  margin-top: 5vh !important; 
+  margin-top: 5vh !important;
 }
-
-

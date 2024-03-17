@@ -20,10 +20,15 @@ const Footer = () => {
           <a
             href="https://www.linkedin.com/in/mateo-le%C3%B3n-097b57268/"
             target="_blank"
+            rel="noreferrer"
           >
             <FaLinkedin className={styles.icon} />
           </a>
-          <a href="https://github.com/MateoLeon505" target="_blank">
+          <a
+            href="https://github.com/MateoLeon505"
+            target="_blank"
+            rel="noreferrer"
+          >
             <FaGithub className={styles.icon} />
           </a>
         </div>

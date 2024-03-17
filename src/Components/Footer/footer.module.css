@@ -1,5 +1,5 @@
 .footer {
-  height: 6rem;
+  min-height: 6rem;
   width: 100%;
   position: relative;
   bottom: 0;
