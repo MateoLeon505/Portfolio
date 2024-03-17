@@ -10,13 +10,17 @@ const Info = () => {
 
   return (
     <div>
-      <div onClick={handleOpen}>
+      <div
+        onClick={handleOpen}
+        style={{ display: "flex", alignItems: "center" }}
+      >
+        <BsFillInfoCircleFill style={{ fontSize: "1.2rem", marginRight: 1 }} />
         <Typography
           variant="body1"
           align="center"
           sx={{ ":hover": { color: "#92E3A9" } }}
         >
-          <BsFillInfoCircleFill /> Info +
+          Info +
         </Typography>
       </div>
       <Modal

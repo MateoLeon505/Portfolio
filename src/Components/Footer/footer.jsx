@@ -10,7 +10,7 @@ const Footer = () => {
       <div>
         <Info />
       </div>
-      <div>
+      <div className={styles.nameAndContactNetworks}>
         <div>
           <Typography variant="h6" align="center">
             Mateo León
@@ -34,7 +34,7 @@ const Footer = () => {
         </div>
       </div>
       <div className={styles.copyright}>
-        <Typography variant="body2" align="center">
+        <Typography variant="body2" >
           Copyright ©2024
         </Typography>
       </div>
