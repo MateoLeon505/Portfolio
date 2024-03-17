@@ -5,33 +5,38 @@
   bottom: 0;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;    
+  justify-content: space-around;
   align-items: center;
   background-color: #121212;
-  color: #D8D4CF;
+  color: #d8d4cf;
   transition: all 0.3s ease-in-out;
   border-top: 1px solid rgba(250, 250, 250, 0.5);
 }
 .nameAndContactNetworks {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.nameAndContactNetworks * {
+  margin: 0;
+  padding: 0;
 }
 .iconsContainer {
-    display: flex;
-    gap: 0.5rem;
+  display: flex;
+  gap: 0.5rem;
 }
 a {
-    color: #D7D3C9;
+  color: #d7d3c9;
 }
-a:hover, a::before {
-    color: #FFFFFF;
+a:hover,
+a::before {
+  color: #ffffff;
 }
 .icon {
-    font-size: 2.6rem;
+  font-size: 2.6rem;
 }
 
 .copyright {
-    align-self: center;
+  align-self: center;
 }

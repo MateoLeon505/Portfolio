@@ -14,7 +14,7 @@ const Info = () => {
         onClick={handleOpen}
         style={{ display: "flex", alignItems: "center" }}
       >
-        <BsFillInfoCircleFill style={{ fontSize: "1.2rem", marginRight: 1 }} />
+        <BsFillInfoCircleFill style={{ fontSize: "1.5rem", marginRight: 1 }} />
         <Typography
           variant="body1"
           align="center"
