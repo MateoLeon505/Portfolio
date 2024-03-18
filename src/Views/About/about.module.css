@@ -157,8 +157,7 @@
   min-height: 24.7rem;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
+  justify-content: space-between;
 }
 .paper div {
   height: 100%;

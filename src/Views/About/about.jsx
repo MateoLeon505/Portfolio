@@ -184,34 +184,32 @@ const About = () => {
                   style={{
                     backgroundColor: "#121212",
                     color: "#ffffff",
-                    padding: "1rem",
+                    padding: "2rem 1rem",
                     border: "1px solid #ffffff",
                   }}
                   className={styles.paper}
                 >
-                  <div>
-                    <Typography variant="h5" style={{ color: "#92E3A9" }}>
-                      Sobre mí
-                    </Typography>
-                    <Typography variant="body2" gutterBottom align="left">
-                      Soy estudiante de ingeniería multimedia y desarrollador
-                      web fullstack. Mi enfoque principal se encuentra en el
-                      desarrollo frontend, donde busco fusionar la creatividad
-                      visual con la funcionalidad impecable.
-                    </Typography>
-                    <Typography variant="body2" gutterBottom align="left">
-                      Actualmente, me encuentro desarrollando proyectos que me
-                      permiten mejorar mis habilidades al implementar
-                      innovaciones y curso mi carrera de ingeniería multimedia.
-                    </Typography>
-                    <Typography variant="body2" gutterBottom align="left">
-                      Mis objetivos profesionales son crecer como desarrollador
-                      web, explorar el emocionante mundo del desarrollo de
-                      aplicaciones móviles y contribuir a proyectos que generen
-                      un impacto positivo en la sociedad. Siempre estoy abierto
-                      a nuevas oportunidades y desafíos emocionantes.
-                    </Typography>
-                  </div>
+                  <Typography variant="h5" style={{ color: "#92E3A9" }}>
+                    Sobre mí
+                  </Typography>
+                  <Typography variant="body2" gutterBottom align="left">
+                    Soy estudiante de ingeniería multimedia y desarrollador web
+                    fullstack. Mi enfoque principal se encuentra en el
+                    desarrollo frontend, donde busco fusionar la creatividad
+                    visual con la funcionalidad impecable.
+                  </Typography>
+                  <Typography variant="body2" gutterBottom align="left">
+                    Actualmente, me encuentro desarrollando proyectos que me
+                    permiten mejorar mis habilidades al implementar innovaciones
+                    y curso mi carrera de ingeniería multimedia.
+                  </Typography>
+                  <Typography variant="body2" gutterBottom align="left">
+                    Mis objetivos profesionales son crecer como desarrollador
+                    web, explorar el emocionante mundo del desarrollo de
+                    aplicaciones móviles y contribuir a proyectos que generen un
+                    impacto positivo en la sociedad. Siempre estoy abierto a
+                    nuevas oportunidades y desafíos emocionantes.
+                  </Typography>
                 </Paper>
               )}
               {value === "2" && (
@@ -224,40 +222,32 @@ const About = () => {
                   }}
                   className={styles.paper}
                 >
-                  <div>
-                    <Typography variant="h5" style={{ color: "#92E3A9" }}>
-                      Desarrollador web FullStack
-                    </Typography>
-                    <Typography variant="body1">
-                      <a
-                        href="https://certificates.soyhenry.com/new-cert?id=3af51b507287f18ecd58ebabbd94c9c5cb8adf8671032854b18e34051a448e28"
-                        target="blank"
-                        style={{ color: "#FFFFFF", textDecoration: "none" }}
-                      >
-                        <b>Bootcamp SoyHenry</b>
-                      </a>
-                    </Typography>
-                    <Typography variant="body1">2023</Typography>
-                    <Typography
-                      variant="body2"
-                      gutterBottom
-                      marginBottom={[10]}
+                  <Typography variant="h5" style={{ color: "#92E3A9" }}>
+                    Desarrollador web FullStack
+                  </Typography>
+                  <Typography variant="body1">
+                    <a
+                      href="https://certificates.soyhenry.com/new-cert?id=3af51b507287f18ecd58ebabbd94c9c5cb8adf8671032854b18e34051a448e28"
+                      target="blank"
+                      style={{ color: "#FFFFFF", textDecoration: "none" }}
                     >
-                      <b> +800 </b> horas de cursada
-                    </Typography>
-                  </div>
-                  <div>
-                    <Typography variant="h5" style={{ color: "#92E3A9" }}>
-                      Ingeniería multimedia
-                    </Typography>
-                    <Typography variant="body1">
-                      <b>UNAD (Universidad Nacional abierta y a Distancia)</b>
-                    </Typography>
-                    <Typography variant="body1">Modalidad virtual</Typography>
-                    <Typography variant="body1">
-                      2022 - En curso actualmente
-                    </Typography>
-                  </div>
+                      <b>Bootcamp SoyHenry</b>
+                    </a>
+                  </Typography>
+                  <Typography variant="body1">2023</Typography>
+                  <Typography variant="body2" gutterBottom marginBottom={[10]}>
+                    <b> +800 </b> horas de cursada
+                  </Typography>
+                  <Typography variant="h5" style={{ color: "#92E3A9" }}>
+                    Ingeniería multimedia
+                  </Typography>
+                  <Typography variant="body1">
+                    <b>UNAD (Universidad Nacional abierta y a Distancia)</b>
+                  </Typography>
+                  <Typography variant="body1">Modalidad virtual</Typography>
+                  <Typography variant="body1">
+                    2022 - En curso actualmente
+                  </Typography>
                 </Paper>
               )}
               {value === "3" && (
