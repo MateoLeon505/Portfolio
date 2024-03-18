@@ -14,9 +14,10 @@ const Banner = () => {
       container
       sx={{
         direction: "row",
-        padding: 0,
+        padding: '0 1rem',
         justifyContent: "space-between",
         alignItems: "center",
+        minHeight: "100vh"
       }}
     >
       <Grid item xs={12} md={6} lg={6} className={styles.text}>
