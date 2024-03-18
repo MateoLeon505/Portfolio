@@ -24,14 +24,17 @@ const NavBar = () => {
   const location = useLocation();
 
   const [anchorElNav, setAnchorElNav] = useState(null);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
   };
 
-  // const [ activeLink, setActiveLink ] = useState('home');
   const [scrolled, setScrolled] = useState(false);
 
+  const handleToggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
   };
@@ -45,188 +48,99 @@ const NavBar = () => {
   }, [scrolled]);
 
   const onUpdateActiveLink = (value) => {
-    // setActiveLink(value);
     navigate(value);
-    // handleCloseNavMenu();
   };
 
   return (
-    <AppBar className={scrolled ? styles.navbarScrolled : styles.navbar}>
-      <Toolbar disableGutters>
+    <AppBar
+      className={[styles.navbar, scrolled && styles.navbarScrolled].join(" ")}
+    >
+      <Toolbar >
         {/* Small - Medium */}
         <Box
-          sx={{ flexGrow: 1, display: { xs: "flex", md: "flex", xl: "none" } }}
+          sx={{ display: { xs: "flex", md: "flex", xl: "none" }}}
           display="flex"
           justifyContent="space-between"
+          alignItems="center"
           width="100%"
         >
-          <IconButton>
+          <IconButton sx={{ height: "5rem" }}>
             <img
               src={Logo}
               alt="Logo"
-              className={styles.logoResponsive}
+              className={styles.logo}
               onClick={() => navigate("/")}
             />
           </IconButton>
-          <IconButton
-            size="large"
-            aria-label="account of current user"
-            aria-controls="menu-appbar"
-            aria-haspopup="true"
-            onClick={handleOpenNavMenu}
-            color="inherit"
-          >
-            <MenuIcon className={styles.menuIcon} />
-          </IconButton>
-          <Menu
-            id="menu-appbar"
-            anchorEl={anchorElNav}
-            anchorOrigin={{
-              vertical: "bottom",
-              horizontal: "left",
-            }}
-            keepMounted
-            transformOrigin={{
-              vertical: "top",
-              horizontal: "left",
-            }}
-            open={Boolean(anchorElNav)}
-            onClose={handleCloseNavMenu}
-            sx={{
-              display: { xs: "block", sm: "block", md: "block" },
-            }}
-          >
-            <MenuItem
-              sx={{ bgcolor: "black" }}
-              onClick={() => onUpdateActiveLink("")}
-            >
-              <Button
-                className={
-                  location.pathname === "/"
-                    ? styles.active_navbarlinkResponsive
-                    : styles.navbarlinkResponsive
-                }
-                // sx={{ my: 2, color: 'white', display: 'block' }}
-              >
-                <IconButton
-                  size="small"
-                  sx={{
-                    color: location.pathname === "/" ? "#008080" : "#FFFFFF",
+          <div className={styles.menuIcon}>
+            <MenuIcon color="secondary" sx={{ fontSize: "2.7rem" }} />
+            <ul>
+              <li>
+                <Button
+                  onClick={() => onUpdateActiveLink("")}
+                  style={{
+                    color: "#ffffff",
+                    width: "100%",
                   }}
                 >
-                  <HiMiniHome />
-                </IconButton>
-                Inicio
-              </Button>
-            </MenuItem>
-            <MenuItem
-              sx={{ bgcolor: "black", color: "white" }}
-              onClick={() => onUpdateActiveLink("about")}
-            >
-              <Button
-                className={
-                  location.pathname === "/about"
-                    ? styles.active_navbarlinkResponsive
-                    : styles.navbarlinkResponsive
-                }
-                // sx={{ my: 2, color: 'white', display: 'block' }}
-              >
-                <IconButton
-                  size="small"
-                  sx={{
-                    color:
-                      location.pathname === "/about" ? "#008080" : "#FFFFFF",
+                  <HiMiniHome /> Inicio
+                </Button>
+              </li>
+              <li>
+                <Button
+                  onClick={() => onUpdateActiveLink("about")}
+                  style={{
+                    color: "#ffffff",
+                    width: "100%",
                   }}
                 >
-                  <MdAccountBox />
-                </IconButton>
-                Sobre mí
-              </Button>
-            </MenuItem>
-            <MenuItem
-              sx={{ bgcolor: "black", color: "white" }}
-              onClick={() => onUpdateActiveLink("skills")}
-            >
-              <Button
-                className={
-                  location.pathname === "/skills"
-                    ? styles.active_navbarlinkResponsive
-                    : styles.navbarlinkResponsive
-                }
-                // sx={{ my: 2, color: 'white', display: 'block' }}
-              >
-                <IconButton
-                  size="small"
-                  sx={{
-                    color:
-                      location.pathname === "/skills" ? "#008080" : "#FFFFFF",
+                  <MdAccountBox /> {"                      "} Sobre mí
+                </Button>
+              </li>
+              <li>
+                <Button
+                  onClick={() => onUpdateActiveLink("skills")}
+                  style={{
+                    color: "#ffffff",
+                    width: "100%",
                   }}
                 >
-                  <PiFileCodeFill />
-                </IconButton>
-                Habilidades
-              </Button>
-            </MenuItem>
-            <MenuItem
-              sx={{ bgcolor: "black", color: "white" }}
-              onClick={() => onUpdateActiveLink("projects")}
-            >
-              <Button
-                className={
-                  location.pathname === "/projects"
-                    ? styles.active_navbarlinkResponsive
-                    : styles.navbarlinkResponsive
-                }
-                // sx={{ my: 2, color: 'white', display: 'block' }}
-              >
-                <IconButton
-                  size="small"
-                  sx={{
-                    color:
-                      location.pathname === "/projects" ? "#008080" : "#FFFFFF",
+                  <PiFileCodeFill /> Habilidades
+                </Button>
+              </li>
+              <li>
+                <Button
+                  onClick={() => onUpdateActiveLink("projects")}
+                  style={{
+                    color: "#ffffff",
+                    width: "100%",
                   }}
                 >
-                  <PiMonitorPlayFill />
-                </IconButton>
-                Proyectos
-              </Button>
-            </MenuItem>
-            <MenuItem
-              sx={{ bgcolor: "black", color: "white" }}
-              onClick={() => onUpdateActiveLink("contact")}
-            >
-              <Button
-                className={
-                  location.pathname === "/contact"
-                    ? styles.active_navbarlinkResponsive
-                    : styles.navbarlinkResponsive
-                }
-                // sx={{ my: 2, color: 'white', display: 'block' }}
-              >
-                <IconButton
-                  size="small"
-                  sx={{
-                    color:
-                      location.pathname === "/contact" ? "#008080" : "#FFFFFF",
+                  <PiMonitorPlayFill /> Proyectos
+                </Button>
+              </li>
+              <li>
+                <Button
+                  onClick={() => onUpdateActiveLink("contact")}
+                  style={{
+                    color: "#ffffff",
+                    width: "100%",
                   }}
                 >
-                  <AiFillMessage />
-                </IconButton>
-                Contacto
-              </Button>
-            </MenuItem>
-          </Menu>
+                  <AiFillMessage /> Contacto
+                </Button>
+              </li>
+            </ul>
+          </div>
         </Box>
-
         {/* Large */}
         <Box
           sx={{ display: { xs: "none", md: "none", xl: "flex" } }}
           display="flex"
-          justifyContent="space-between"
-          alignItems="flex-start"
+          justifyContent="space-around"
           width="100%"
         >
-          <IconButton>
+          <IconButton sx={{ height: "5rem" }}>
             <img
               src={Logo}
               alt="Logo"
