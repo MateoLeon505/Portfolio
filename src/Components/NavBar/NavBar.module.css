@@ -83,6 +83,26 @@ ul > li:hover {
   font-size: 1rem;
   opacity: 50;
 }
+.navbarlinkResponsive {
+  color: #ffffff !important;
+  width: 100% !important;
+  height: 100% !important;
+  font-weight: 500;
+  letter-spacing: 0.8px;
+  padding: 0 25px;
+  font-size: 1rem;
+  opacity: 50;
+}
+.active_navbarlinkResponsive {
+  color: #008080 !important;
+  width: 100% !important;
+  height: 100% !important;
+  border-bottom: 2px solid #ffffff !important;
+  letter-spacing: 0.8px;
+  padding: 0 25px;
+  font-size: 1rem;
+  opacity: 50;
+}
 
 .navbar_text {
   display: flex;
