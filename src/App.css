@@ -23,7 +23,7 @@ body {
 
 @media (max-width: 900px) {
   body {
-    padding: 15vh 5px 0 5px !important;
+    padding: 11vh 5px 0 5px !important;
     min-height: 100vh !important;
   }
 }

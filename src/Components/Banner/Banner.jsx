@@ -13,14 +13,14 @@ const Banner = () => {
     <Grid
       container
       sx={{
-        direction: "row",
-        padding: '0 1rem',
+        flexDirection: "row",
+        padding: '0 4%',
         justifyContent: "space-between",
         alignItems: "center",
-        minHeight: "100vh"
+        minHeight: "100vh",
       }}
     >
-      <Grid item xs={12} md={6} lg={6} className={styles.text}>
+      <Grid item xs={12} md={6} lg={6}>
         <Typography variant="h2" align="center" gutterBottom>
           Bienvenido a mi portfolio
           <WavingHandIcon

@@ -1,21 +1,5 @@
-.container {
-  height: 100vh;
-  margin-top: 10%;
-}
-.gridContainer {
-  justify-content: center;
-  align-items: center;
-  gap: 2%;
-}
-
-.mainCard {
-  background-color: #181a1b !important;
-}
 .header {
   background-image: url(../../assets/img/wavey-fingerprint.svg);
-}
-.avatar {
-  border: 4px solid #1d7235;
 }
 
 .contactIcons {
