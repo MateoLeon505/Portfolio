@@ -58,7 +58,6 @@
   justify-content: center;
   line-height: 1;
   border-radius: 50%;
-  /* border: 1px solid #D8D4CF; */
 }
 .social_icon a::before {
   content: "";
@@ -154,23 +153,8 @@
   color: #3d3c3c;
 }
 
-.secondCard {
-  background-color: #121212 !important;
-  color: #ffffff !important;
-  border: 1px solid #ffffff !important;
-  padding: 0;
-}
-
-.tab {
-  color: #ffffff !important;
-}
-
 .paper {
-  height: 24.7rem;
-  background-color: #121212 !important;
-  color: #ffffff !important;
-  padding: 2rem !important;
-  border: 1px solid #ffffff !important;
+  min-height: 24.7rem;
   display: flex;
   flex-direction: column;
   justify-content: space-around;

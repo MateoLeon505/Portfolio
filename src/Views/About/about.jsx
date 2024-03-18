@@ -28,6 +28,8 @@ import { GiProgression } from "react-icons/gi";
 // import { MdCastForEducation } from "react-icons/md";
 import Me from "../../assets/img/Me.jpg";
 import styles from "./about.module.css";
+import { color } from "@mui/system";
+import { style } from "@mui/system/Stack/createStack";
 
 const About = () => {
   const navigate = useNavigate();
@@ -41,19 +43,17 @@ const About = () => {
     <Grid
       container
       sx={{
-        padding: '0 4%',
-        flexDirection: {lg: "row", md: "row", xs: "column" },
+        padding: "0 4%",
+        flexDirection: { lg: "row", md: "row", xs: "column" },
         justifyContent: "space-evenly",
         alignItems: "center",
         minHeight: "100vh",
         margin: "1rem 0",
-        gap: "1rem"
+        gap: "1rem",
       }}
     >
-      <Grid item xs={11} sm={9} md={5.2} lg={4}>
-        <Card
-         sx={{ minWidth: 275, height: 480, backgroundColor: "#181a1b" }}
-         >
+      <Grid item xs={12} sm={9} md={5.5} lg={4}>
+        <Card sx={{ minWidth: 275, height: 480, backgroundColor: "#181a1b" }}>
           <CardContent>
             <Stack className={styles.header}>
               <Avatar
@@ -144,60 +144,65 @@ const About = () => {
           </CardActions>
         </Card>
       </Grid>
-      <Grid item xs={11} sm={9} md={5.8} lg={4.3}>
+      <Grid item xs={12} sm={9} md={5.8} lg={4.3}>
         <Card
-         sx={{ minWidth: 275, height: 480 }} className={styles.secondCard}
-         >
+          sx={{
+            width: "100%",
+            height: "100%",
+            backgroundColor: "#121212",
+            color: "#ffffff",
+            border: "1px solid #ffffff",
+            padding: 0,
+          }}
+        >
           <CardContent>
             <div>
               <Tabs value={value} onChange={handleChange}>
                 <Tab
-                  label={<GrContactInfo style={{fontSize: "1.5rem"}}/>}
+                  label={<GrContactInfo style={{ fontSize: "1.5rem" }} />}
                   value="1"
-                  className={value !== "1" && styles.tab}
+                  style={value !== "1" ? { color: "#ffffff" } : {}}
                 />
                 <Tab
-                  label={<MdCastForEducation style={{fontSize: "1.5rem"}}/>}
+                  label={<MdCastForEducation style={{ fontSize: "1.5rem" }} />}
                   value="2"
-                  className={value !== "2" && styles.tab}
+                  style={value !== "2" ? { color: "#ffffff" } : {}}
                 />
                 <Tab
-                  label={<GiProgression style={{fontSize: "1.5rem"}}/>}
+                  label={<GiProgression style={{ fontSize: "1.5rem" }} />}
                   value="3"
-                  className={value !== "3" && styles.tab}
+                  style={value !== "3" ? { color: "#ffffff" } : {}}
                 />
                 <Tab
-                  label={<FaPeopleGroup style={{fontSize: "1.5rem"}}/>}
+                  label={<FaPeopleGroup style={{ fontSize: "1.5rem" }} />}
                   value="4"
-                  className={value !== "4" && styles.tab}
+                  style={value !== "4" ? { color: "#ffffff" } : {}}
                 />
               </Tabs>
               {value === "1" && (
-                <Paper className={styles.paper}>
+                <Paper
+                  style={{
+                    backgroundColor: "#121212",
+                    color: "#ffffff",
+                    padding: "1rem",
+                    border: "1px solid #ffffff",
+                  }}
+                  className={styles.paper}
+                >
                   <div>
                     <Typography variant="h5" style={{ color: "#92E3A9" }}>
-                      ¿Quién soy?
+                      Sobre mí
                     </Typography>
-                    <Typography variant="body2" align="left">
+                    <Typography variant="body2" gutterBottom align="left">
                       Soy estudiante de ingeniería multimedia y desarrollador
                       web fullstack. Mi enfoque principal se encuentra en el
-                      desarrollo frontend, donde siempre busco fusionar la
-                      creatividad visual con la funcionalidad impecable.
-                    </Typography>
-                  </div>
-                  <div>
-                    <Typography variant="h5" style={{ color: "#92E3A9" }}>
-                      ¿Qué hago?
+                      desarrollo frontend, donde busco fusionar la creatividad
+                      visual con la funcionalidad impecable.
                     </Typography>
                     <Typography variant="body2" gutterBottom align="left">
                       Actualmente, me encuentro desarrollando proyectos que me
                       permiten mejorar mis habilidades al implementar
                       innovaciones y curso mi carrera de ingeniería multimedia.
-                    </Typography>
-                  </div>
-                  <div>
-                    <Typography variant="h5" style={{ color: "#92E3A9" }}>
-                      ¿Adónde me dirijo?
                     </Typography>
                     <Typography variant="body2" gutterBottom align="left">
                       Mis objetivos profesionales son crecer como desarrollador
@@ -210,7 +215,15 @@ const About = () => {
                 </Paper>
               )}
               {value === "2" && (
-                <Paper className={styles.paper}>
+                <Paper
+                  style={{
+                    backgroundColor: "#121212",
+                    color: "#ffffff",
+                    padding: "1rem",
+                    border: "1px solid #ffffff",
+                  }}
+                  className={styles.paper}
+                >
                   <div>
                     <Typography variant="h5" style={{ color: "#92E3A9" }}>
                       Desarrollador web FullStack
@@ -248,7 +261,15 @@ const About = () => {
                 </Paper>
               )}
               {value === "3" && (
-                <Paper className={styles.paper}>
+                <Paper
+                  style={{
+                    backgroundColor: "#121212",
+                    color: "#ffffff",
+                    padding: "1rem",
+                    border: "1px solid #ffffff",
+                  }}
+                  className={styles.paper}
+                >
                   <div>
                     <Typography variant="h5" style={{ color: "#92E3A9" }}>
                       Proyecto Final SoyHenry
@@ -314,7 +335,15 @@ const About = () => {
                 </Paper>
               )}
               {value === "4" && (
-                <Paper className={styles.paper}>
+                <Paper
+                  style={{
+                    backgroundColor: "#121212",
+                    color: "#ffffff",
+                    padding: "1rem",
+                    border: "1px solid #ffffff",
+                  }}
+                  className={styles.paper}
+                >
                   <div>
                     <Typography variant="h6" align="left">
                       <FaArrowAltCircleRight style={{ color: "#92E3A9" }} />{" "}
