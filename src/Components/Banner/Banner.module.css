@@ -1,25 +1,3 @@
-.gridContainer {
-  padding: 0;
-  align-items: center;
-  justify-content: space-between;
-}
-/* @keyframes textAnimation {
-  0% {
-    transform: scale(1);
-    opacity: 0.5;
-  }
-  50% {
-    transform: scale(1.1);
-    opacity: 1;
-  }
-  100% {
-    transform: scale(1);
-    opacity: 0.5;
-  }
-}
-.Typography {
-  animation: textAnimation 3s ease infinite;
-} */
 
 @keyframes waving {
   0% {

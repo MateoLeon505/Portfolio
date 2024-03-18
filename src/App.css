@@ -5,15 +5,6 @@
   text-decoration: none;
   list-style: none;
 }
-@media (max-width: 767px) {
-  * {
-    padding: 10px 0 0 0;
-  }
-  body {
-    margin-top: 0;
-    min-height: 100vh !important;
-  }
-}
 
 html {
   scroll-behavior: smooth;
@@ -21,10 +12,18 @@ html {
 }
 
 body {
-  position: relative !important;
+  /* position: relative !important; */
   overflow-x: hidden;
   background-image: url(./assets/img/endless-constellation-darkMode.svg);
   color: #d8d4cf;
-  min-height: 100vh !important;
-  margin-top: 5vh !important;
+  max-height: 95vh !important;
+  padding: 2rem 0 0 0 !important;
+  /* margin-top: 2rem !important; */
+}
+
+@media (max-width: 900px) {
+  body {
+    padding: 15vh 5px 0 5px !important;
+    min-height: 100vh !important;
+  }
 }
