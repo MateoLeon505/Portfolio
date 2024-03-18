@@ -5,6 +5,7 @@
   height: 5rem;
   top: 0;
   z-index: 9999;
+  padding: 0;
   background-color: #121212 !important;
   transition: all 0.3s ease-in-out;
 }
@@ -14,19 +15,11 @@
   opacity: 1;
   border-bottom: 1px solid rgba(255, 252, 252, 0.5);
 }
-@media (max-width: 768px) {
-  .navbar {
-    min-height: 3rem;
-    padding: 0 1px 0 1px;
-    overflow: hidden;
-  }
-}
 
 .menuIcon > ul {
   list-style: none;
   position: absolute;
-  top: calc(80%); 
-  right: 0;
+  right: 0%;
   display: none;
   list-style: none;
   width: 180px;
@@ -34,6 +27,24 @@
 }
 .menuIcon:hover > ul {
   display: block;
+}
+
+/* @media (max-width: 952px) {
+  .navbar {
+    min-height: 3rem;
+    padding: 0 1px 0 1px;
+    overflow: hidden;
+  }
+} */
+@media (max-width: 858px) {
+  .navbar {
+    min-height: 3rem;
+    padding: 0 1px 0 1px;
+    overflow: hidden;
+  }
+  .menuIcon > ul {
+    position: fixed;
+  }
 }
 
 /* ul > li {

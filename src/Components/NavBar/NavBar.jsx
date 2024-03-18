@@ -5,8 +5,7 @@ import {
   Toolbar,
   Button,
   IconButton,
-  Menu,
-  MenuItem,
+  Typography,
   Box,
 } from "@mui/material";
 
@@ -23,21 +22,7 @@ const NavBar = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
-  const [anchorElNav, setAnchorElNav] = useState(null);
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  const handleOpenNavMenu = (event) => {
-    setAnchorElNav(event.currentTarget);
-  };
-
   const [scrolled, setScrolled] = useState(false);
-
-  const handleToggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
-  const handleCloseNavMenu = () => {
-    setAnchorElNav(null);
-  };
 
   useEffect(() => {
     const onScroll = () => {
@@ -55,10 +40,10 @@ const NavBar = () => {
     <AppBar
       className={[styles.navbar, scrolled && styles.navbarScrolled].join(" ")}
     >
-      <Toolbar >
+      <Toolbar>
         {/* Small - Medium */}
         <Box
-          sx={{ display: { xs: "flex", md: "flex", xl: "none" }}}
+          sx={{ display: { xs: "flex", md: "flex", xl: "none" } }}
           display="flex"
           justifyContent="space-between"
           alignItems="center"
@@ -73,7 +58,7 @@ const NavBar = () => {
             />
           </IconButton>
           <div className={styles.menuIcon}>
-            <MenuIcon color="secondary" sx={{ fontSize: "2.7rem" }} />
+            <MenuIcon color="secondary" sx={{ fontSize: "2.5rem" }} />
             <ul>
               <li>
                 <Button
@@ -83,7 +68,8 @@ const NavBar = () => {
                     width: "100%",
                   }}
                 >
-                  <HiMiniHome /> Inicio
+                  <Typography></Typography>
+                  <HiMiniHome style={{fontSize: '28px'}}/> Inicio
                 </Button>
               </li>
               <li>
@@ -94,7 +80,7 @@ const NavBar = () => {
                     width: "100%",
                   }}
                 >
-                  <MdAccountBox /> {"                      "} Sobre mí
+                  <MdAccountBox style={{fontSize: '28px'}}/>Sobre mí
                 </Button>
               </li>
               <li>
@@ -105,7 +91,7 @@ const NavBar = () => {
                     width: "100%",
                   }}
                 >
-                  <PiFileCodeFill /> Habilidades
+                  <PiFileCodeFill style={{fontSize: '28px'}}/> Habilidades
                 </Button>
               </li>
               <li>
@@ -116,7 +102,7 @@ const NavBar = () => {
                     width: "100%",
                   }}
                 >
-                  <PiMonitorPlayFill /> Proyectos
+                  <PiMonitorPlayFill style={{fontSize: '28px'}}/> Proyectos
                 </Button>
               </li>
               <li>
@@ -127,7 +113,7 @@ const NavBar = () => {
                     width: "100%",
                   }}
                 >
-                  <AiFillMessage /> Contacto
+                  <AiFillMessage style={{fontSize: '28px'}}/> Contacto
                 </Button>
               </li>
             </ul>
@@ -137,7 +123,7 @@ const NavBar = () => {
         <Box
           sx={{ display: { xs: "none", md: "none", xl: "flex" } }}
           display="flex"
-          justifyContent="space-around"
+          justifyContent="space-between"
           width="100%"
         >
           <IconButton sx={{ height: "5rem" }}>
