@@ -42,7 +42,6 @@ const Projects = () => {
         margin: "1rem 0",
         gap: "1rem",
       }}
-      className={styles.gridContainer}
     >
       {projects.map((project) => (
         <Grid
