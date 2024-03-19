@@ -1,7 +1,7 @@
-.gridContainer {
+/* .gridContainer {
   height: 100vh;
   padding-top: 20vh;
-}
+} */
 .gridProject {
   display: flex;
   align-items: flex-start;

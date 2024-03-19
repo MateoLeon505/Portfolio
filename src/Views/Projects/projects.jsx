@@ -34,7 +34,14 @@ const Projects = () => {
       container
       spacing={{ xs: 2, md: 3 }}
       columns={{ xs: 4, sm: 8, md: 18 }}
-      justifyContent="center"
+      justifyContent="space-evenly"
+      sx={{
+        padding: "5% 4%",
+        alignItems: "center",
+        minHeight: "100vh",
+        margin: "1rem 0",
+        gap: "1rem",
+      }}
       className={styles.gridContainer}
     >
       {projects.map((project) => (
