@@ -47,7 +47,7 @@ const Services = () => {
   ];
 
   return (
-    <Box sx={{ flexGrow: 1 }} className={styles.skillsContainer}>
+    <Box sx={{ flexGrow: 1, padding: "6%" }}>
       <Typography
         variant="h5"
         gutterBottom
@@ -72,12 +72,12 @@ const Services = () => {
             key={index}
             className={styles.gridTool}
           >
-            <span className={styles.skillContainer}>
-              <span className={styles.iconContainer}>{tool.image1}</span>
+            <div className={styles.skillContainer}>
+              <div className={styles.iconContainer}>{tool.image1}</div>
               <Typography sx={{ fontSize: 14 }} className={styles.skillName}>
                 {tool.name}
               </Typography>
-            </span>
+            </div>
           </Grid>
         ))}
       </Grid>
@@ -105,21 +105,25 @@ const Services = () => {
             key={index}
             className={styles.gridTool}
           >
-            <span className={styles.skillContainer}>
-              <span className={styles.iconContainer}>{tool.image1}</span>
+            <div className={styles.skillContainer}>
+              <div className={styles.iconContainer}>{tool.image1}</div>
               <Typography sx={{ fontSize: 14 }} className={styles.skillName}>
                 {tool.name}
               </Typography>
-            </span>
+            </div>
           </Grid>
         ))}
       </Grid>
       <Typography variant="body1" align="center">
         <Button
-          className={styles.projects}
+          className={`${styles.projectsButton} ${styles.effectProjectsButton}`}
           variant="contained"
           onClick={() => navigate("/projects")}
-          style={{ background: "#ECEFF1", color: "#121212" }}
+          style={{
+            background: "#000000",
+            color: "#ffffff",
+            border: "0.1rem solid #2d6c45",
+          }}
         >
           <PiMonitorPlayFill style={{ fontSize: "23" }} /> Proyectos
         </Button>
