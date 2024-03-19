@@ -1,7 +1,7 @@
 .footer {
   min-height: 6rem;
   width: 100%;
-  position: absolute;
+  position: relative;
   bottom: calc(0 - 2px);
   display: flex;
   flex-wrap: wrap;

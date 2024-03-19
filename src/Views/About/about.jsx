@@ -260,52 +260,52 @@ const About = () => {
                   }}
                   className={styles.paper}
                 >
-                  <div>
-                    <Typography variant="h5" style={{ color: "#92E3A9" }}>
-                      Proyecto Final SoyHenry
-                    </Typography>
-                    <Typography variant="body1" align="left">
-                      <b>E-commerce 'Las Encinas Boutique'.</b>
-                    </Typography>
-                    <Typography variant="body2" align="left">
-                      Oct. 2023 - Nov. 2023.
-                    </Typography>
-                  </div>
-                  <div>
-                    <Typography variant="body2" align="left">
-                      El proyecto me brindó la oportunidad de fortalecer tanto{" "}
-                      <span
-                        onClick={() => navigate("/skills")}
-                        style={{ color: "#92E3A9", cursor: "pointer" }}
-                      >
-                        mis habilidades técnicas
-                      </span>{" "}
-                      como{" "}
-                      <span
-                        onClick={() => setValue("4")}
-                        style={{ color: "#92E3A9", cursor: "pointer" }}
-                      >
-                        mis habilidades blandas
-                      </span>{" "}
-                      al enfrentar una diversidad de desafíos durante su
-                      desarrollo. Esencialmente, logramos cohesionar un equipo
-                      en el que aprendimos nuevas tecnologías y colaboramos de
-                      manera eficaz en grupo.
-                    </Typography>
-                    <Typography align="right">
-                      <Button
-                        onClick={() =>
-                          window.open(
-                            "https://las-encinas-boutique-omega.vercel.app/home"
-                          )
-                        }
-                      >
-                        <CgWebsite style={{ fontSize: 20, marginRight: 5 }} />
-                        Sitio Web
-                      </Button>
-                    </Typography>
-                  </div>
-                  <div></div>
+                  <Typography
+                    variant="h5"
+                    align="left"
+                    style={{ color: "#92E3A9" }}
+                  >
+                    Proyecto Final SoyHenry
+                  </Typography>
+                  <Typography variant="body1" align="left">
+                    <b>E-commerce 'Las Encinas Boutique'.</b>
+                  </Typography>
+                  <Typography variant="body2" align="left">
+                    Oct. 2023 - Nov. 2023.
+                  </Typography>
+                  <Typography variant="body2" align="left">
+                    El proyecto me brindó la oportunidad de fortalecer tanto{" "}
+                    <span
+                      onClick={() => navigate("/skills")}
+                      style={{ color: "#92E3A9", cursor: "pointer" }}
+                    >
+                      mis habilidades técnicas
+                    </span>{" "}
+                    como{" "}
+                    <span
+                      onClick={() => setValue("4")}
+                      style={{ color: "#92E3A9", cursor: "pointer" }}
+                    >
+                      mis habilidades blandas
+                    </span>{" "}
+                    al enfrentar una diversidad de desafíos durante su
+                    desarrollo. Esencialmente, logramos cohesionar un equipo en
+                    el que aprendimos nuevas tecnologías y colaboramos de manera
+                    eficaz en grupo.
+                  </Typography>
+                  <Typography align="right">
+                    <Button
+                      onClick={() =>
+                        window.open(
+                          "https://las-encinas-boutique-omega.vercel.app/home"
+                        )
+                      }
+                    >
+                      <CgWebsite style={{ fontSize: 20, marginRight: 5 }} />
+                      Sitio Web
+                    </Button>
+                  </Typography>
+
                   <div>
                     <Button
                       onClick={() => navigate("/projects")}
