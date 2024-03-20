@@ -1,8 +1,15 @@
 .floatButton:hover >.contactIcon {
-    color: #1D7235;
+    color: #ffffff;
+
+}
+.floatButton:hover {
+    scale: 110px;
+    background-color: #2e9d4e !important;
+    transform: scale(1.1);
 }
 
 .contactIcon {
     font-size: 40px;
     color: #D8D4CF;
+    transition: color 0.3s;
 }

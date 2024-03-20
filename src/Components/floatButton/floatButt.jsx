@@ -15,7 +15,8 @@ const FloatButton = () => {
         bottom: 35,
         right: 35,
         height: 70,
-        width: 70
+        width: 70,
+        transition: "background-color 0.3s, transform 0.3s",
       }}
       className={styles.floatButton}
       onClick={()=> navigate('/contact')}
