@@ -1,4 +1,3 @@
-/* CONTAINER */
 .navbar {
   position: fixed;
   width: 100vw;
@@ -50,7 +49,6 @@ ul > li:hover {
   align-items: center;
 }
 
-/* Logo */
 .logo {
   width: 100%;
   max-height: 5rem;
@@ -63,9 +61,14 @@ ul > li:hover {
   font-size: 1rem;
   opacity: 0.75;
 }
+
 .navbarlink:hover,
-.navbarlink.active {
+.active_navbarlink:hover {
   opacity: 1;
+  scale: 110px;
+  background-color: transparent !important;
+  transform: scale(1.1);
+  transition: color 0.3s;
 }
 .active_navbarlink {
   font-weight: 400;
@@ -75,3 +78,5 @@ ul > li:hover {
   font-size: 1rem;
   opacity: 50;
 }
+
+

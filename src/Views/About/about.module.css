@@ -159,8 +159,10 @@
   flex-direction: column;
   justify-content: space-between;
 }
-.paper div {
-  height: 100%;
+.softSkills {
+  /* height: 100%;
   width: 100%;
   text-align: center;
+   */
+  display: inline-block !important;
 }

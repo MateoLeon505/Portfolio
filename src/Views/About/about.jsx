@@ -203,12 +203,16 @@ const About = () => {
                         style={{
                           backgroundColor: "#121212",
                           color: "#ffffff",
-                          padding: "2rem 1rem",
+                          padding: "1rem",
                           border: "1px solid #ffffff",
                         }}
                         className={styles.paper}
                       >
-                        <Typography variant="h5" style={{ color: "#92E3A9" }}>
+                        <Typography
+                          variant="h5"
+                          align="center"
+                          style={{ color: "#92E3A9" }}
+                        >
                           Sobre mí
                         </Typography>
                         <Typography variant="body2" gutterBottom align="left">
@@ -244,7 +248,14 @@ const About = () => {
                         }}
                         className={styles.paper}
                       >
-                        <Typography variant="h5" style={{ color: "#92E3A9" }}>
+                        <Typography
+                          variant="h5"
+                          align="center"
+                          style={{ color: "#92E3A9" }}
+                        >
+                          Educación
+                        </Typography>
+                        <Typography variant="h6" style={{ color: "#92E3A9" }}>
                           Desarrollador web FullStack
                         </Typography>
                         <Typography variant="body1">
@@ -260,11 +271,11 @@ const About = () => {
                         <Typography
                           variant="body2"
                           gutterBottom
-                          marginBottom={[10]}
+                          marginBottom={[4]}
                         >
                           <b> +800 </b> horas de cursada
                         </Typography>
-                        <Typography variant="h5" style={{ color: "#92E3A9" }}>
+                        <Typography variant="h6" style={{ color: "#92E3A9" }}>
                           Ingeniería multimedia
                         </Typography>
                         <Typography variant="body1">
@@ -292,6 +303,13 @@ const About = () => {
                       >
                         <Typography
                           variant="h5"
+                          align="center"
+                          style={{ color: "#92E3A9" }}
+                        >
+                          Experiencia
+                        </Typography>
+                        <Typography
+                          variant="h6"
                           align="left"
                           style={{ color: "#92E3A9" }}
                         >
@@ -367,13 +385,19 @@ const About = () => {
                         }}
                         className={styles.paper}
                       >
-                        <div>
+                        <Typography variant="h5" align="center" style={{ color: "#92E3A9" }}>
+                          Habilidades blandas
+                        </Typography>
+                        <div className={styles.softSkills}>
                           <Typography variant="h6" align="left">
                             <FaArrowAltCircleRight
                               style={{ color: "#92E3A9" }}
                             />{" "}
+                            Autodidacta:                           
+                            <Typography variant="body2" >
                             Autodidacta
                           </Typography>
+                          </Typography>                          
                         </div>
                         <div>
                           <Typography variant="h6" align="left">

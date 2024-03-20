@@ -34,8 +34,8 @@ const Banner = () => {
             }}
           >
             <Grid item xs={12} md={6} lg={6}>
-              <Typography variant="h2" align="center" gutterBottom>
-                Bienvenido a mi portfolio
+              <Typography variant="h3" align="center" gutterBottom>
+                Bienvenido a mi portafolio
                 <WavingHandIcon
                   style={{ color: "#92E3A9", fontSize: 40, marginLeft: 2 }}
                   className={styles.WavingHandIcon}
