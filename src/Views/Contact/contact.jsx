@@ -106,6 +106,7 @@ const Contact = () => {
                   id="1"
                   color="primary"
                   focused
+                  autoComplete="off"
                   label="Nombre"
                   type="text"
                   variant="outlined"
@@ -173,8 +174,7 @@ const Contact = () => {
                   rows={2}
                   name="message"
                   value={contactData.message}
-                  onChange={updateData}
-                  style={{ height: "100px" }}
+                  onChange={updateData} 
                   className={styles.textFieldFull}
                   InputProps={{
                     style: { color: "#FFFFFF", height: "200" },
@@ -203,7 +203,7 @@ const Contact = () => {
                     margin: "0 auto",
                   }}
                 >
-                  <a>
+                  <a href="#">
                     <i></i>
                     <i></i>
                     <span>

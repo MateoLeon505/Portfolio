@@ -1,4 +1,5 @@
 import { Suspense } from "react";
+import { useLocation } from "react-router-dom";
 import { Routes, Route } from "react-router-dom";
 import { Home, About, Services, Projects, Contact } from "./Views/index.js";
 import { NavBar, Footer, FloatButton } from "./Components/index.js";
@@ -6,6 +7,7 @@ import CircularProgress from "@mui/material/CircularProgress";
 import "./App.css";
 
 const App = () => {
+  const location = useLocation();
   return (
     <div>
       <Suspense fallback={<CircularProgress sx={style} />}>
@@ -17,7 +19,7 @@ const App = () => {
           <Route path="/projects" element={<Projects />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
-        <FloatButton />
+        {location.pathname !== "/contact" && <FloatButton />}
         <Footer />
       </Suspense>
     </div>
