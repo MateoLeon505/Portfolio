@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useForm, ValidationError } from "@formspree/react";
+import { Loading } from "../../Components/index";
 import { Grid, Typography, Button } from "@mui/material";
 import SocialMedia from "./socialMedia";
 import TextField from "@mui/material/TextField";
@@ -57,181 +58,196 @@ const Contact = () => {
     });
   };
 
+  const [isLoading, setIsLoading] = useState(true);
+  useEffect(() => {
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 1000);
+  }, []);
+
   return (
-    <section className={styles.mainContainer}>
-      <Box className={styles.alertBox}>
-        <Collapse in={alertOpen}>
-          <Alert
-            severity="success"
-            action={
-              <IconButton
-                aria-label="close"
-                color="inherit"
-                size="small"
-                onClick={() => {
-                  setAlertOpen(false);
-                }}
-              >
-                <CloseIcon fontSize="inherit" />
-              </IconButton>
-            }
-            sx={{ mb: 2 }}
-          >
-            <AlertTitle>¡Gracias por contactarme!</AlertTitle>
-            Pronto te daré una respuesta...
-          </Alert>
-        </Collapse>
-      </Box>
-      <Grid container direction="row" className={styles.gridContainer}>
-        <Grid item xs={12} sm={8} md={6} lg={6} spacing={2}>
-          <form
-            className={styles.formContainer}
-            onSubmit={submitData}
-            autoComplete="off"
-          >
-            <div className={styles.organizer}>
-              <div className={styles.formRow}>
-                <Typography
-                  variant="h3"
-                  gutterBottom
-                  align="center"
-                  className={styles.formTitle}
+    <div>
+      {isLoading ? (
+        <Loading />
+      ) : (
+        <div>
+          <section className={styles.mainContainer}>
+            <Box className={styles.alertBox}>
+              <Collapse in={alertOpen}>
+                <Alert
+                  severity="success"
+                  action={
+                    <IconButton
+                      aria-label="close"
+                      color="inherit"
+                      size="small"
+                      onClick={() => {
+                        setAlertOpen(false);
+                      }}
+                    >
+                      <CloseIcon fontSize="inherit" />
+                    </IconButton>
+                  }
+                  sx={{ mb: 2 }}
                 >
-                  ¡Contáctame
-                  <span style={{ color: "#92E3A9" }}> aquí!</span>
-                </Typography>
-              </div>
-              <div className={styles.formRow}>
-                <TextField
-                  id="1"
-                  color="primary"
-                  focused
+                  <AlertTitle>¡Gracias por contactarme!</AlertTitle>
+                  Pronto te daré una respuesta...
+                </Alert>
+              </Collapse>
+            </Box>
+            <Grid container direction="row" className={styles.gridContainer}>
+              <Grid item xs={12} sm={8} md={6} lg={6} spacing={2}>
+                <form
+                  className={styles.formContainer}
+                  onSubmit={submitData}
                   autoComplete="off"
-                  label="Nombre"
-                  type="text"
-                  variant="outlined"
-                  name="name"
-                  required
-                  value={contactData.name}
-                  onChange={updateData}
-                  className={styles.textFieldHalf}
-                  InputProps={{
-                    style: { color: "#FFFFFF" },
-                    startAdornment: (
-                      <InputAdornment position="start">
-                        <MdAccountCircle style={{ color: "#FFFFFF" }} />
-                      </InputAdornment>
-                    ),
-                  }}
-                  InputLabelProps={{
-                    style: { color: "#92E3A9" },
-                  }}
-                />
-                <TextField
-                  id="2"
-                  color="primary"
-                  focused
-                  required
-                  label="Correo Electrónico"
-                  type="email"
-                  variant="outlined"
-                  name="email"
-                  autoComplete="off"
-                  value={contactData.email}
-                  onChange={updateData}
-                  className={styles.textFieldHalf}
-                  InputProps={{
-                    style: { color: "#FFFFFF" },
-                    startAdornment: (
-                      <InputAdornment position="start">
-                        <MdEmail style={{ color: "#FFFFFF" }} />
-                      </InputAdornment>
-                    ),
-                  }}
-                  InputLabelProps={{
-                    style: { color: "#92E3A9" },
-                  }}
-                />
-                {/* <ValidationError
+                >
+                  <div className={styles.organizer}>
+                    <div className={styles.formRow}>
+                      <Typography
+                        variant="h3"
+                        gutterBottom
+                        align="center"
+                        className={styles.formTitle}
+                      >
+                        ¡Contáctame
+                        <span style={{ color: "#92E3A9" }}> aquí!</span>
+                      </Typography>
+                    </div>
+                    <div className={styles.formRow}>
+                      <TextField
+                        id="1"
+                        color="primary"
+                        focused
+                        autoComplete="off"
+                        label="Nombre"
+                        type="text"
+                        variant="outlined"
+                        name="name"
+                        required
+                        value={contactData.name}
+                        onChange={updateData}
+                        className={styles.textFieldHalf}
+                        InputProps={{
+                          style: { color: "#FFFFFF" },
+                          startAdornment: (
+                            <InputAdornment position="start">
+                              <MdAccountCircle style={{ color: "#FFFFFF" }} />
+                            </InputAdornment>
+                          ),
+                        }}
+                        InputLabelProps={{
+                          style: { color: "#92E3A9" },
+                        }}
+                      />
+                      <TextField
+                        id="2"
+                        color="primary"
+                        focused
+                        required
+                        label="Correo Electrónico"
+                        type="email"
+                        variant="outlined"
+                        name="email"
+                        autoComplete="off"
+                        value={contactData.email}
+                        onChange={updateData}
+                        className={styles.textFieldHalf}
+                        InputProps={{
+                          style: { color: "#FFFFFF" },
+                          startAdornment: (
+                            <InputAdornment position="start">
+                              <MdEmail style={{ color: "#FFFFFF" }} />
+                            </InputAdornment>
+                          ),
+                        }}
+                        InputLabelProps={{
+                          style: { color: "#92E3A9" },
+                        }}
+                      />
+                      {/* <ValidationError
                   prefix="Email"
                   field="email"
                   errors={state.errors}
                   className={styles.validationForm}
                 /> */}
-              </div>
-              <div className={styles.formRow}>
-                <TextField
-                  id="2"
-                  color="primary"
-                  focused
-                  label="Mensaje (opcional)"
-                  type="text"
-                  variant="outlined"
-                  placeholder="Escribe un mensaje..."
-                  multiline
-                  rows={2}
-                  name="message"
-                  value={contactData.message}
-                  onChange={updateData}
-                  className={styles.textFieldFull}
-                  InputProps={{
-                    style: { color: "#FFFFFF", height: "200" },
-                    startAdornment: (
-                      <InputAdornment position="start">
-                        <FaMessage style={{ color: "#FFFFFF" }} />
-                      </InputAdornment>
-                    ),
-                  }}
-                  InputLabelProps={{
-                    style: { color: "#92E3A9" },
-                  }}
-                />
-              </div>
-              <div className={styles.formRow}>
-                <Button
-                  variant="text"
-                  className={styles.buttonSubmit}
-                  type="submit"
-                  disabled={contactData.email === ""}
-                  style={{
-                    margin: "0 auto",
-                  }}
-                >
-                  <a>
-                    <i></i>
-                    <i></i>
-                    <span>
-                      <BsFillSendFill
-                        style={{ fontSize: "15", marginRight: "5" }}
-                      />{" "}
-                      Envíar
-                    </span>
-                  </a>
-                </Button>
-              </div>
-            </div>
-          </form>
-        </Grid>
-        <Grid
-          item
-          xs={12}
-          sm={8}
-          md={6}
-          lg={6}
-          className={styles.socialMediaContact}
-        >
-          <div className={styles.gridElement}>
-            <Typography variant="h4" align="center" gutterBottom>
-              O encuentrame
-              <span className={styles.letterMedia}> en:</span>
-            </Typography>
-          </div>
-          <div className={styles.gridElement}>
-            <SocialMedia />
-          </div>
-        </Grid>
-      </Grid>
-    </section>
+                    </div>
+                    <div className={styles.formRow}>
+                      <TextField
+                        id="2"
+                        color="primary"
+                        focused
+                        label="Mensaje (opcional)"
+                        type="text"
+                        variant="outlined"
+                        placeholder="Escribe un mensaje..."
+                        multiline
+                        rows={2}
+                        name="message"
+                        value={contactData.message}
+                        onChange={updateData}
+                        className={styles.textFieldFull}
+                        InputProps={{
+                          style: { color: "#FFFFFF", height: "200" },
+                          startAdornment: (
+                            <InputAdornment position="start">
+                              <FaMessage style={{ color: "#FFFFFF" }} />
+                            </InputAdornment>
+                          ),
+                        }}
+                        InputLabelProps={{
+                          style: { color: "#92E3A9" },
+                        }}
+                      />
+                    </div>
+                    <div className={styles.formRow}>
+                      <Button
+                        variant="text"
+                        className={styles.buttonSubmit}
+                        type="submit"
+                        disabled={contactData.email === ""}
+                        style={{
+                          margin: "0 auto",
+                        }}
+                      >
+                        <a>
+                          <i></i>
+                          <i></i>
+                          <span>
+                            <BsFillSendFill
+                              style={{ fontSize: "15", marginRight: "5" }}
+                            />{" "}
+                            Envíar
+                          </span>
+                        </a>
+                      </Button>
+                    </div>
+                  </div>
+                </form>
+              </Grid>
+              <Grid
+                item
+                xs={12}
+                sm={8}
+                md={6}
+                lg={6}
+                className={styles.socialMediaContact}
+              >
+                <div className={styles.gridElement}>
+                  <Typography variant="h4" align="center" gutterBottom>
+                    O encuentrame
+                    <span className={styles.letterMedia}> en:</span>
+                  </Typography>
+                </div>
+                <div className={styles.gridElement}>
+                  <SocialMedia />
+                </div>
+              </Grid>
+            </Grid>
+          </section>
+        </div>
+      )}
+    </div>
   );
 };
 
