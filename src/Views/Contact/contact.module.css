@@ -44,7 +44,7 @@
   outline: none; 
 }
 .textFieldHalf:-webkit-autofill {
-  background-color: #92E3A9; /* Define el color de fondo deseado cuando se autocompleta */
+  background-color: #92E3A9; 
 }
 .textFieldHalf.has-value {
   background-color: transparent !important;
