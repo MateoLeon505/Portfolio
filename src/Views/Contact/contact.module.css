@@ -35,7 +35,6 @@
   color: #ffffff;
   backdrop-filter: blur(1px);
   flex: 0.49;
-  
 }
 .textFieldHalf:hover {
   box-shadow: 0 0 20px #1d7235; 
@@ -73,8 +72,6 @@
   height: 100%;
   display: inline-block;
   border-radius: 5px;
-  
-  
   z-index: 1;
   background: linear-gradient(to right, #008080, #082410, #082410, #99dd5f);
 }

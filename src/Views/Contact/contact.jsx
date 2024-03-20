@@ -24,6 +24,7 @@ const Contact = () => {
       btn.style.setProperty("--x", x + "deg");
     });
   }, []);
+
   const [state, handleSubmit] = useForm("xgegaboy");
 
   const [contactData, setContactData] = useState({
@@ -32,7 +33,7 @@ const Contact = () => {
     message: "",
   });
 
-  const [alertOpen, setAlertOpen] = useState(true);
+  const [alertOpen, setAlertOpen] = useState(false);
 
   const updateData = (event) => {
     const property = event.target.name;
@@ -41,47 +42,46 @@ const Contact = () => {
     setContactData({ ...contactData, [property]: value });
   };
 
-  const submitData = (event) => {
+  const submitData = async (event) => {
     event.preventDefault();
 
-    handleSubmit(event).then(() => {
+    await handleSubmit(event).then(() => {
       if (state.succeeded) {
         setContactData({
           name: "",
           email: "",
           message: "",
         });
+        setAlertOpen(true);
       }
     });
   };
 
   return (
     <section className={styles.mainContainer}>
-      {state.succeeded && (
-        <Box className={styles.alertBox}>
-          <Collapse in={alertOpen}>
-            <Alert
-              severity="success"
-              action={
-                <IconButton
-                  aria-label="close"
-                  color="inherit"
-                  size="small"
-                  onClick={() => {
-                    setAlertOpen(false);
-                  }}
-                >
-                  <CloseIcon fontSize="inherit" />
-                </IconButton>
-              }
-              sx={{ mb: 2 }}
-            >
-              <AlertTitle>¡Gracias por contactarme!</AlertTitle>
-              Pronto te daré una respuesta...
-            </Alert>
-          </Collapse>
-        </Box>
-      )}
+      <Box className={styles.alertBox}>
+        <Collapse in={alertOpen}>
+          <Alert
+            severity="success"
+            action={
+              <IconButton
+                aria-label="close"
+                color="inherit"
+                size="small"
+                onClick={() => {
+                  setAlertOpen(false);
+                }}
+              >
+                <CloseIcon fontSize="inherit" />
+              </IconButton>
+            }
+            sx={{ mb: 2 }}
+          >
+            <AlertTitle>¡Gracias por contactarme!</AlertTitle>
+            Pronto te daré una respuesta...
+          </Alert>
+        </Collapse>
+      </Box>
       <Grid container direction="row" className={styles.gridContainer}>
         <Grid item xs={12} sm={8} md={6} lg={6} spacing={2}>
           <form
@@ -139,7 +139,7 @@ const Contact = () => {
                   type="email"
                   variant="outlined"
                   name="email"
-                  autoComplete="new-password"
+                  autoComplete="off"
                   value={contactData.email}
                   onChange={updateData}
                   className={styles.textFieldHalf}
@@ -174,7 +174,7 @@ const Contact = () => {
                   rows={2}
                   name="message"
                   value={contactData.message}
-                  onChange={updateData} 
+                  onChange={updateData}
                   className={styles.textFieldFull}
                   InputProps={{
                     style: { color: "#FFFFFF", height: "200" },
@@ -203,7 +203,7 @@ const Contact = () => {
                     margin: "0 auto",
                   }}
                 >
-                  <a href="#">
+                  <a>
                     <i></i>
                     <i></i>
                     <span>
