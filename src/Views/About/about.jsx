@@ -287,7 +287,7 @@ const About = () => {
                           Modalidad virtual
                         </Typography>
                         <Typography variant="body1">
-                          2022 - En curso actualmente
+                          2022 - En curso 
                         </Typography>
                       </Paper>
                     )}
