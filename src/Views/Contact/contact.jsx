@@ -111,6 +111,7 @@ const Contact = () => {
                   type="text"
                   variant="outlined"
                   name="name"
+                  required
                   value={contactData.name}
                   onChange={updateData}
                   className={styles.textFieldHalf}
@@ -126,15 +127,11 @@ const Contact = () => {
                     style: { color: "#92E3A9" },
                   }}
                 />
-                <ValidationError
-                  prefix="Message"
-                  field="message"
-                  errors={state.errors}
-                />
                 <TextField
                   id="2"
                   color="primary"
                   focused
+                  required
                   label="Correo Electrónico"
                   type="email"
                   variant="outlined"
@@ -155,18 +152,19 @@ const Contact = () => {
                     style: { color: "#92E3A9" },
                   }}
                 />
-                <ValidationError
+                {/* <ValidationError
                   prefix="Email"
                   field="email"
                   errors={state.errors}
-                />
+                  className={styles.validationForm}
+                /> */}
               </div>
               <div className={styles.formRow}>
                 <TextField
                   id="2"
                   color="primary"
                   focused
-                  label="Mensaje"
+                  label="Mensaje (opcional)"
                   type="text"
                   variant="outlined"
                   placeholder="Escribe un mensaje..."
@@ -188,17 +186,13 @@ const Contact = () => {
                     style: { color: "#92E3A9" },
                   }}
                 />
-                <ValidationError
-                  prefix="Message"
-                  field="message"
-                  errors={state.errors}
-                />
               </div>
               <div className={styles.formRow}>
                 <Button
                   variant="text"
                   className={styles.buttonSubmit}
                   type="submit"
+                  disabled={contactData.email === ""}
                   style={{
                     margin: "0 auto",
                   }}

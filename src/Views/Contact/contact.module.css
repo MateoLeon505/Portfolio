@@ -39,18 +39,10 @@
 .textFieldHalf:hover {
   box-shadow: 0 0 20px #1d7235; 
 }
-.textFieldHalf:focus {
-  outline: none; 
-}
-.textFieldHalf:-webkit-autofill {
-  background-color: #92E3A9; 
-}
-.textFieldHalf.has-value {
-  background-color: transparent !important;
-}
+.validationForm {
+  position: sticky;
+  top: 0;
 
-.textFieldHalf.focused {
-  background-color: transparent !important;
 }
 .textFieldFull {
   backdrop-filter: blur(1px) !important;
