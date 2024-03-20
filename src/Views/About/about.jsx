@@ -385,50 +385,89 @@ const About = () => {
                         }}
                         className={styles.paper}
                       >
-                        <Typography variant="h5" align="center" style={{ color: "#92E3A9" }}>
+                        <Typography
+                          variant="h5"
+                          align="center"
+                          style={{ color: "#92E3A9" }}
+                        >
                           Habilidades blandas
                         </Typography>
-                        <div className={styles.softSkills}>
-                          <Typography variant="h6" align="left">
-                            <FaArrowAltCircleRight
-                              style={{ color: "#92E3A9" }}
-                            />{" "}
-                            Autodidacta:                           
-                            <Typography variant="body2" >
-                            Autodidacta
-                          </Typography>
-                          </Typography>                          
-                        </div>
                         <div>
-                          <Typography variant="h6" align="left">
+                          <Typography
+                            variant="h6"
+                            align="left"
+                            sx={{ color: "#92E3A9" }}
+                          >
                             <FaArrowAltCircleRight
-                              style={{ color: "#92E3A9" }}
+                              style={{ color: "#2e9d4e" }}
                             />{" "}
-                            Proactivo
-                          </Typography>
-                        </div>
-                        <div>
-                          <Typography variant="h6" align="left">
-                            <FaArrowAltCircleRight
-                              style={{ color: "#92E3A9" }}
-                            />{" "}
-                            Creatividad
+                            Autodidacta:
+                            <Typography
+                              variant="body2"
+                              sx={{ color: "#ffffff" }}
+                            >
+                              En el desarrollo de varios proyectos he
+                              implementado nuevas tecnologías con el objetivo de
+                              ampliar mis conocimientos de forma autónoma.
+                            </Typography>
                           </Typography>
                         </div>
                         <div>
-                          <Typography variant="h6" align="left">
+                          <Typography
+                            variant="h6"
+                            align="left"
+                            sx={{ color: "#92E3A9" }}
+                          >
                             <FaArrowAltCircleRight
-                              style={{ color: "#92E3A9" }}
+                              style={{ color: "#2e9d4e" }}
                             />{" "}
-                            Adaptabilidad
+                            Proactivo:
+                            <Typography
+                              variant="body2"
+                              sx={{ color: "#ffffff" }}
+                            >
+                              Tengo la iniciativa para tomar acción y proponer
+                              ideas nuevas en el desarrollo de proyectos.
+                            </Typography>
                           </Typography>
                         </div>
                         <div>
-                          <Typography variant="h6" align="left">
+                          <Typography
+                            variant="h6"
+                            align="left"
+                            sx={{ color: "#92E3A9" }}
+                          >
                             <FaArrowAltCircleRight
-                              style={{ color: "#92E3A9" }}
+                              style={{ color: "#2e9d4e" }}
                             />{" "}
-                            Trabajo en equipo
+                            Creatividad:
+                            <Typography
+                              variant="body2"
+                              sx={{ color: "#ffffff" }}
+                            >
+                              Me gusta implementar nuevas tecnologías y diseños
+                              que favorezcan el aspecto visual y funcional de
+                              las aplicaciones.
+                            </Typography>
+                          </Typography>
+                        </div>
+                        <div>
+                          <Typography
+                            variant="h6"
+                            align="left"
+                            sx={{ color: "#92E3A9" }}
+                          >
+                            <FaArrowAltCircleRight
+                              style={{ color: "#2e9d4e" }}
+                            />{" "}
+                            Adaptabilidad:
+                            <Typography
+                              variant="body2"
+                              sx={{ color: "#ffffff" }}
+                            >
+                              Tengo la flexibilidad para acomodarme a las
+                              necesidades del grupo.
+                            </Typography>
                           </Typography>
                         </div>
                       </Paper>
