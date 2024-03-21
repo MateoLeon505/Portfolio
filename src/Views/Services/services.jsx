@@ -18,6 +18,8 @@ import {
   SiVisualstudiocode,
 } from "react-icons/si";
 import { AiFillSlackCircle } from "react-icons/ai";
+import { TbBrandNextjs, TbBrandReactNative } from "react-icons/tb";
+import { SiTailwindcss, SiPrisma } from "react-icons/si";
 import { PiMonitorPlayFill } from "react-icons/pi";
 import styles from "./services.module.css";
 
@@ -32,15 +34,16 @@ const Services = () => {
   }, []);
 
   const devTools = [
-    { name: "HTML5", image1: <FaHtml5 className={styles.icon} /> },
-    { name: "CSS3", image1: <FaCss3Alt className={styles.icon} /> },
+    { name: "React", image1: <FaReact style={{ fontSize: "70px" }} className={styles.icon} />, },
+    { name: "Next.js", image1: <TbBrandNextjs className={styles.icon} />, },
+    { name: "React Native", image1: <TbBrandReactNative className={styles.icon} /> },
     { name: "JavaScript", image1: <SiJavascript className={styles.icon} /> },
-    {
-      name: "React",
-      image1: <FaReact style={{ fontSize: "70px" }} className={styles.icon} />,
-    },
     { name: "Redux", image1: <SiRedux className={styles.icon} /> },
+    { name: "CSS3", image1: <FaCss3Alt className={styles.icon} /> },
+    { name: "Tailwind CSS", image1: <SiTailwindcss className={styles.icon} />,},
+    { name: "Prisma", image1: <SiPrisma className={styles.icon} /> },
     { name: "PostgreSQL", image1: <SiPostgresql className={styles.icon} /> },
+    { name: "HTML5", image1: <FaHtml5 className={styles.icon} /> },
   ];
 
   const tools = [
@@ -50,7 +53,7 @@ const Services = () => {
     { name: "GHProjects", image1: <FaGitSquare className={styles.icon} /> },
     {
       name: "Trello",
-      image1: <FaTrello style={{ fontSize: "70px" }} className={styles.icon} />,
+      image1: <FaTrello className={styles.icon} />,
     },
     { name: "Git", image1: <FaGitAlt className={styles.icon} /> },
   ];
@@ -63,7 +66,7 @@ const Services = () => {
         <div>
           <Box sx={{ flexGrow: 1, padding: "6%" }}>
             <Typography
-              variant="h5"
+              variant="h4"
               gutterBottom
               align="center"
               className={styles.title}
@@ -100,7 +103,7 @@ const Services = () => {
               ))}
             </Grid>
             <Typography
-              variant="h5"
+              variant="h4"
               gutterBottom
               align="center"
               className={styles.title}
@@ -135,7 +138,7 @@ const Services = () => {
                 </Grid>
               ))}
             </Grid>
-            <Typography variant="body1" align="center">
+            {/* <Typography variant="body1" align="center">
               <Button
                 className={`${styles.projectsButton} ${styles.effectProjectsButton}`}
                 variant="contained"
@@ -148,7 +151,7 @@ const Services = () => {
               >
                 <PiMonitorPlayFill style={{ fontSize: "23" }} /> Proyectos
               </Button>
-            </Typography>
+            </Typography> */}
           </Box>
         </div>
       )}

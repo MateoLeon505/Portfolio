@@ -398,9 +398,9 @@ const About = () => {
                             align="left"
                             sx={{ color: "#92E3A9" }}
                           >
-                            <FaArrowAltCircleRight
+                            {/* <FaArrowAltCircleRight
                               style={{ color: "#2e9d4e" }}
-                            />{" "}
+                            />{" "} */}
                             Autodidacta:
                             <Typography
                               variant="body2"
@@ -418,9 +418,9 @@ const About = () => {
                             align="left"
                             sx={{ color: "#92E3A9" }}
                           >
-                            <FaArrowAltCircleRight
+                            {/* <FaArrowAltCircleRight
                               style={{ color: "#2e9d4e" }}
-                            />{" "}
+                            />{" "} */}
                             Proactivo:
                             <Typography
                               variant="body2"
@@ -437,9 +437,9 @@ const About = () => {
                             align="left"
                             sx={{ color: "#92E3A9" }}
                           >
-                            <FaArrowAltCircleRight
+                            {/* <FaArrowAltCircleRight
                               style={{ color: "#2e9d4e" }}
-                            />{" "}
+                            />{" "} */}
                             Creatividad:
                             <Typography
                               variant="body2"
@@ -457,9 +457,6 @@ const About = () => {
                             align="left"
                             sx={{ color: "#92E3A9" }}
                           >
-                            <FaArrowAltCircleRight
-                              style={{ color: "#2e9d4e" }}
-                            />{" "}
                             Adaptabilidad:
                             <Typography
                               variant="body2"

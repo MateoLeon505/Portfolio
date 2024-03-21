@@ -18,30 +18,36 @@
   display: flex;
   align-items: center;
 }
-.gridTool .skillName {
-  position: absolute;
-  bottom: -10px;
+.skillName {
   opacity: 0;
   transition: opacity 0.2s ease;
 }
-.gridTool:hover .skillName {
-  opacity: 1;
-}
-.gridTool:hover {
-  color: #92e3a9;
-}
-.gridTool:hover .iconContainer {
-  color: #92e3a9;
-  transform: translateY(-10px);
-  transition: transform 0.2s ease;
+@keyframes rotateAndTranslate {
+  0% {
+    transform: rotateY(0deg) translateY(0);
+  }
+  50% {
+    transform: rotateY(0) translateY(-15px);
+  }
+  100% {
+    transform: rotateY(0) translateY(0);
+  }
 }
 
+.iconContainer:hover + .skillName {
+  opacity: 1;
+}
+
+.iconContainer:hover {
+  animation: rotateAndTranslate 2s infinite linear alternate;
+  transition: transform 0.2s ease;
+}
 .title {
   color: #ffffff;
   font-weight: 400;
 }
 .icon {
-  font-size: 60px;
+  font-size: 83px;
 }
 
 .projectsButton {
