@@ -76,6 +76,7 @@ const Projects = () => {
                   <CardMedia
                     component="img"
                     image={project.image}
+                    className={styles.cardMedia}
                     alt={project.name}
                     // style={{height: 170}}
                   />

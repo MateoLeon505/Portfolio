@@ -6,6 +6,7 @@ const projects = [
   {
     id: "1",
     name: "RaceHub",
+    type: "Web",
     date: "Octubre, 2023",
     image: raceHub,
     repo: "https://github.com/MateoLeon505/PI-Drivers",
@@ -28,6 +29,7 @@ const projects = [
   {
     id: "2",
     name: "Las Encinas Boutique",
+    type: "Web",
     date: "Noviembre, 2023",
     image: lasEncinasBoutique,
     repo: "https://github.com/thomasrey99/Las-Encinas-Boutique-",
@@ -52,6 +54,7 @@ const projects = [
   {
     id: "3",
     name: "CRUD con Next.js",
+    type: "Web",
     date: "Febrero, 2024",
     image: nextCrud,
     repo: "https://github.com/MateoLeon505/NextJS-Prisma-Crud",
