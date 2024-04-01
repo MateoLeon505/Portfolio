@@ -16,11 +16,11 @@ const Banner = () => {
       setIsLoading(false);
     }, 1000);
   }, []);
-  
+
   return (
     <div>
       {isLoading ? (
-        <Loading style={{minHeight: "100vh"}}/>
+        <Loading style={{ minHeight: "100vh" }} />
       ) : (
         <div>
           <Grid

@@ -1,6 +1,6 @@
-import raceHub from "../../assets/img/projects/Race-Hub.png";
-import lasEncinasBoutique from "../../assets/img/projects/Las-Encinas-Boutique.png";
-import nextCrud from "../../assets/img/projects/NextCrud.png";
+import raceHub from "../../assets/img/projects/receHub.png";
+import lasEncinasBoutique from "../../assets/img/projects/lasEncinas.png";
+import nextCrud from "../../assets/img/projects/nextCrud.png";
 
 const projects = [
   {
