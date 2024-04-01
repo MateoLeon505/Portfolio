@@ -17,7 +17,7 @@ body {
   background-image: url(./assets/img/endless-constellation-darkMode.svg);
   color: #d8d4cf;
   max-height: 95vh !important;
-  padding: 2rem 0 0 0 !important;
+  padding: 0 0 0 0 !important;
   /* margin-top: 2rem !important; */
 }
 

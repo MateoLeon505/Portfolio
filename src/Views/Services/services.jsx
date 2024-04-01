@@ -22,7 +22,6 @@ import { SiTailwindcss, SiPrisma } from "react-icons/si";
 import styles from "./services.module.css";
 
 const Services = () => {
-
   const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
     setTimeout(() => {
@@ -62,12 +61,80 @@ const Services = () => {
   ];
 
   return (
-    <div>
+    <>
       {isLoading ? (
         <Loading />
       ) : (
-        <div>
-          <Box sx={{ flexGrow: 1, padding: "6%" }}>
+        <div className={styles.servicesContainer}>
+          <Typography
+            variant="h4"
+            gutterBottom
+            align="center"
+            className={styles.title}
+          >
+            Mis <span style={{ color: "#92E3A9" }}> Habilidades</span>
+          </Typography>
+          <Box sx={{ flexGrow: 1, paddingX: "6%", paddingY: "1%", display: "flex"}}>
+            <Grid
+              container
+              spacing={{ xs: 2, md: 3 }}
+              columns={{ xs: 4, sm: 8, md: 12 }}
+              justifyContent="center"
+              flex={1}
+              className={styles.gridContainer}
+            >
+              {devTools.map((tool, index) => (
+                <Grid
+                  item
+                  xs={2}
+                  sm={4}
+                  md={4}
+                  key={index}
+                  className={styles.gridTool}
+                >
+                  <div className={styles.skillContainer}>
+                    <div className={styles.iconContainer}>{tool.image1}</div>
+                    <Typography
+                      sx={{ fontSize: 14 }}
+                      className={styles.skillName}
+                    >
+                      {tool.name}
+                    </Typography>
+                  </div>
+                </Grid>
+              ))}
+            </Grid>
+            <Grid
+              container
+              spacing={{ xs: 2, md: 3 }}
+              columns={{ xs: 4, sm: 8, md: 12 }}
+              justifyContent="center"
+              flex={1}
+              className={styles.gridContainer}
+            >
+              {tools.map((tool, index) => (
+                <Grid
+                  item
+                  xs={2}
+                  sm={4}
+                  md={4}
+                  key={index}
+                  className={styles.gridTool}
+                >
+                  <div className={styles.skillContainer}>
+                    <div className={styles.iconContainer}>{tool.image1}</div>
+                    <Typography
+                      sx={{ fontSize: 14 }}
+                      className={styles.skillName}
+                    >
+                      {tool.name}
+                    </Typography>
+                  </div>
+                </Grid>
+              ))}
+            </Grid>
+          </Box>
+          {/* <Box sx={{ flexGrow: 1, padding: "6%" }}>
             <Typography
               variant="h4"
               gutterBottom
@@ -141,10 +208,10 @@ const Services = () => {
                 </Grid>
               ))}
             </Grid>
-          </Box>
+          </Box> */}
         </div>
       )}
-    </div>
+    </>
   );
 };
 
