@@ -1,14 +1,20 @@
 .servicesContainer {
-  margin-top: 7%;
   margin-bottom: 2%;
+  margin: 7% auto;
 }
 .gridContainer {
   border: 3px solid #d8d4cf;
   border-radius: 50px;
-  margin: 0 1rem;
+  margin-top: 0.5rem;
   /* margin-top: 0vh !important;
   margin-bottom: 3vh;
   padding-bottom: 1vh; */
+}
+.gridTool {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 150px;
 }
 .skillContainer {
   position: relative;
@@ -16,12 +22,6 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-}
-.gridTool {
-  background-color: transparent;
-  justify-content: center;
-  display: flex;
-  align-items: center;
 }
 .skillName {
   opacity: 0;
@@ -44,7 +44,7 @@
 }
 
 .iconContainer:hover {
-  animation: rotateAndTranslate 2s infinite linear alternate;
+  animation: rotateAndTranslate 1s infinite linear alternate;
   transition: transform 0.2s ease;
 }
 .title {
@@ -52,7 +52,7 @@
   font-weight: 400;
 }
 .icon {
-  font-size: 83px;
+  font-size: 80px;
 }
 
 .projectsButton {
@@ -86,4 +86,10 @@
 .effectProjectsButton:hover::before {
   transform: scaleX(1);
   transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+}
+
+@media (max-width: 768px) {
+  .icon {
+    font-size: 50px;
+  }
 }

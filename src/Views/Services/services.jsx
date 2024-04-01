@@ -9,6 +9,7 @@ import {
   FaTrello,
   FaGitAlt,
   FaGitSquare,
+  FaNode,
 } from "react-icons/fa";
 import {
   SiJavascript,
@@ -29,10 +30,10 @@ const Services = () => {
     }, 1000);
   }, []);
 
-  const devTools = [
+  const fontendTools = [
     {
       name: "React",
-      image1: <FaReact style={{ fontSize: "70px" }} className={styles.icon} />,
+      image1: <FaReact className={styles.icon} />,
     },
     { name: "Next.js", image1: <TbBrandNextjs className={styles.icon} /> },
     {
@@ -43,12 +44,13 @@ const Services = () => {
     { name: "Redux", image1: <SiRedux className={styles.icon} /> },
     { name: "CSS3", image1: <FaCss3Alt className={styles.icon} /> },
     { name: "Tailwind CSS", image1: <SiTailwindcss className={styles.icon} /> },
-    { name: "Prisma", image1: <SiPrisma className={styles.icon} /> },
-    { name: "PostgreSQL", image1: <SiPostgresql className={styles.icon} /> },
     { name: "HTML5", image1: <FaHtml5 className={styles.icon} /> },
   ];
 
-  const tools = [
+  const backendAndTools = [
+    { name: "Node.js", image1: <FaNode className={styles.icon} /> },
+    { name: "PostgreSQL", image1: <SiPostgresql className={styles.icon} /> },
+    { name: "Prisma", image1: <SiPrisma className={styles.icon} /> },
     { name: "VSCode", image1: <SiVisualstudiocode className={styles.icon} /> },
     { name: "GitHub", image1: <FaGithub className={styles.icon} /> },
     { name: "Slack", image1: <AiFillSlackCircle className={styles.icon} /> },
@@ -67,148 +69,101 @@ const Services = () => {
       ) : (
         <div className={styles.servicesContainer}>
           <Typography
-            variant="h4"
+            variant="h3"
             gutterBottom
             align="center"
             className={styles.title}
           >
-            Mis <span style={{ color: "#92E3A9" }}> Habilidades</span>
+            Habilidades <span style={{ color: "#92E3A9" }}> técnicas</span>
           </Typography>
-          <Box sx={{ flexGrow: 1, paddingX: "6%", paddingY: "1%", display: "flex"}}>
+          <Box
+            sx={{
+              flexGrow: 1,
+              paddingX: "6%",
+              paddingY: "1%",
+              display: "flex",
+              flexDirection: { xs: "column", md: "row" },
+              gap: 5,
+            }}
+          >
             <Grid
               container
-              spacing={{ xs: 2, md: 3 }}
-              columns={{ xs: 4, sm: 8, md: 12 }}
-              justifyContent="center"
-              flex={1}
+              sx={{ flex: 1, display: "flex", flexDirection: "column", gap: 2 }}
               className={styles.gridContainer}
             >
-              {devTools.map((tool, index) => (
-                <Grid
-                  item
-                  xs={2}
-                  sm={4}
-                  md={4}
-                  key={index}
-                  className={styles.gridTool}
-                >
-                  <div className={styles.skillContainer}>
-                    <div className={styles.iconContainer}>{tool.image1}</div>
-                    <Typography
-                      sx={{ fontSize: 14 }}
-                      className={styles.skillName}
-                    >
-                      {tool.name}
-                    </Typography>
-                  </div>
-                </Grid>
-              ))}
+              <div
+                style={{ borderBottom: "1px solid white", textAlign: "center" }}
+              >
+                <Typography variant="h4">Frontend</Typography>
+              </div>
+              <Grid
+                sx={{
+                  display: "flex",
+                  justifyContent: "center",
+                  flexWrap: "wrap",
+                  flex: 1,
+                }}
+              >
+                {fontendTools.map((tool, index) => (
+                  <Grid
+                    item
+                    xs={4}
+                    sm={4}
+                    md={4}
+                    key={index}
+                    className={styles.gridTool}
+                  >
+                    <div className={styles.skillContainer}>
+                      <div className={styles.iconContainer}>{tool.image1}</div>
+                      <Typography variant="body1" className={styles.skillName}>
+                        {tool.name}
+                      </Typography>
+                    </div>
+                  </Grid>
+                ))}
+              </Grid>
             </Grid>
             <Grid
               container
-              spacing={{ xs: 2, md: 3 }}
-              columns={{ xs: 4, sm: 8, md: 12 }}
-              justifyContent="center"
-              flex={1}
+              sx={{ flex: 1, display: "flex", flexDirection: "column", gap: 2 }}
               className={styles.gridContainer}
             >
-              {tools.map((tool, index) => (
-                <Grid
-                  item
-                  xs={2}
-                  sm={4}
-                  md={4}
-                  key={index}
-                  className={styles.gridTool}
-                >
-                  <div className={styles.skillContainer}>
-                    <div className={styles.iconContainer}>{tool.image1}</div>
-                    <Typography
-                      sx={{ fontSize: 14 }}
-                      className={styles.skillName}
-                    >
-                      {tool.name}
-                    </Typography>
-                  </div>
-                </Grid>
-              ))}
+              <div
+                style={{ borderBottom: "1px solid white", textAlign: "center" }}
+              >
+                <Typography variant="h4">Backend & Herramientas</Typography>
+              </div>
+              <Grid
+                sx={{
+                  display: "flex",
+                  justifyContent: "center",
+                  flexWrap: "wrap",
+                  flex: 1,
+                }}
+              >
+                {backendAndTools.map((tool, index) => (
+                  <Grid
+                    item
+                    xs={4}
+                    sm={4}
+                    md={4}
+                    key={index}
+                    className={styles.gridTool}
+                  >
+                    <div className={styles.skillContainer}>
+                      <div className={styles.iconContainer}>{tool.image1}</div>
+                      <Typography
+                        sx={{ fontSize: 14 }}
+                        className={styles.skillName}
+                      >
+                        {tool.name}
+                      </Typography>
+                    </div>
+                  </Grid>
+                ))}
+              </Grid>
             </Grid>
           </Box>
-          {/* <Box sx={{ flexGrow: 1, padding: "6%" }}>
-            <Typography
-              variant="h4"
-              gutterBottom
-              align="center"
-              className={styles.title}
-            >
-              Herramientas |
-              <span style={{ color: "#92E3A9" }}> Desarrollo</span>
-            </Typography>
-            <Grid
-              container
-              spacing={{ xs: 2, md: 3 }}
-              columns={{ xs: 4, sm: 8, md: 12 }}
-              justifyContent="center"
-              className={styles.gridContainer}
-            >
-              {devTools.map((tool, index) => (
-                <Grid
-                  item
-                  xs={2}
-                  sm={4}
-                  md={4}
-                  key={index}
-                  className={styles.gridTool}
-                >
-                  <div className={styles.skillContainer}>
-                    <div className={styles.iconContainer}>{tool.image1}</div>
-                    <Typography
-                      sx={{ fontSize: 14 }}
-                      className={styles.skillName}
-                    >
-                      {tool.name}
-                    </Typography>
-                  </div>
-                </Grid>
-              ))}
-            </Grid>
-            <Typography
-              variant="h4"
-              gutterBottom
-              align="center"
-              className={styles.title}
-            >
-              Complementos |<span style={{ color: "#92E3A9" }}> Gestión</span>
-            </Typography>
-            <Grid
-              container
-              spacing={{ xs: 2, md: 3 }}
-              columns={{ xs: 4, sm: 8, md: 12 }}
-              justifyContent="center"
-              className={styles.gridContainer}
-            >
-              {tools.map((tool, index) => (
-                <Grid
-                  item
-                  xs={2}
-                  sm={4}
-                  md={4}
-                  key={index}
-                  className={styles.gridTool}
-                >
-                  <div className={styles.skillContainer}>
-                    <div className={styles.iconContainer}>{tool.image1}</div>
-                    <Typography
-                      sx={{ fontSize: 14 }}
-                      className={styles.skillName}
-                    >
-                      {tool.name}
-                    </Typography>
-                  </div>
-                </Grid>
-              ))}
-            </Grid>
-          </Box> */}
         </div>
       )}
     </>
